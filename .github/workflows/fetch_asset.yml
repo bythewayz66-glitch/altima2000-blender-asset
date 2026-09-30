@@ -1,14 +1,22 @@
 name: Fetch ALTIMA2000 asset files
 
 # The sandbox that generated this asset has no git credentials, so the large
-# binaries are pulled in here (from their public permanent URLs) and committed
-# through Git LFS by the runner, which does have a write token.
+# binaries are pulled in here (from their permanent URLs) and committed through
+# Git LFS by the runner, which does have a write token.
 #
 # .gitattributes (LFS patterns) is already committed on main, so the binaries
 # land in LFS rather than as plain blobs.
+#
+# The asset host is access-controlled, so a short-lived access token is passed
+# in as the `tk` input and appended to each request.
 
 on:
   workflow_dispatch:
+    inputs:
+      tk:
+        description: 'Access token for the asset host (appended as ?tk=)'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -29,6 +37,8 @@ jobs:
           cat .gitattributes
 
       - name: Download asset files
+        env:
+          TK: ${{ inputs.tk }}
         run: |
           set -euo pipefail
           BASE="https://static.teamily.ai/sites/d6ce0160-9a49-4bcb-a5b7-3605389009d3/documents/altima2000_v2"
@@ -36,7 +46,7 @@ jobs:
           fetch() {
             local src="$1" dst="$2"
             mkdir -p "$(dirname "$dst")"
-            curl -fsSL --retry 3 --retry-delay 2 -o "$dst" "$BASE/$src"
+            curl -fsSL --retry 3 --retry-delay 2 -o "$dst" "$BASE/$src?tk=$TK"
             printf '  %-46s %10s bytes\n' "$dst" "$(stat -c%s "$dst")"
           }
 
