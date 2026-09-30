@@ -35,6 +35,8 @@ from altima.parts import templates as T
 from altima.parts import panels as PN
 from altima.parts import mechanical as MC
 from altima.parts import interior as IN
+from altima.parts import wiring as WR
+from altima.parts import hoses as HS
 
 OUT_DIR = os.environ.get("ALTIMA_OUT", os.path.join(os.path.dirname(HERE), "deliverables"))
 SKIP_EXPORT = os.environ.get("ALTIMA_SKIP_EXPORT") == "1"
@@ -65,24 +67,38 @@ def reset_scene():
 
 
 def add_sequence_objects(scene, reg):
-    """Create the 12 named engine-bay sequence step empties.
+    """Create the sequence step empties and parent each step's parts to them.
 
-    Each empty is an animation target and an optional parent for its step's
-    parts.  It carries the step index, title, explode vector, distance and the
+    Every step owns one empty (``ALTIMA2000_SEQ_StepNN_<Key>``) which is both
+    the animation target and the PARENT of that step's parts.  Parenting uses
+    an identity parent-inverse, so a part's ``location`` stays its world-space
+    assembly position and the disassemble / reassemble operators keep working
+    unchanged - while moving the empty moves exactly that step's parts.
+
+    Each empty carries the step index, title, explode vector, distance and the
     explicit list of part names it moves, so the sequence is fully
     self-describing inside the .blend.
     """
     part_names = [r["name"] for r in reg.parts]
     mapping, unclaimed = SQ.resolve(part_names)
-    coll = reg.colls["Sequence"]
+    by_name = {r["name"]: r["object"] for r in reg.parts}
+
+    root = reg.add_empty("ALTIMA2000_SEQ_Root", "Sequence", loc=(0.0, 0.0, 0.0),
+                         display="CUBE", size=0.45,
+                         meta={"kind": "sequence_root", "step_count": SQ.STEP_COUNT,
+                               "note": "parent of the %d sequence steps" % SQ.STEP_COUNT})
+    bpy.context.view_layer.update()
+    root_inv = root.matrix_world.inverted()
+
     empties = []
     for i, s in enumerate(SQ.STEPS):
         idx = i + 1
         name = SQ.step_empty_name(idx)
         d = SQ.unit(s["direction"])
+        loc = s.get("loc", SQ.BAY_CENTRE)
         members = sorted(nm for nm, k in mapping.items() if k == idx)
         ob = reg.add_empty(
-            name, "Sequence", loc=SQ.BAY_CENTRE, display="ARROWS", size=0.30,
+            name, "Sequence", loc=loc, display="ARROWS", size=0.30,
             meta={"kind": "sequence_step", "step_index": idx,
                   "step_key": s["key"], "step_title": s["title"],
                   "explode_dir": [round(v, 6) for v in d],
@@ -90,17 +106,65 @@ def add_sequence_objects(scene, reg):
                   "part_count": len(members),
                   "parts": ",".join(members),
                   "note": s["note"]})
-        empties.append(ob)
-    # a parent empty that owns the whole sequence (handy for animating all 12)
-    root = reg.add_empty("ALTIMA2000_SEQ_Root", "Sequence", loc=SQ.BAY_CENTRE,
-                         display="CUBE", size=0.45,
-                         meta={"kind": "sequence_root", "step_count": SQ.STEP_COUNT,
-                               "note": "parent of the 12 engine-bay sequence steps"})
-    for ob in empties:
         ob.parent = root
+        ob.matrix_parent_inverse = root_inv
+        empties.append(ob)
+
+    # parent each step's parts to its empty.  The depsgraph must be current so
+    # matrix_world is valid before we invert it.
+    bpy.context.view_layer.update()
+    for i, ob in enumerate(empties):
+        idx = i + 1
+        inv = ob.matrix_world.inverted()
+        for nm in sorted(nm for nm, k in mapping.items() if k == idx):
+            p = by_name.get(nm)
+            if p is None:
+                continue
+            p.parent = ob
+            p.matrix_parent_inverse = inv
+    bpy.context.view_layer.update()
+
     log("sequence: %d step empties, %d parts mapped, %d unclaimed"
         % (SQ.STEP_COUNT, len(mapping), len(unclaimed)))
     return mapping, unclaimed, root
+
+
+def add_teardown_animation(scene, empties):
+    """Keyframe the sequence empties: one frame per step, in assembly order.
+
+    Frame 1 is the assembled car.  Step ``i`` starts moving at frame ``i`` and
+    is fully exploded at frame ``i+1``, so playing 1 -> N+1 is a forward
+    teardown and playing N+1 -> 1 is the reassembly.  Each empty is keyframed
+    with the explode direction and distance already stored on it, so the
+    animation and the interactive ``altima.sequence_step`` operator can never
+    disagree.
+    """
+    n = len(empties)
+    for i, ob in enumerate(empties):
+        idx = i + 1
+        info = ob.get("asmb", {})
+        home = Vector(info.get("loc", (0.0, 0.0, 0.0)))
+        d = Vector(info.get("explode_dir", (0.0, 0.0, 1.0)))
+        dist = float(info.get("explode_distance", 0.5))
+        ob.location = home
+        ob.keyframe_insert("location", frame=idx)
+        ob.location = home + d * dist
+        ob.keyframe_insert("location", frame=idx + 1)
+        ob.location = home
+    # linear interpolation: a teardown should read as a mechanical slide, not
+    # an ease-in/ease-out drift
+    for ob in empties:
+        ad = ob.animation_data
+        if not ad or not ad.action:
+            continue
+        for fc in ad.action.fcurves:
+            for kp in fc.keyframe_points:
+                kp.interpolation = "LINEAR"
+    scene.frame_start = 1
+    scene.frame_end = n + 1
+    scene.frame_set(1)
+    log("teardown animation: %d steps, frames 1..%d" % (n, n + 1))
+    return n + 1
 
 
 def add_metadata_objects(scene, reg, mats):
@@ -176,12 +240,20 @@ def build():
     log("interior done ->", len(reg.parts))
     IN.build_electrical(reg, mats, surf, M)
     log("electrical done ->", len(reg.parts))
+    WR.build_wiring(reg, mats, surf, M)
+    log("wiring done ->", len(reg.parts), M.get("wiring"))
+    HS.build_hoses(reg, mats, surf, M)
+    log("hoses done ->", len(reg.parts), M.get("hoses"))
     IN.build_bulk(reg, mats, surf, M)
     log("bulk done ->", len(reg.parts))
 
     reg.sync_manifest()
     add_metadata_objects(scene, reg, mats)
     seq_map, seq_unclaimed, seq_root = add_sequence_objects(scene, reg)
+    seq_empties = [o for o in scene.objects
+                   if o.type == "EMPTY" and o.get("asmb", {}).get("kind") == "sequence_step"]
+    seq_empties.sort(key=lambda o: int(o.get("asmb", {}).get("step_index", 0)))
+    add_teardown_animation(scene, seq_empties)
     log("total parts:", len(reg.parts))
     return scene, reg, mats, seq_map, seq_unclaimed
 
@@ -296,6 +368,156 @@ class ALTIMA_PT_panel(bpy.types.Panel):
         layout.separator()
         layout.label(text="Exploded view: run disassemble,")
         layout.label(text="then reassemble to restore.")
+        layout.separator()
+        layout.label(text="Wire Glow / Trace", icon="OUTLINER_OB_LIGHT")
+        layout.operator("altima.trace_wire", icon="TRACKER")
+        layout.operator("altima.trace_all", icon="SEQUENCE_COLOR_04")
+        layout.operator("altima.trace_clear", icon="X")
+        layout.label(text="Select a wire, then Trace Wire:")
+        layout.label(text="the glow runs end to end.")
+        layout.operator("altima.trace_modal", icon="PLAY")
+        layout.label(text="Live Trace: hover a wire to sweep")
+        layout.label(text="the glow along it; ESC to stop.")
+
+
+# ---------------------------------------------------------------------------
+# touch-activated glow / progressive trace
+# ---------------------------------------------------------------------------
+
+TRACE_PROGRESS = "TraceProgress"
+TRACE_WIDTH = "TraceWidth"
+TRACE_STRENGTH = "GlowStrength"
+
+
+def _trace_materials():
+    """Every material carrying the trace shader (i.e. every wire material)."""
+    out = []
+    for mat in bpy.data.materials:
+        if not mat.use_nodes or mat.node_tree is None:
+            continue
+        if mat.node_tree.nodes.get(TRACE_PROGRESS) is not None:
+            out.append(mat)
+    return out
+
+
+def _trace_nodes(mat):
+    nt = mat.node_tree
+    return (nt.nodes.get(TRACE_PROGRESS), nt.nodes.get(TRACE_WIDTH),
+            nt.nodes.get(TRACE_STRENGTH))
+
+
+def trace_set(progress, strength=6.0, width=0.12):
+    """Set the glow state on every wire material; returns the material count."""
+    n = 0
+    for mat in _trace_materials():
+        prog, wid, st = _trace_nodes(mat)
+        if prog is None:
+            continue
+        prog.outputs[0].default_value = float(progress)
+        if wid is not None:
+            wid.outputs[0].default_value = float(width)
+        if st is not None:
+            st.outputs[0].default_value = float(strength)
+        n += 1
+    return n
+
+
+def trace_clear():
+    return trace_set(0.0, 0.0)
+
+
+def trace_wire_impl(ob, strength=6.0, width=0.12, steps=24, delay=0.0):
+    """Light one wire progressively from its start to its end.
+
+    The wire mesh carries a baked ``trace_t`` attribute (normalised arc length
+    along the run).  Sweeping ``TraceProgress`` from 0 to 1 on the wire's
+    material makes the glow travel along the run.  Because the attribute is
+    per-vertex, the leading edge is a real gradient along the wire rather than
+    a whole-object switch.
+    """
+    import time
+    mats = []
+    for slot in ob.material_slots:
+        m = slot.material
+        if m is not None and m.node_tree is not None \
+                and m.node_tree.nodes.get(TRACE_PROGRESS) is not None:
+            mats.append(m)
+    if not mats:
+        return 0
+    if delay:
+        time.sleep(delay)
+    for i in range(steps + 1):
+        p = i / float(steps)
+        for m in mats:
+            prog, wid, st = _trace_nodes(m)
+            prog.outputs[0].default_value = p
+            if wid is not None:
+                wid.outputs[0].default_value = width
+            if st is not None:
+                st.outputs[0].default_value = strength
+        bpy.context.view_layer.update()
+        time.sleep(0.012)
+    return len(mats)
+
+
+class ALTIMA_OT_trace_wire(bpy.types.Operator):
+    """Touch a wire: it glows and the light travels along its run"""
+    bl_idname = "altima.trace_wire"
+    bl_label = "Trace Wire (Touch Glow)"
+    bl_options = {"REGISTER", "UNDO"}
+
+    strength: bpy.props.FloatProperty(name="Glow Strength", default=6.0, min=0.0, max=50.0)
+    width: bpy.props.FloatProperty(name="Trace Width", default=0.12, min=0.01, max=1.0)
+    steps: bpy.props.IntProperty(name="Steps", default=24, min=2, max=200)
+    delay: bpy.props.FloatProperty(name="Delay (s)", default=0.0, min=0.0, max=5.0)
+
+    def execute(self, context):
+        obs = [o for o in context.selected_objects
+               if o.type == "MESH" and o.name.startswith("ALTIMA2000_")]
+        if not obs:
+            self.report({"WARNING"}, "Select one or more ALTIMA2000 wires first")
+            return {"CANCELLED"}
+        n = 0
+        for ob in obs:
+            n += trace_wire_impl(ob, self.strength, self.width, self.steps, self.delay)
+        if not n:
+            self.report({"WARNING"}, "Selection has no traceable wire material")
+            return {"CANCELLED"}
+        self.report({"INFO"}, "Traced %d wire(s)" % len(obs))
+        return {"FINISHED"}
+
+
+class ALTIMA_OT_trace_all(bpy.types.Operator):
+    """Trace every wire in the scene, one after another"""
+    bl_idname = "altima.trace_all"
+    bl_label = "Trace All Wires"
+    bl_options = {"REGISTER", "UNDO"}
+
+    strength: bpy.props.FloatProperty(name="Glow Strength", default=6.0, min=0.0, max=50.0)
+    width: bpy.props.FloatProperty(name="Trace Width", default=0.12, min=0.01, max=1.0)
+    steps: bpy.props.IntProperty(name="Steps", default=16, min=2, max=200)
+    delay: bpy.props.FloatProperty(name="Delay (s)", default=0.0, min=0.0, max=5.0)
+
+    def execute(self, context):
+        obs = [o for o in context.scene.objects
+               if o.type == "MESH" and o.name.startswith("ALTIMA2000_ELEC_Wire_")]
+        obs.sort(key=lambda o: o.name)
+        for ob in obs:
+            trace_wire_impl(ob, self.strength, self.width, self.steps, self.delay)
+        self.report({"INFO"}, "Traced %d wire segments" % len(obs))
+        return {"FINISHED"}
+
+
+class ALTIMA_OT_trace_clear(bpy.types.Operator):
+    """Switch every wire glow off"""
+    bl_idname = "altima.trace_clear"
+    bl_label = "Clear Wire Glow"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        n = trace_clear()
+        self.report({"INFO"}, "Cleared glow on %d wire materials" % n)
+        return {"FINISHED"}
 
 
 # ---------------------------------------------------------------------------
@@ -329,25 +551,26 @@ def _seq_parts(step_ob):
 
 
 def sequence_apply_step(index, reverse=False, distance_scale=1.0):
-    """Move one step's parts along its explode vector (or back, if reverse)."""
+    """Move one step's parts along its explode vector (or back, if reverse).
+
+    The step's parts are PARENTED to the step empty, so moving the empty moves
+    the whole step in a single transform - which is exactly what the teardown
+    animation keyframes.  The parts' own ``location`` values are left untouched,
+    so the disassemble / reassemble operators keep working unchanged.
+    """
     steps = dict(_seq_steps())
     if index not in steps:
         return 0
-    info = steps[index].get("asmb", {})
+    ob = steps[index]
+    info = ob.get("asmb", {})
     d = Vector(info.get("explode_dir", (0.0, 0.0, 1.0)))
     dist = float(info.get("explode_distance", 0.5)) * distance_scale
-    n = 0
-    for part in _seq_parts(steps[index]):
-        pinfo = dict(part.get("asmb", {}))
-        pinfo.setdefault("loc", [part.location[0], part.location[1], part.location[2]])
-        part["asmb"] = pinfo
-        home = Vector(pinfo["loc"])
-        # forward: displace along the step vector.
-        # reverse: return the part to its stored assembly position exactly, so
-        # playing the 12 steps backwards reassembles the engine bay.
-        part.location = home if reverse else home + d * dist
-        n += 1
-    return n
+    home = Vector(info.get("loc", (0.0, 0.0, 0.0)))
+    # forward: displace the step empty along its vector.
+    # reverse: return the empty to its stored assembly position exactly, so
+    # playing the steps backwards reassembles the car.
+    ob.location = home if reverse else home + d * dist
+    return len(_seq_parts(ob))
 
 
 def sequence_apply_all(reverse=False, distance_scale=1.0):
@@ -359,24 +582,23 @@ def sequence_apply_all(reverse=False, distance_scale=1.0):
 
 
 def sequence_reset():
-    """Return every sequence part to its stored assembly position."""
+    """Return every step empty to its assembly position (its parts follow)."""
     n = 0
     for idx, ob in _seq_steps():
-        for part in _seq_parts(ob):
-            info = part.get("asmb", {})
-            if "loc" in info:
-                part.location = info["loc"]
-                n += 1
+        info = ob.get("asmb", {})
+        if "loc" in info:
+            ob.location = info["loc"]
+            n += 1
     return n
 
 
 class ALTIMA_OT_sequence_step(bpy.types.Operator):
-    """Explode (or restore) one engine-bay assembly step"""
+    """Explode (or restore) one assembly step"""
     bl_idname = "altima.sequence_step"
     bl_label = "Apply Sequence Step"
     bl_options = {"REGISTER", "UNDO"}
 
-    step: bpy.props.IntProperty(name="Step", default=1, min=1, max=12)
+    step: bpy.props.IntProperty(name="Step", default=1, min=1, max=64)
     reverse: bpy.props.BoolProperty(name="Reverse (Reassemble)", default=False)
     distance_scale: bpy.props.FloatProperty(name="Distance Scale", default=1.0,
                                             min=0.0, max=5.0)
@@ -418,7 +640,7 @@ class ALTIMA_OT_sequence_reset(bpy.types.Operator):
 
 
 class ALTIMA_PT_sequence(bpy.types.Panel):
-    bl_label = "Engine Bay Sequence (12 steps)"
+    bl_label = "Assembly Sequence"
     bl_idname = "ALTIMA_PT_sequence"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
@@ -426,22 +648,270 @@ class ALTIMA_PT_sequence(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        layout.label(text="Teardown in assembly order", icon="SEQUENCE")
-        for i in range(1, 13):
-            row = layout.row(align=True)
-            op = row.operator("altima.sequence_step", text="Step %02d" % i)
-            op.step = i
+        steps = _seq_steps()
+        n = len(steps)
+        layout.label(text="Teardown in assembly order (%d steps)" % n, icon="SEQUENCE")
+        layout.label(text="Steps 01-12 = engine bay", icon="INFO")
+        col = layout.column(align=True)
+        for idx, ob in steps:
+            info = ob.get("asmb", {})
+            row = col.row(align=True)
+            op = row.operator("altima.sequence_step",
+                              text="%02d %s" % (idx, info.get("step_key", "")))
+            op.step = idx
             op.reverse = False
             back = row.operator("altima.sequence_step", text="", icon="LOOP_BACK")
-            back.step = i
+            back.step = idx
             back.reverse = True
         layout.separator()
-        layout.operator("altima.sequence_all", text="Explode All 12 Steps",
+        layout.operator("altima.sequence_all", text="Explode All %d Steps" % n,
                         icon="FULLSCREEN_EXIT")
-        rev = layout.operator("altima.sequence_all", text="Reassemble All 12 Steps",
+        rev = layout.operator("altima.sequence_all", text="Reassemble All %d Steps" % n,
                               icon="FULLSCREEN_ENTER")
         rev.reverse = True
         layout.operator("altima.sequence_reset", icon="LOOP_BACK")
+
+
+# ---------------------------------------------------------------------------
+# per-harness visibility panel
+# ---------------------------------------------------------------------------
+
+def harness_names():
+    """Every harness tag present in the scene, sorted."""
+    out = set()
+    for ob in bpy.context.scene.objects:
+        if ob.type != "MESH":
+            continue
+        h = ob.get("asmb", {}).get("harness")
+        if h:
+            out.add(h)
+    return sorted(out)
+
+
+def harness_objects(name):
+    """Every object belonging to one harness."""
+    return [ob for ob in bpy.context.scene.objects
+            if ob.type == "MESH" and ob.get("asmb", {}).get("harness") == name]
+
+
+def _harness_toggle_update(self, context):
+    """Show / hide every object belonging to this harness."""
+    for ob in harness_objects(self.name):
+        ob.hide_viewport = not self.visible
+        ob.hide_render = not self.visible
+
+
+class ALTIMA_HarnessItem(bpy.types.PropertyGroup):
+    name: bpy.props.StringProperty()
+    visible: bpy.props.BoolProperty(default=True, update=_harness_toggle_update)
+
+
+def refresh_harnesses(scene=None):
+    """Rebuild the harness list from the scene (idempotent)."""
+    scene = scene or bpy.context.scene
+    names = harness_names()
+    have = [it.name for it in scene.altima_harnesses]
+    if have == names:
+        return len(names)
+    scene.altima_harnesses.clear()
+    for n in names:
+        it = scene.altima_harnesses.add()
+        it.name = n
+        it.visible = True
+    return len(names)
+
+
+class ALTIMA_OT_harness_refresh(bpy.types.Operator):
+    """Re-scan the scene for harnesses"""
+    bl_idname = "altima.harness_refresh"
+    bl_label = "Refresh Harness List"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        n = refresh_harnesses(context.scene)
+        self.report({"INFO"}, "Found %d harnesses" % n)
+        return {"FINISHED"}
+
+
+class ALTIMA_OT_harness_show_all(bpy.types.Operator):
+    """Show every harness"""
+    bl_idname = "altima.harness_show_all"
+    bl_label = "Show All Harnesses"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        refresh_harnesses(context.scene)
+        n = 0
+        for it in context.scene.altima_harnesses:
+            it.visible = True
+            n += 1
+        self.report({"INFO"}, "Showing %d harnesses" % n)
+        return {"FINISHED"}
+
+
+class ALTIMA_OT_harness_hide_all(bpy.types.Operator):
+    """Hide every harness"""
+    bl_idname = "altima.harness_hide_all"
+    bl_label = "Hide All Harnesses"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        refresh_harnesses(context.scene)
+        n = 0
+        for it in context.scene.altima_harnesses:
+            it.visible = False
+            n += 1
+        self.report({"INFO"}, "Hiding %d harnesses" % n)
+        return {"FINISHED"}
+
+
+class ALTIMA_PT_harness(bpy.types.Panel):
+    bl_label = "Wiring Harnesses"
+    bl_idname = "ALTIMA_PT_harness"
+    bl_space_type = "VIEW_3D"
+    bl_region_type = "UI"
+    bl_category = "Altima 2000"
+    bl_options = {"DEFAULT_CLOSED"}
+
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+        if len(scene.altima_harnesses) == 0:
+            refresh_harnesses(scene)
+        row = layout.row(align=True)
+        row.operator("altima.harness_show_all", icon="HIDE_OFF")
+        row.operator("altima.harness_hide_all", icon="HIDE_ON")
+        layout.operator("altima.harness_refresh", icon="FILE_REFRESH")
+        layout.separator()
+        col = layout.column(align=True)
+        for it in scene.altima_harnesses:
+            col.prop(it, "visible", text=it.name, icon="OUTLINER_OB_CURVE")
+
+
+# ---------------------------------------------------------------------------
+# live modal trace: hover / select a wire -> the glow sweeps along its run
+# ---------------------------------------------------------------------------
+
+class ALTIMA_OT_trace_modal(bpy.types.Operator):
+    """Live wire trace: hover or select a wire and the glow sweeps along it.
+
+    Runs as a modal operator so the trace animates in the viewport in real
+    time.  Hovering a wire (or selecting one) drives its material's
+    ``TraceProgress`` node value up, so the glow travels from one end of the
+    run to the other; moving off the wire lets it fade back out.  ESC or
+    right-click stops the operator.
+    """
+    bl_idname = "altima.trace_modal"
+    bl_label = "Live Wire Trace (Modal)"
+    bl_options = {"REGISTER", "UNDO"}
+
+    strength: bpy.props.FloatProperty(name="Glow Strength", default=6.0,
+                                      min=0.0, max=50.0)
+    width: bpy.props.FloatProperty(name="Trace Width", default=0.12,
+                                   min=0.01, max=1.0)
+    speed: bpy.props.FloatProperty(name="Sweep Speed", default=1.8,
+                                   min=0.05, max=20.0)
+    fade: bpy.props.FloatProperty(name="Fade Rate", default=2.6,
+                                  min=0.05, max=20.0)
+    interval: bpy.props.FloatProperty(name="Interval (s)", default=0.02,
+                                      min=0.005, max=0.5)
+
+    def _wire_under_mouse(self, context, event):
+        """The wire object under the pointer, or None."""
+        try:
+            from bpy_extras import view3d_utils
+        except Exception:
+            return None
+        region = context.region
+        rv3d = context.region_data
+        if region is None or rv3d is None:
+            return None
+        coord = (event.mouse_region_x, event.mouse_region_y)
+        origin = view3d_utils.region_2d_to_origin_3d(region, rv3d, coord)
+        direction = view3d_utils.region_2d_to_vector_3d(region, rv3d, coord)
+        deps = context.evaluated_depsgraph_get()
+        hit, loc, nrm, idx, ob, mat = context.scene.ray_cast(deps, origin, direction)
+        if hit and ob is not None and ob.type == "MESH":
+            if ob.get("asmb", {}).get("harness") or "Wire" in ob.name:
+                return ob
+        return None
+
+    def _set_progress(self, ob, p, strength, width):
+        for slot in ob.material_slots:
+            m = slot.material
+            if m is None or m.node_tree is None:
+                continue
+            prog = m.node_tree.nodes.get(TRACE_PROGRESS)
+            if prog is None:
+                continue
+            prog.outputs[0].default_value = p
+            wid = m.node_tree.nodes.get(TRACE_WIDTH)
+            if wid is not None:
+                wid.outputs[0].default_value = width
+            st = m.node_tree.nodes.get(TRACE_STRENGTH)
+            if st is not None:
+                st.outputs[0].default_value = strength if p > 0.0 else 0.0
+
+    def invoke(self, context, event):
+        if context.area is None or context.area.type != "VIEW_3D":
+            self.report({"WARNING"}, "Run this from the 3D Viewport")
+            return {"CANCELLED"}
+        self._timer = context.window_manager.event_timer_add(
+            self.interval, window=context.window)
+        self._state = {}
+        self._target = None
+        self._last = time.time()
+        context.window_manager.modal_handler_add(self)
+        self.report({"INFO"}, "Live trace running - hover a wire, ESC to stop")
+        return {"RUNNING_MODAL"}
+
+    def modal(self, context, event):
+        if event.type in {"ESC", "RIGHTMOUSE"}:
+            self._finish(context)
+            return {"CANCELLED"}
+        if event.type == "TIMER":
+            now = time.time()
+            dt = max(1e-4, now - self._last)
+            self._last = now
+            ob = self._wire_under_mouse(context, event)
+            if ob is None:
+                sel = [o for o in context.selected_objects
+                       if o.type == "MESH" and o.get("asmb", {}).get("harness")]
+                ob = sel[0] if sel else None
+            self._target = ob.name if ob is not None else None
+            for name in list(self._state):
+                if name == self._target:
+                    continue
+                p = self._state[name] - self.fade * dt
+                if p <= 0.0:
+                    del self._state[name]
+                    p = 0.0
+                else:
+                    self._state[name] = p
+                o = bpy.data.objects.get(name)
+                if o is not None:
+                    self._set_progress(o, p, self.strength, self.width)
+            if self._target is not None:
+                p = min(1.0, self._state.get(self._target, 0.0) + self.speed * dt)
+                self._state[self._target] = p
+                o = bpy.data.objects.get(self._target)
+                if o is not None:
+                    self._set_progress(o, p, self.strength, self.width)
+            context.view_layer.update()
+            context.area.tag_redraw()
+        return {"PASS_THROUGH"}
+
+    def _finish(self, context):
+        try:
+            context.window_manager.event_timer_remove(self._timer)
+        except Exception:
+            pass
+        for name in list(self._state):
+            o = bpy.data.objects.get(name)
+            if o is not None:
+                self._set_progress(o, 0.0, 0.0, self.width)
+        self._state = {}
+        context.view_layer.update()
 
 
 def register():
@@ -451,13 +921,37 @@ def register():
     bpy.utils.register_class(ALTIMA_OT_sequence_step)
     bpy.utils.register_class(ALTIMA_OT_sequence_all)
     bpy.utils.register_class(ALTIMA_OT_sequence_reset)
+    bpy.utils.register_class(ALTIMA_OT_trace_wire)
+    bpy.utils.register_class(ALTIMA_OT_trace_all)
+    bpy.utils.register_class(ALTIMA_OT_trace_clear)
     bpy.utils.register_class(ALTIMA_PT_panel)
     bpy.utils.register_class(ALTIMA_PT_sequence)
+    bpy.utils.register_class(ALTIMA_HarnessItem)
+    bpy.utils.register_class(ALTIMA_OT_harness_refresh)
+    bpy.utils.register_class(ALTIMA_OT_harness_show_all)
+    bpy.utils.register_class(ALTIMA_OT_harness_hide_all)
+    bpy.utils.register_class(ALTIMA_PT_harness)
+    bpy.utils.register_class(ALTIMA_OT_trace_modal)
+    bpy.types.Scene.altima_harnesses = bpy.props.CollectionProperty(
+        type=ALTIMA_HarnessItem)
 
 
 def unregister():
+    try:
+        del bpy.types.Scene.altima_harnesses
+    except Exception:
+        pass
+    bpy.utils.unregister_class(ALTIMA_OT_trace_modal)
+    bpy.utils.unregister_class(ALTIMA_PT_harness)
+    bpy.utils.unregister_class(ALTIMA_OT_harness_hide_all)
+    bpy.utils.unregister_class(ALTIMA_OT_harness_show_all)
+    bpy.utils.unregister_class(ALTIMA_OT_harness_refresh)
+    bpy.utils.unregister_class(ALTIMA_HarnessItem)
     bpy.utils.unregister_class(ALTIMA_PT_sequence)
     bpy.utils.unregister_class(ALTIMA_PT_panel)
+    bpy.utils.unregister_class(ALTIMA_OT_trace_clear)
+    bpy.utils.unregister_class(ALTIMA_OT_trace_all)
+    bpy.utils.unregister_class(ALTIMA_OT_trace_wire)
     bpy.utils.unregister_class(ALTIMA_OT_sequence_reset)
     bpy.utils.unregister_class(ALTIMA_OT_sequence_all)
     bpy.utils.unregister_class(ALTIMA_OT_sequence_step)
@@ -483,9 +977,11 @@ def install_operators(reg):
               '    "blender": (4, 0, 0),\n'
               '    "category": "Object",\n'
               '    "description": "Disassemble / reassemble / verify the Altima 2000 asset, '
-              'plus the 12-step engine-bay exploded assembly sequence",\n'
+              'the full-car exploded assembly sequence, the per-harness visibility '
+              'panel, the live modal wire trace and the touch-activated glow",\n'
               '}\n\n'
-              'import bpy\n')
+              'import bpy\n'
+              'import json\n')
     with open(path, "w") as fh:
         fh.write(header)
         fh.write(OPERATOR_SRC)
@@ -573,6 +1069,8 @@ def write_manifest(reg, path_json, path_csv, scene, mats, seq_map=None,
         "instance_families": families,
         "material_count": len(mats),
         "sequence": build_sequence_block(seq_map, seq_unclaimed),
+        "wiring": build_wiring_block(),
+        "hoses": build_hose_block(),
         "modules": module_report or {},
         "parts": rows,
     }
@@ -625,6 +1123,205 @@ def build_sequence_block(seq_map, seq_unclaimed):
     }
 
 
+def build_wiring_block():
+    """Manifest block describing the real wiring: systems, counts, trace data."""
+    systems = {}
+    wires = []
+    bulk_runs = 0
+    for ob in bpy.data.objects:
+        if not ob.name.startswith("ALTIMA2000_ELEC_Wire_"):
+            continue
+        info = ob.get("asmb", {})
+        if not info.get("harness"):
+            # a legacy bulk wire run from the fastener population, not a
+            # routed harness wire - counted separately, not as a harness
+            bulk_runs += 1
+            continue
+        wires.append({
+            "name": ob.name,
+            "harness": info.get("harness", ""),
+            "circuit": info.get("circuit", ""),
+            "segment": info.get("segment", 0),
+            "segments": info.get("segments", 0),
+            "material": ob.data.materials[0].name if ob.data.materials else "",
+            "radius_m": ob.get("wire_radius", 0.0),
+            "length_m": ob.get("trace_len", 0.0),
+            "trace_attr": ob.get("trace_attr", ""),
+            "trace_points": [round(float(c), 5) for c in ob.get("trace_pts", [])],
+        })
+    wires.sort(key=lambda w: w["name"])
+    for w in wires:
+        s = systems.setdefault(w["harness"], {
+            "circuits": set(), "segments": 0, "wires": 0, "length_m": 0.0})
+        s["circuits"].add(w["circuit"])
+        s["segments"] = max(s["segments"], w["segments"])
+        s["wires"] += 1
+        s["length_m"] = round(s["length_m"] + w["length_m"], 4)
+    out_systems = {}
+    for k, v in sorted(systems.items()):
+        out_systems[k] = {"circuits": sorted(v["circuits"]),
+                          "circuit_count": len(v["circuits"]),
+                          "segments_per_circuit": v["segments"],
+                          "wire_segments": v["wires"],
+                          "total_length_m": v["length_m"]}
+    total_len = round(sum(w["length_m"] for w in wires), 3)
+    return {
+        "description": "Real, physically modelled wiring - every wire is its own "
+                       "selectable object with a baked trace coordinate",
+        "wire_segment_count": len(wires),
+        "legacy_bulk_wire_runs": bulk_runs,
+        "harness_count": len(out_systems),
+        "total_wire_length_m": total_len,
+        "trace": {
+            "mesh_attribute": "trace_t",
+            "domain": "POINT",
+            "meaning": "normalised arc length along the run (0.0 start, 1.0 end)",
+            "material_nodes": ["TraceProgress", "TraceWidth", "GlowStrength"],
+            "operator": "altima.trace_wire",
+            "note": "sweeping TraceProgress 0->1 lights the wire progressively "
+                    "from one end to the other",
+        },
+        "systems": out_systems,
+        "wires": wires,
+    }
+
+
+def build_hose_block():
+    """Manifest block describing the routed hoses and tie straps."""
+    hoses = []
+    straps = []
+    for ob in bpy.data.objects:
+        if ob.type != "MESH":
+            continue
+        info = ob.get("asmb", {})
+        if info.get("hose") and ob.name.startswith("ALTIMA2000_") and "_Hose_" in ob.name:
+            hoses.append({
+                "name": ob.name,
+                "hose": info.get("hose", ""),
+                "segment": info.get("segment", 0),
+                "segments": info.get("segments", 0),
+                "material": ob.data.materials[0].name if ob.data.materials else "",
+                "radius_m": ob.get("hose_radius", 0.0),
+                "length_m": ob.get("trace_len", 0.0),
+                "trace_attr": ob.get("trace_attr", ""),
+                "trace_points": [round(float(c), 5) for c in ob.get("trace_pts", [])],
+            })
+        elif "_TieStrap_" in ob.name:
+            straps.append({
+                "name": ob.name,
+                "hose": info.get("hose", ""),
+                "material": ob.data.materials[0].name if ob.data.materials else "",
+                "length_m": ob.get("trace_len", 0.0),
+                "trace_attr": ob.get("trace_attr", ""),
+            })
+    hoses.sort(key=lambda w: w["name"])
+    straps.sort(key=lambda w: w["name"])
+    systems = {}
+    for w in hoses:
+        s = systems.setdefault(w["hose"], {"segments": 0, "hose_segments": 0,
+                                             "length_m": 0.0, "straps": 0})
+        s["segments"] = max(s["segments"], w["segments"])
+        s["hose_segments"] += 1
+        s["length_m"] = round(s["length_m"] + w["length_m"], 4)
+    for w in straps:
+        s = systems.setdefault(w["hose"], {"segments": 0, "hose_segments": 0,
+                                            "length_m": 0.0, "straps": 0})
+        s["straps"] += 1
+    return {
+        "description": "Real, physically modelled hoses and tie straps - every hose "
+                       "is a swept tube along its actual run, every strap a swept "
+                       "band wrapping it",
+        "hose_segment_count": len(hoses),
+        "tie_strap_count": len(straps),
+        "hose_system_count": len(systems),
+        "total_hose_length_m": round(sum(w["length_m"] for w in hoses), 3),
+        "trace": {
+            "mesh_attribute": "trace_t",
+            "domain": "POINT",
+            "meaning": "normalised arc length along the run (0.0 start, 1.0 end)",
+            "material_nodes": ["TraceProgress", "TraceWidth", "GlowStrength"],
+            "note": "hoses and straps carry the same trace shader as the wiring",
+        },
+        "systems": systems,
+        "hoses": hoses,
+        "tie_straps": straps,
+    }
+
+
+def write_module_manifests(module_report, master_json):
+    """Write a standalone manifest (JSON + CSV) for every module .blend.
+
+    Each module manifest uses exactly the same row schema as the master, so a
+    module can be validated and round-tripped on its own.  ``master_index``
+    records the part's 1-based position in the master manifest, which is how a
+    module-level name maps back to the master assembly.
+    """
+    with open(master_json) as fh:
+        mdoc = json.load(fh)
+    by_name = {r["name"]: r for r in mdoc["parts"]}
+    written = {}
+    for key, rep in sorted(module_report.items()):
+        rows = []
+        for nm in rep["parts"]:
+            src = by_name.get(nm)
+            if src is None:
+                continue
+            row = dict(src)
+            row["master_index"] = src["part_index"]
+            row["module"] = key
+            rows.append(row)
+        rows.sort(key=lambda r: r["name"])
+        for i, r in enumerate(rows):
+            r["part_index"] = i + 1
+        doc = {
+            "asset": mdoc["asset"],
+            "module": key,
+            "module_file": rep["file"],
+            "generator": mdoc["generator"],
+            "bulk_scale": mdoc["bulk_scale"],
+            "units": mdoc["units"],
+            "coordinate_system": mdoc["coordinate_system"],
+            "naming_convention": mdoc["naming_convention"],
+            "root_collections": rep["root_collections"],
+            "collections": rep["collections"],
+            "part_count": len(rows),
+            "master_manifest": os.path.basename(master_json),
+            "master_part_count": mdoc["part_count"],
+            "standalone_reassembly": {
+                "note": "This module reassembles on its own: every row carries the "
+                        "part's assembled world position in offset_m, so the "
+                        "disassemble / reassemble operators shipped in "
+                        "altima2000_assembly_tools.py work on this file unchanged.",
+                "operators": ["altima.disassemble", "altima.reassemble",
+                              "altima.verify_assembly"],
+                "mapping_to_master": "row['master_index'] is the part's 1-based "
+                                     "index in the master manifest; row['name'] is "
+                                     "identical in both, and row['collection'] is "
+                                     "the same sub-collection name.",
+            },
+            "parts": rows,
+        }
+        jp = os.path.join(OUT_DIR, "altima2000_module_%s_manifest.json" % key)
+        with open(jp, "w") as fh:
+            json.dump(doc, fh, indent=1)
+        cp = os.path.join(OUT_DIR, "altima2000_module_%s_manifest.csv" % key)
+        with open(cp, "w", newline="") as fh:
+            w = csv.writer(fh)
+            w.writerow(["part_index", "master_index", "name", "collection",
+                        "group", "sub", "part", "material", "instance_of",
+                        "x", "y", "z", "notes"])
+            for r in rows:
+                p = r["position"]
+                w.writerow([r["part_index"], r["master_index"], r["name"],
+                            r["collection"], r["group"], r["sub"], r["part"],
+                            r["material"], r["instance_of"],
+                            p["x"], p["y"], p["z"], r.get("notes", "")])
+        written[key] = {"json": os.path.basename(jp), "csv": os.path.basename(cp),
+                        "part_count": len(rows)}
+        log("module manifest %-11s -> %d parts" % (key, len(rows)))
+    return written
+
+
 def check_names(reg):
     bad = [r["name"] for r in reg.parts if not B.NAME_RE.match(r["name"])]
     dupes = {}
@@ -649,13 +1346,17 @@ def export_all(scene, reg):
     if SKIP_EXPORT:
         return blend, None, None, None
 
+    # The teardown animation lives on the sequence step empties, so every
+    # export below must carry animations or the keyframed teardown is lost.
     glb = os.path.join(OUT_DIR, "altima2000.glb")
     try:
         bpy.ops.export_scene.gltf(
             filepath=glb, export_format="GLB", use_selection=False,
             export_apply=False, export_yup=True,
             export_materials="EXPORT", export_cameras=False, export_lights=False,
-            export_extras=True, export_texcoords=True, export_normals=True)
+            export_extras=True, export_texcoords=True, export_normals=True,
+            export_animations=True, export_animation_mode="ACTIONS",
+            export_frame_range=False, export_optimize_animation_size=False)
         log("glTF glb ->", "%.1f MB" % (os.path.getsize(glb) / 1e6))
     except Exception as e:  # pragma: no cover
         log("glTF GLB export FAILED:", e)
@@ -663,7 +1364,11 @@ def export_all(scene, reg):
     gltf = os.path.join(OUT_DIR, "altima2000.gltf")
     try:
         bpy.ops.export_scene.gltf(filepath=gltf, export_format="GLTF_SEPARATE",
-                                  use_selection=False, export_extras=True)
+                                  use_selection=False, export_extras=True,
+                                  export_animations=True,
+                                  export_animation_mode="ACTIONS",
+                                  export_frame_range=False,
+                                  export_optimize_animation_size=False)
         log("glTF separate -> %.1f MB" % (os.path.getsize(gltf) / 1e6))
     except Exception as e:  # pragma: no cover
         log("glTF separate export FAILED:", e)
@@ -674,7 +1379,7 @@ def export_all(scene, reg):
             filepath=fbx, use_selection=False, global_scale=1.0,
             apply_unit_scale=True, axis_forward="-Z", axis_up="Y",
             object_types={"MESH", "EMPTY"}, use_custom_props=True,
-            mesh_smooth_type="FACE", path_mode="AUTO")
+            mesh_smooth_type="FACE", path_mode="AUTO", bake_anim=False)
         log("FBX ->", "%.1f MB" % (os.path.getsize(fbx) / 1e6))
     except Exception as e:  # pragma: no cover
         log("FBX export FAILED:", e)
@@ -889,13 +1594,17 @@ def main():
     module_paths = export_modules(blend, module_report)
     asm_path, linked = build_assembly_file(blend, module_paths)
     verification = verify_modules(module_paths, asm_path, module_report)
+    mod_manifests = write_module_manifests(
+        module_report, os.path.join(OUT_DIR, "altima2000_manifest.json"))
     # patch the manifest with the post-export verification results
     with open(os.path.join(OUT_DIR, "altima2000_manifest.json")) as fh:
         mdoc = json.load(fh)
     for key, res in verification["modules"].items():
         mdoc["modules"][key].update(res)
-        mdoc["modules"][key]["object_count"] = module_report[key].get("object_count", -1)
-        mdoc["modules"][key]["size_mb"] = module_report[key].get("size_mb", 0.0)
+    for key, res in mod_manifests.items():
+        mdoc["modules"][key]["manifest_json"] = res["json"]
+        mdoc["modules"][key]["manifest_csv"] = res["csv"]
+        mdoc["modules"][key]["manifest_part_count"] = res["part_count"]
     mdoc["modules"]["_assembly"] = verification["assembly"]
     with open(os.path.join(OUT_DIR, "altima2000_manifest.json"), "w") as fh:
         json.dump(mdoc, fh, indent=1)
@@ -908,8 +1617,24 @@ def main():
     print("BUILD_ASSEMBLY_LINKED %s" % asm_path)
     for key in sorted(module_paths):
         print("BUILD_MODULE %-11s %s" % (key, module_paths[key]))
+    for key in sorted(mod_manifests):
+        print("BUILD_MODULE_MANIFEST %-11s %s (%d parts)"
+              % (key, mod_manifests[key]["json"], mod_manifests[key]["part_count"]))
     print("BUILD_SEQUENCE steps=%d parts_moved=%d unclaimed=%d"
           % (SQ.STEP_COUNT, len(seq_map), len(seq_unclaimed)))
+    wb = doc.get("wiring", {})
+    print("BUILD_WIRING harnesses=%d wire_segments=%d total_length_m=%.1f"
+          % (wb.get("harness_count", 0), wb.get("wire_segment_count", 0),
+             wb.get("total_wire_length_m", 0.0)))
+    hb = doc.get("hoses", {})
+    print("BUILD_HOSES systems=%d hose_segments=%d tie_straps=%d total_length_m=%.1f"
+          % (hb.get("hose_system_count", 0), hb.get("hose_segment_count", 0),
+             hb.get("tie_strap_count", 0), hb.get("total_hose_length_m", 0.0)))
+    for k in sorted(wb.get("systems", {})):
+        s = wb["systems"][k]
+        print("BUILD_HARNESS %-14s circuits=%d segments=%d wires=%3d len=%6.2fm"
+              % (k, s["circuit_count"], s["segments_per_circuit"],
+                 s["wire_segments"], s["total_length_m"]))
     for i, s in enumerate(SQ.STEPS):
         n = len([1 for nm, k in seq_map.items() if k == i + 1])
         print("BUILD_STEP %02d %-34s %-22s parts=%3d"

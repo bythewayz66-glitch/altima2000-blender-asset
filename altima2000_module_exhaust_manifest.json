@@ -1,0 +1,791 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "exhaust",
+ "module_file": "altima2000_module_exhaust.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Exhaust"
+ ],
+ "collections": [
+  "Exhaust_Manifold",
+  "Exhaust_Muffler",
+  "Exhaust_Pipe"
+ ],
+ "part_count": 21,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_ENG_ExhaustManifold_Cast",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "ExhaustManifold",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.0,
+    "y": -0.0,
+    "z": -0.0
+   },
+   "offset_m": [
+    -0.0,
+    -0.0,
+    -0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold (cast iron)",
+   "master_index": 247,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_ENG_HeatShield_Manifold",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "HeatShield",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.215,
+    "z": 0.575
+   },
+   "offset_m": [
+    1.02,
+    -0.215,
+    0.575
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "manifold heat shield",
+   "master_index": 252,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_ENG_ManifoldRunner_Cast_001",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "ManifoldRunner",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.87,
+    "y": -0.165,
+    "z": 0.555
+   },
+   "offset_m": [
+    0.87,
+    -0.165,
+    0.555
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold runner",
+   "master_index": 248,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_ENG_ManifoldRunner_Cast_002",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "ManifoldRunner",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.97,
+    "y": -0.165,
+    "z": 0.555
+   },
+   "offset_m": [
+    0.97,
+    -0.165,
+    0.555
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold runner",
+   "master_index": 249,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_ENG_ManifoldRunner_Cast_003",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "ManifoldRunner",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": -0.165,
+    "z": 0.555
+   },
+   "offset_m": [
+    1.07,
+    -0.165,
+    0.555
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold runner",
+   "master_index": 250,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_ENG_ManifoldRunner_Cast_004",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "ManifoldRunner",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": -0.165,
+    "z": 0.555
+   },
+   "offset_m": [
+    1.17,
+    -0.165,
+    0.555
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold runner",
+   "master_index": 251,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_ENG_OxygenSensor_Upstream",
+   "collection": "Exhaust_Manifold",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "O2Sensor",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.04,
+    "y": -0.19,
+    "z": 0.605
+   },
+   "offset_m": [
+    1.04,
+    -0.19,
+    0.605
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upstream heated oxygen sensor",
+   "master_index": 253,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_EXH_Catalyst_Converter",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Catalyst",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.05,
+    "y": -0.13,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.05,
+    -0.13,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "catalytic converter",
+   "master_index": 436,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_EXH_Downpipe_Primary",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Downpipe",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "stainless",
+   "instance_of": "",
+   "position": {
+    "x": 0.673333,
+    "y": -0.156667,
+    "z": 0.343333
+   },
+   "offset_m": [
+    0.673333,
+    -0.156667,
+    0.343333
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust downpipe",
+   "master_index": 435,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_EXH_Hanger_Rubber_001",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Hanger",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.3,
+    "y": -0.24,
+    "z": 0.33
+   },
+   "offset_m": [
+    -0.3,
+    -0.24,
+    0.33
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust rubber hanger",
+   "master_index": 441,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_EXH_Hanger_Rubber_002",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Hanger",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.78,
+    "y": -0.24,
+    "z": 0.33
+   },
+   "offset_m": [
+    -0.78,
+    -0.24,
+    0.33
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust rubber hanger",
+   "master_index": 442,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_EXH_Hanger_Rubber_003",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Hanger",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.26,
+    "y": -0.24,
+    "z": 0.33
+   },
+   "offset_m": [
+    -1.26,
+    -0.24,
+    0.33
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust rubber hanger",
+   "master_index": 443,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_EXH_Hanger_Rubber_004",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Hanger",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.74,
+    "y": -0.24,
+    "z": 0.33
+   },
+   "offset_m": [
+    -1.74,
+    -0.24,
+    0.33
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust rubber hanger",
+   "master_index": 444,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_EXH_HeatShield_Floor_001",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "HeatShield",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.5,
+    "y": -0.25,
+    "z": 0.29
+   },
+   "offset_m": [
+    -0.5,
+    -0.25,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust heat shield",
+   "master_index": 445,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_EXH_HeatShield_Floor_002",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "HeatShield",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.2,
+    "y": -0.25,
+    "z": 0.29
+   },
+   "offset_m": [
+    -1.2,
+    -0.25,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust heat shield",
+   "master_index": 446,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_EXH_HeatShield_Floor_003",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "HeatShield",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.32,
+    "y": -0.22,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.32,
+    -0.22,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust heat shield",
+   "master_index": 447,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_EXH_Midpipe_Intermediate",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Midpipe",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "stainless",
+   "instance_of": "",
+   "position": {
+    "x": -0.706667,
+    "y": -0.163333,
+    "z": 0.275
+   },
+   "offset_m": [
+    -0.706667,
+    -0.163333,
+    0.275
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intermediate exhaust pipe",
+   "master_index": 437,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_EXH_Muffler_Main",
+   "collection": "Exhaust_Muffler",
+   "group": "EX",
+   "sub": "Muffler",
+   "part": "Muffler",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.74,
+    "y": -0.29,
+    "z": 0.3
+   },
+   "offset_m": [
+    -1.74,
+    -0.29,
+    0.3
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main exhaust muffler",
+   "master_index": 439,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_EXH_OxygenSensor_Downstream",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "O2SensorDown",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.06,
+    "y": -0.13,
+    "z": 0.35
+   },
+   "offset_m": [
+    -0.06,
+    -0.13,
+    0.35
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "downstream oxygen sensor",
+   "master_index": 448,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_EXH_Resonator_Canister",
+   "collection": "Exhaust_Pipe",
+   "group": "EX",
+   "sub": "Pipe",
+   "part": "Resonator",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.9,
+    "y": -0.18,
+    "z": 0.265
+   },
+   "offset_m": [
+    -0.9,
+    -0.18,
+    0.265
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust resonator",
+   "master_index": 438,
+   "module": "exhaust"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_EXH_Tailpipe_Outlet",
+   "collection": "Exhaust_Muffler",
+   "group": "EX",
+   "sub": "Muffler",
+   "part": "Tailpipe",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -2.040851,
+    "y": -0.3,
+    "z": 0.29
+   },
+   "offset_m": [
+    -2.040851,
+    -0.3,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust tailpipe",
+   "master_index": 440,
+   "module": "exhaust"
+  }
+ ]
+}

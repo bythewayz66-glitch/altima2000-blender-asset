@@ -1,0 +1,113 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,1583,ALTIMA2000_STR_HexBolt_Column_001,Suspension_Steering,SR,Column,HexBolt_Column,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,steering column bolt (M8)
+2,1584,ALTIMA2000_STR_HexBolt_Column_002,Suspension_Steering,SR,Column,HexBolt_Column,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,steering column bolt (M8)
+3,1585,ALTIMA2000_STR_HexBolt_Column_003,Suspension_Steering,SR,Column,HexBolt_Column,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,steering column bolt (M8)
+4,1586,ALTIMA2000_STR_HexBolt_Column_004,Suspension_Steering,SR,Column,HexBolt_Column,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,steering column bolt (M8)
+5,1579,ALTIMA2000_STR_HexBolt_SteeringRack_001,Suspension_Steering,SR,SteeringRack,HexBolt_SteeringRack,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,steering rack bolt (M10)
+6,1580,ALTIMA2000_STR_HexBolt_SteeringRack_002,Suspension_Steering,SR,SteeringRack,HexBolt_SteeringRack,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,steering rack bolt (M10)
+7,1581,ALTIMA2000_STR_HexBolt_SteeringRack_003,Suspension_Steering,SR,SteeringRack,HexBolt_SteeringRack,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,steering rack bolt (M10)
+8,1582,ALTIMA2000_STR_HexBolt_SteeringRack_004,Suspension_Steering,SR,SteeringRack,HexBolt_SteeringRack,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,steering rack bolt (M10)
+9,1879,ALTIMA2000_STR_HexNut_TieRod_001,Suspension_Steering,SR,TieRod,HexNut_TieRod,MAT_Steel_Phosphate_Fastener,TPL_Nut_M12,2.221702,-0.266,0.903,tie rod end nut (M12)
+10,1880,ALTIMA2000_STR_HexNut_TieRod_002,Suspension_Steering,SR,TieRod,HexNut_TieRod,MAT_Steel_Phosphate_Fastener,TPL_Nut_M12,-0.458724,-0.609171,0.515856,tie rod end nut (M12)
+11,1881,ALTIMA2000_STR_HexNut_TieRod_003,Suspension_Steering,SR,TieRod,HexNut_TieRod,MAT_Steel_Phosphate_Fastener,TPL_Nut_M12,1.19787,0.447657,1.028713,tie rod end nut (M12)
+12,1882,ALTIMA2000_STR_HexNut_TieRod_004,Suspension_Steering,SR,TieRod,HexNut_TieRod,MAT_Steel_Phosphate_Fastener,TPL_Nut_M12,-1.482556,0.104486,0.641569,tie rod end nut (M12)
+13,312,ALTIMA2000_SUSP_BallJoint_Front_L,Suspension_Front,SU,Front,BallJoint,MAT_Steel_Structural,,1.42,0.73794,0.25,lower ball joint
+14,299,ALTIMA2000_SUSP_BallJoint_Front_R,Suspension_Front,SU,Front,BallJoint,MAT_Steel_Structural,,1.42,-0.73794,0.25,lower ball joint
+15,318,ALTIMA2000_SUSP_BeamAxle_Rear,Suspension_Rear,SU,Rear,BeamAxle,MAT_Steel_Structural,,-1.24,0.0,0.3,rear torsion beam axle
+16,309,ALTIMA2000_SUSP_BumpStop_Front_L,Suspension_Front,SU,Front,BumpStop,MAT_Suspension_Bushing,,1.38,0.72288,0.79,strut bump stop
+17,296,ALTIMA2000_SUSP_BumpStop_Front_R,Suspension_Front,SU,Front,BumpStop,MAT_Suspension_Bushing,,1.38,-0.72288,0.79,strut bump stop
+18,307,ALTIMA2000_SUSP_CoilSpring_Front_L,Suspension_Front,SU,Front,CoilSpring,MAT_Suspension_Spring,,1.38,0.72288,0.6,front coil spring
+19,294,ALTIMA2000_SUSP_CoilSpring_Front_R,Suspension_Front,SU,Front,CoilSpring,MAT_Suspension_Spring,,1.38,-0.72288,0.6,front coil spring
+20,327,ALTIMA2000_SUSP_CoilSpring_Rear_L,Suspension_Rear,SU,Rear,CoilSpringR,MAT_Suspension_Spring,,-1.24,0.6024,0.43,rear coil spring
+21,321,ALTIMA2000_SUSP_CoilSpring_Rear_R,Suspension_Rear,SU,Rear,CoilSpringR,MAT_Suspension_Spring,,-1.24,-0.6024,0.43,rear coil spring
+22,310,ALTIMA2000_SUSP_DustBoot_Front_L,Suspension_Front,SU,Front,DustBoot,MAT_Rubber_Hose,,1.38,0.72288,0.7,strut dust boot
+23,297,ALTIMA2000_SUSP_DustBoot_Front_R,Suspension_Front,SU,Front,DustBoot,MAT_Rubber_Hose,,1.38,-0.72288,0.7,strut dust boot
+24,1545,ALTIMA2000_SUSP_HexBolt_BallJoint_001,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,ball joint bolt (M10)
+25,1546,ALTIMA2000_SUSP_HexBolt_BallJoint_002,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,ball joint bolt (M10)
+26,1547,ALTIMA2000_SUSP_HexBolt_BallJoint_003,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,ball joint bolt (M10)
+27,1548,ALTIMA2000_SUSP_HexBolt_BallJoint_004,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,ball joint bolt (M10)
+28,1549,ALTIMA2000_SUSP_HexBolt_BallJoint_005,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,ball joint bolt (M10)
+29,1550,ALTIMA2000_SUSP_HexBolt_BallJoint_006,Suspension_Front,SU,BallJoint,HexBolt_BallJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,ball joint bolt (M10)
+30,1561,ALTIMA2000_SUSP_HexBolt_BeamAxle_001,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,2.328085,-0.2812,0.97,rear beam axle bolt (M12)
+31,1562,ALTIMA2000_SUSP_HexBolt_BeamAxle_002,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.483838,-0.643981,0.53984,rear beam axle bolt (M12)
+32,1563,ALTIMA2000_SUSP_HexBolt_BeamAxle_003,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.254026,0.473238,1.109681,rear beam axle bolt (M12)
+33,1564,ALTIMA2000_SUSP_HexBolt_BeamAxle_004,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.557897,0.110457,0.679521,rear beam axle bolt (M12)
+34,1565,ALTIMA2000_SUSP_HexBolt_BeamAxle_005,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.179967,-0.252324,1.249361,rear beam axle bolt (M12)
+35,1566,ALTIMA2000_SUSP_HexBolt_BeamAxle_006,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.917831,-0.615105,0.819201,rear beam axle bolt (M12)
+36,1567,ALTIMA2000_SUSP_HexBolt_BeamAxle_007,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.894092,0.502114,0.389042,rear beam axle bolt (M12)
+37,1568,ALTIMA2000_SUSP_HexBolt_BeamAxle_008,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.843772,0.139333,0.958882,rear beam axle bolt (M12)
+38,1569,ALTIMA2000_SUSP_HexBolt_BeamAxle_009,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.968151,-0.223448,0.528722,rear beam axle bolt (M12)
+39,1570,ALTIMA2000_SUSP_HexBolt_BeamAxle_010,Suspension_Rear,SU,BeamAxle,HexBolt_BeamAxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.230287,-0.58623,1.098563,rear beam axle bolt (M12)
+40,1551,ALTIMA2000_SUSP_HexBolt_ControlArm_001,Suspension_Front,SU,ControlArm,HexBolt_ControlArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,2.328085,-0.2812,0.97,lower control arm pivot bolt (M12)
+41,1552,ALTIMA2000_SUSP_HexBolt_ControlArm_002,Suspension_Front,SU,ControlArm,HexBolt_ControlArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.483838,-0.643981,0.53984,lower control arm pivot bolt (M12)
+42,1553,ALTIMA2000_SUSP_HexBolt_ControlArm_003,Suspension_Front,SU,ControlArm,HexBolt_ControlArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.254026,0.473238,1.109681,lower control arm pivot bolt (M12)
+43,1554,ALTIMA2000_SUSP_HexBolt_ControlArm_004,Suspension_Front,SU,ControlArm,HexBolt_ControlArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.557897,0.110457,0.679521,lower control arm pivot bolt (M12)
+44,1541,ALTIMA2000_SUSP_HexBolt_StrutClamp_001,Suspension_Front,SU,StrutClamp,HexBolt_StrutClamp,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,2.328085,-0.2812,0.97,strut to knuckle clamp bolt (M12)
+45,1542,ALTIMA2000_SUSP_HexBolt_StrutClamp_002,Suspension_Front,SU,StrutClamp,HexBolt_StrutClamp,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.483838,-0.643981,0.53984,strut to knuckle clamp bolt (M12)
+46,1543,ALTIMA2000_SUSP_HexBolt_StrutClamp_003,Suspension_Front,SU,StrutClamp,HexBolt_StrutClamp,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.254026,0.473238,1.109681,strut to knuckle clamp bolt (M12)
+47,1544,ALTIMA2000_SUSP_HexBolt_StrutClamp_004,Suspension_Front,SU,StrutClamp,HexBolt_StrutClamp,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.557897,0.110457,0.679521,strut to knuckle clamp bolt (M12)
+48,1535,ALTIMA2000_SUSP_HexBolt_StrutMount_001,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,strut upper mount nut/bolt (M10)
+49,1536,ALTIMA2000_SUSP_HexBolt_StrutMount_002,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,strut upper mount nut/bolt (M10)
+50,1537,ALTIMA2000_SUSP_HexBolt_StrutMount_003,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,strut upper mount nut/bolt (M10)
+51,1538,ALTIMA2000_SUSP_HexBolt_StrutMount_004,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,strut upper mount nut/bolt (M10)
+52,1539,ALTIMA2000_SUSP_HexBolt_StrutMount_005,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,strut upper mount nut/bolt (M10)
+53,1540,ALTIMA2000_SUSP_HexBolt_StrutMount_006,Suspension_Front,SU,StrutMount,HexBolt_StrutMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,strut upper mount nut/bolt (M10)
+54,1555,ALTIMA2000_SUSP_HexBolt_SwayBar_001,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,stabiliser bar bracket bolt (M8)
+55,1556,ALTIMA2000_SUSP_HexBolt_SwayBar_002,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,stabiliser bar bracket bolt (M8)
+56,1557,ALTIMA2000_SUSP_HexBolt_SwayBar_003,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,stabiliser bar bracket bolt (M8)
+57,1558,ALTIMA2000_SUSP_HexBolt_SwayBar_004,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,stabiliser bar bracket bolt (M8)
+58,1559,ALTIMA2000_SUSP_HexBolt_SwayBar_005,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.179967,-0.252324,1.249361,stabiliser bar bracket bolt (M8)
+59,1560,ALTIMA2000_SUSP_HexBolt_SwayBar_006,Suspension_Front,SU,SwayBar,HexBolt_SwayBar,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.917831,-0.615105,0.819201,stabiliser bar bracket bolt (M8)
+60,1571,ALTIMA2000_SUSP_HexBolt_TrailingArm_001,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,trailing arm bolt (M10)
+61,1572,ALTIMA2000_SUSP_HexBolt_TrailingArm_002,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,trailing arm bolt (M10)
+62,1573,ALTIMA2000_SUSP_HexBolt_TrailingArm_003,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,trailing arm bolt (M10)
+63,1574,ALTIMA2000_SUSP_HexBolt_TrailingArm_004,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,trailing arm bolt (M10)
+64,1575,ALTIMA2000_SUSP_HexBolt_TrailingArm_005,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,trailing arm bolt (M10)
+65,1576,ALTIMA2000_SUSP_HexBolt_TrailingArm_006,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,trailing arm bolt (M10)
+66,1577,ALTIMA2000_SUSP_HexBolt_TrailingArm_007,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.894092,0.502114,0.389042,trailing arm bolt (M10)
+67,1578,ALTIMA2000_SUSP_HexBolt_TrailingArm_008,Suspension_Rear,SU,TrailingArm,HexBolt_TrailingArm,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.843772,0.139333,0.958882,trailing arm bolt (M10)
+68,1875,ALTIMA2000_SUSP_HexNut_BallJointCastle_001,Suspension_Front,SU,BallJointCastle,HexNut_BallJointCastle,MAT_Steel_Phosphate_Fastener,TPL_Nut_M10,2.221702,-0.266,0.903,ball joint castle nut (M10)
+69,1876,ALTIMA2000_SUSP_HexNut_BallJointCastle_002,Suspension_Front,SU,BallJointCastle,HexNut_BallJointCastle,MAT_Steel_Phosphate_Fastener,TPL_Nut_M10,-0.458724,-0.609171,0.515856,ball joint castle nut (M10)
+70,1877,ALTIMA2000_SUSP_HexNut_BallJointCastle_003,Suspension_Front,SU,BallJointCastle,HexNut_BallJointCastle,MAT_Steel_Phosphate_Fastener,TPL_Nut_M10,1.19787,0.447657,1.028713,ball joint castle nut (M10)
+71,1878,ALTIMA2000_SUSP_HexNut_BallJointCastle_004,Suspension_Front,SU,BallJointCastle,HexNut_BallJointCastle,MAT_Steel_Phosphate_Fastener,TPL_Nut_M10,-1.482556,0.104486,0.641569,ball joint castle nut (M10)
+72,314,ALTIMA2000_SUSP_HubBearing_Front_L,Suspension_Front,SU,Front,HubBearing,MAT_Steel_Structural,,1.38,0.753,0.3135,front hub bearing assembly
+73,301,ALTIMA2000_SUSP_HubBearing_Front_R,Suspension_Front,SU,Front,HubBearing,MAT_Steel_Structural,,1.38,-0.753,0.3135,front hub bearing assembly
+74,330,ALTIMA2000_SUSP_HubBearing_Rear_L,Suspension_Rear,SU,Rear,HubBearingR,MAT_Steel_Structural,,-1.24,0.753,0.3135,rear hub bearing assembly
+75,324,ALTIMA2000_SUSP_HubBearing_Rear_R,Suspension_Rear,SU,Rear,HubBearingR,MAT_Steel_Structural,,-1.24,-0.753,0.3135,rear hub bearing assembly
+76,311,ALTIMA2000_SUSP_LowerControlArm_Front_L,Suspension_Front,SU,Front,LowerControlArm,MAT_Steel_Structural,,1.42,0.4518,0.26,front lower control arm (transverse link)
+77,298,ALTIMA2000_SUSP_LowerControlArm_Front_R,Suspension_Front,SU,Front,LowerControlArm,MAT_Steel_Structural,,1.42,-0.4518,0.26,front lower control arm (transverse link)
+78,331,ALTIMA2000_SUSP_PanhardRod_Rear,Suspension_Rear,SU,Rear,PanhardRod,MAT_Steel_Structural,,-1.12,0.0,0.33,lateral locating rod
+79,333,ALTIMA2000_SUSP_PinionHousing_Steering,Suspension_Steering,SR,Steering,Pinion,MAT_Aluminium_Cast,,1.48,-0.13,0.43,steering pinion housing
+80,339,ALTIMA2000_SUSP_RackBoot_Rubber_L,Suspension_Steering,SR,Steering,RackBoot,MAT_Rubber_Hose,,1.48,0.33,0.395,rack end rubber boot
+81,336,ALTIMA2000_SUSP_RackBoot_Rubber_R,Suspension_Steering,SR,Steering,RackBoot,MAT_Rubber_Hose,,1.48,-0.33,0.395,rack end rubber boot
+82,315,ALTIMA2000_SUSP_StabilizerBar_Front_L,Suspension_Front,SU,Front,StabilizerBar_L,MAT_Suspension_Spring,,1.76,1.06926,0.42,front stabiliser (anti-roll) bar
+83,302,ALTIMA2000_SUSP_StabilizerBar_Front_R,Suspension_Front,SU,Front,StabilizerBar_R,MAT_Suspension_Spring,,1.76,-1.06926,0.42,front stabiliser (anti-roll) bar
+84,317,ALTIMA2000_SUSP_StabilizerBushing_Front_L,Suspension_Front,SU,Front,StabilizerBush_L,MAT_Suspension_Bushing,,1.56,0.2259,0.41,stabiliser bar bushing
+85,304,ALTIMA2000_SUSP_StabilizerBushing_Front_R,Suspension_Front,SU,Front,StabilizerBush_R,MAT_Suspension_Bushing,,1.56,-0.2259,0.41,stabiliser bar bushing
+86,316,ALTIMA2000_SUSP_StabilizerLink_Front_L,Suspension_Front,SU,Front,StabilizerLink_L,MAT_Steel_Structural,,1.7,0.69276,0.36,stabiliser link rod
+87,303,ALTIMA2000_SUSP_StabilizerLink_Front_R,Suspension_Front,SU,Front,StabilizerLink_R,MAT_Steel_Structural,,1.7,-0.69276,0.36,stabiliser link rod
+88,340,ALTIMA2000_SUSP_SteeringColumn_Assembly,Suspension_Steering,SR,Steering,Column,MAT_Steel_Structural,,0.4,-0.36,0.73,collapsible steering column
+89,313,ALTIMA2000_SUSP_SteeringKnuckle_Front_L,Suspension_Front,SU,Front,Knuckle,MAT_CastIron_Exhaust,,1.38,0.749235,0.32,front steering knuckle
+90,300,ALTIMA2000_SUSP_SteeringKnuckle_Front_R,Suspension_Front,SU,Front,Knuckle,MAT_CastIron_Exhaust,,1.38,-0.749235,0.32,front steering knuckle
+91,332,ALTIMA2000_SUSP_SteeringRack_Assembly,Suspension_Steering,SR,Steering,Rack,MAT_Aluminium_Cast,,1.48,0.0,0.4,power steering rack and pinion
+92,341,ALTIMA2000_SUSP_SteeringUJoint_Lower,Suspension_Steering,SR,Steering,UJoint,MAT_Steel_Structural,,0.93,-0.22,0.64,steering intermediate shaft universal joint
+93,343,ALTIMA2000_SUSP_SteeringWheelHub_Centre,Suspension_Steering,SR,Steering,WheelHub,MAT_Plastic_DarkGrey,,0.39,-0.36,0.735,steering wheel hub with airbag
+94,342,ALTIMA2000_SUSP_SteeringWheel_Rim,Suspension_Steering,SR,Steering,SteeringWheel,MAT_Plastic_DarkGrey,,0.36,-0.36,0.735,steering wheel rim
+95,305,ALTIMA2000_SUSP_StrutDamper_Front_L,Suspension_Front,SU,Front,StrutDamper,MAT_Shock_Absorber_Body,,1.38,0.72288,0.52,front strut damper body
+96,292,ALTIMA2000_SUSP_StrutDamper_Front_R,Suspension_Front,SU,Front,StrutDamper,MAT_Shock_Absorber_Body,,1.38,-0.72288,0.52,front strut damper body
+97,326,ALTIMA2000_SUSP_StrutDamper_Rear_L,Suspension_Rear,SU,Rear,StrutDamperR,MAT_Shock_Absorber_Body,,-1.24,0.71535,0.43,rear shock absorber
+98,320,ALTIMA2000_SUSP_StrutDamper_Rear_R,Suspension_Rear,SU,Rear,StrutDamperR,MAT_Shock_Absorber_Body,,-1.24,-0.71535,0.43,rear shock absorber
+99,328,ALTIMA2000_SUSP_StrutMount_Rear_L,Suspension_Rear,SU,Rear,StrutMountR,MAT_Steel_Structural,,-1.24,0.71535,0.62,rear upper shock mount
+100,322,ALTIMA2000_SUSP_StrutMount_Rear_R,Suspension_Rear,SU,Rear,StrutMountR,MAT_Steel_Structural,,-1.24,-0.71535,0.62,rear upper shock mount
+101,308,ALTIMA2000_SUSP_StrutMount_Upper_L,Suspension_Front,SU,Front,StrutMount,MAT_Steel_Structural,,1.38,0.72288,0.88,upper strut mount bearing
+102,295,ALTIMA2000_SUSP_StrutMount_Upper_R,Suspension_Front,SU,Front,StrutMount,MAT_Steel_Structural,,1.38,-0.72288,0.88,upper strut mount bearing
+103,306,ALTIMA2000_SUSP_StrutRod_Front_L,Suspension_Front,SU,Front,StrutRod,MAT_Shock_Piston_Rod,,1.38,0.72288,0.72,front strut piston rod
+104,293,ALTIMA2000_SUSP_StrutRod_Front_R,Suspension_Front,SU,Front,StrutRod,MAT_Shock_Piston_Rod,,1.38,-0.72288,0.72,front strut piston rod
+105,338,ALTIMA2000_SUSP_TieRodEnd_Outer_L,Suspension_Steering,SR,Steering,TieRodEnd,MAT_Steel_Structural,,1.38,0.64,0.36,outer tie rod end
+106,335,ALTIMA2000_SUSP_TieRodEnd_Outer_R,Suspension_Steering,SR,Steering,TieRodEnd,MAT_Steel_Structural,,1.38,-0.64,0.36,outer tie rod end
+107,337,ALTIMA2000_SUSP_TieRod_Inner_L,Suspension_Steering,SR,Steering,TieRod,MAT_Steel_Structural,,1.48,0.27,0.39,inner tie rod
+108,334,ALTIMA2000_SUSP_TieRod_Inner_R,Suspension_Steering,SR,Steering,TieRod,MAT_Steel_Structural,,1.48,-0.27,0.39,inner tie rod
+109,329,ALTIMA2000_SUSP_TrailingArmBushing_Rear_L,Suspension_Rear,SU,Rear,TrailingArmBush,MAT_Suspension_Bushing,,-0.74,0.64758,0.29,trailing arm pivot bushing
+110,323,ALTIMA2000_SUSP_TrailingArmBushing_Rear_R,Suspension_Rear,SU,Rear,TrailingArmBush,MAT_Suspension_Bushing,,-0.74,-0.64758,0.29,trailing arm pivot bushing
+111,325,ALTIMA2000_SUSP_TrailingArm_Rear_L,Suspension_Rear,SU,Rear,TrailingArm,MAT_Steel_Structural,,-0.99,0.64758,0.29,rear trailing arm
+112,319,ALTIMA2000_SUSP_TrailingArm_Rear_R,Suspension_Rear,SU,Rear,TrailingArm,MAT_Steel_Structural,,-0.99,-0.64758,0.29,rear trailing arm

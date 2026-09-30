@@ -1,0 +1,83 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,263,ALTIMA2000_ENG_EngineMount_Bracket_001,Drivetrain_Mount,TR,Mount,EngineMount,MAT_Steel_Structural,,1.02,-0.28,0.375,engine mount bracket
+2,265,ALTIMA2000_ENG_EngineMount_Bracket_002,Drivetrain_Mount,TR,Mount,EngineMount,MAT_Steel_Structural,,1.02,0.33,0.375,engine mount bracket
+3,264,ALTIMA2000_ENG_EngineMount_Insulator_001,Drivetrain_Mount,TR,Mount,EngineMountIns,MAT_Suspension_Bushing,,1.02,-0.29,0.29,engine mount insulator
+4,266,ALTIMA2000_ENG_EngineMount_Insulator_002,Drivetrain_Mount,TR,Mount,EngineMountIns,MAT_Suspension_Bushing,,1.02,0.34,0.29,engine mount insulator
+5,281,ALTIMA2000_TRN_CVBoot_Rubber_001,Drivetrain_Drive,TR,Drive,CVBoot,MAT_Rubber_Hose,,0.07,0.19,0.29,CV joint rubber boot
+6,283,ALTIMA2000_TRN_CVBoot_Rubber_002,Drivetrain_Drive,TR,Drive,CVBoot,MAT_Rubber_Hose,,0.07,0.63,0.29,CV joint rubber boot
+7,286,ALTIMA2000_TRN_CVBoot_Rubber_003,Drivetrain_Drive,TR,Drive,CVBoot,MAT_Rubber_Hose,,0.07,-0.19,0.29,CV joint rubber boot
+8,288,ALTIMA2000_TRN_CVBoot_Rubber_004,Drivetrain_Drive,TR,Drive,CVBoot,MAT_Rubber_Hose,,0.07,-0.63,0.29,CV joint rubber boot
+9,280,ALTIMA2000_TRN_CVJoint_ConstantVelocity_001,Drivetrain_Drive,TR,Drive,CVJoint,MAT_Steel_Structural,,0.07,0.135,0.29,constant velocity joint
+10,282,ALTIMA2000_TRN_CVJoint_ConstantVelocity_002,Drivetrain_Drive,TR,Drive,CVJoint,MAT_Steel_Structural,,0.07,0.58,0.29,constant velocity joint
+11,285,ALTIMA2000_TRN_CVJoint_ConstantVelocity_003,Drivetrain_Drive,TR,Drive,CVJoint,MAT_Steel_Structural,,0.07,-0.135,0.29,constant velocity joint
+12,287,ALTIMA2000_TRN_CVJoint_ConstantVelocity_004,Drivetrain_Drive,TR,Drive,CVJoint,MAT_Steel_Structural,,0.07,-0.58,0.29,constant velocity joint
+13,277,ALTIMA2000_TRN_Differential_Carrier,Drivetrain_Transaxle,TR,Transaxle,Differential,MAT_Steel_Structural,,0.07,0.0,0.29,final drive / differential assembly
+14,279,ALTIMA2000_TRN_DriveShaft_Axle_001,Drivetrain_Drive,TR,Drive,Axle,MAT_Steel_Structural,,0.07,0.36,0.29,front drive axle shaft
+15,284,ALTIMA2000_TRN_DriveShaft_Axle_002,Drivetrain_Drive,TR,Drive,Axle,MAT_Steel_Structural,,0.07,-0.36,0.29,front drive axle shaft
+16,1479,ALTIMA2000_TRN_HexBolt_Bellhousing_001,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,2.328085,-0.2812,0.97,transaxle bellhousing bolt (M12)
+17,1480,ALTIMA2000_TRN_HexBolt_Bellhousing_002,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.483838,-0.643981,0.53984,transaxle bellhousing bolt (M12)
+18,1481,ALTIMA2000_TRN_HexBolt_Bellhousing_003,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.254026,0.473238,1.109681,transaxle bellhousing bolt (M12)
+19,1482,ALTIMA2000_TRN_HexBolt_Bellhousing_004,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.557897,0.110457,0.679521,transaxle bellhousing bolt (M12)
+20,1483,ALTIMA2000_TRN_HexBolt_Bellhousing_005,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.179967,-0.252324,1.249361,transaxle bellhousing bolt (M12)
+21,1484,ALTIMA2000_TRN_HexBolt_Bellhousing_006,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.917831,-0.615105,0.819201,transaxle bellhousing bolt (M12)
+22,1485,ALTIMA2000_TRN_HexBolt_Bellhousing_007,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.894092,0.502114,0.389042,transaxle bellhousing bolt (M12)
+23,1486,ALTIMA2000_TRN_HexBolt_Bellhousing_008,Drivetrain_Transaxle,TR,Bellhousing,HexBolt_Bellhousing,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.843772,0.139333,0.958882,transaxle bellhousing bolt (M12)
+24,1523,ALTIMA2000_TRN_HexBolt_CVJoint_001,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,CV joint flange bolt (M8)
+25,1524,ALTIMA2000_TRN_HexBolt_CVJoint_002,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,CV joint flange bolt (M8)
+26,1525,ALTIMA2000_TRN_HexBolt_CVJoint_003,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,CV joint flange bolt (M8)
+27,1526,ALTIMA2000_TRN_HexBolt_CVJoint_004,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,CV joint flange bolt (M8)
+28,1527,ALTIMA2000_TRN_HexBolt_CVJoint_005,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.179967,-0.252324,1.249361,CV joint flange bolt (M8)
+29,1528,ALTIMA2000_TRN_HexBolt_CVJoint_006,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.917831,-0.615105,0.819201,CV joint flange bolt (M8)
+30,1529,ALTIMA2000_TRN_HexBolt_CVJoint_007,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.894092,0.502114,0.389042,CV joint flange bolt (M8)
+31,1530,ALTIMA2000_TRN_HexBolt_CVJoint_008,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.843772,0.139333,0.958882,CV joint flange bolt (M8)
+32,1531,ALTIMA2000_TRN_HexBolt_CVJoint_009,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.968151,-0.223448,0.528722,CV joint flange bolt (M8)
+33,1532,ALTIMA2000_TRN_HexBolt_CVJoint_010,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.230287,-0.58623,1.098563,CV joint flange bolt (M8)
+34,1533,ALTIMA2000_TRN_HexBolt_CVJoint_011,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.507577,0.530989,0.668403,CV joint flange bolt (M8)
+35,1534,ALTIMA2000_TRN_HexBolt_CVJoint_012,Drivetrain_Drive,TR,CVJoint,HexBolt_CVJoint,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.304346,0.168208,1.238243,CV joint flange bolt (M8)
+36,1509,ALTIMA2000_TRN_HexBolt_EngineMount_001,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,engine mount bolt (M10)
+37,1510,ALTIMA2000_TRN_HexBolt_EngineMount_002,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,engine mount bolt (M10)
+38,1511,ALTIMA2000_TRN_HexBolt_EngineMount_003,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,engine mount bolt (M10)
+39,1512,ALTIMA2000_TRN_HexBolt_EngineMount_004,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,engine mount bolt (M10)
+40,1513,ALTIMA2000_TRN_HexBolt_EngineMount_005,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,engine mount bolt (M10)
+41,1514,ALTIMA2000_TRN_HexBolt_EngineMount_006,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,engine mount bolt (M10)
+42,1515,ALTIMA2000_TRN_HexBolt_EngineMount_007,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.894092,0.502114,0.389042,engine mount bolt (M10)
+43,1516,ALTIMA2000_TRN_HexBolt_EngineMount_008,Drivetrain_Mount,TR,EngineMount,HexBolt_EngineMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.843772,0.139333,0.958882,engine mount bolt (M10)
+44,1497,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_001,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,transaxle oil pan bolt (M6)
+45,1498,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_002,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,transaxle oil pan bolt (M6)
+46,1499,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_003,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,transaxle oil pan bolt (M6)
+47,1500,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_004,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,transaxle oil pan bolt (M6)
+48,1501,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_005,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,transaxle oil pan bolt (M6)
+49,1502,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_006,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,transaxle oil pan bolt (M6)
+50,1503,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_007,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.894092,0.502114,0.389042,transaxle oil pan bolt (M6)
+51,1504,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_008,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.843772,0.139333,0.958882,transaxle oil pan bolt (M6)
+52,1505,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_009,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.968151,-0.223448,0.528722,transaxle oil pan bolt (M6)
+53,1506,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_010,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.230287,-0.58623,1.098563,transaxle oil pan bolt (M6)
+54,1507,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_011,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.507577,0.530989,0.668403,transaxle oil pan bolt (M6)
+55,1508,ALTIMA2000_TRN_HexBolt_OilPanTransaxle_012,Drivetrain_Transaxle,TR,OilPanTransaxle,HexBolt_OilPanTransaxle,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.304346,0.168208,1.238243,transaxle oil pan bolt (M6)
+56,1517,ALTIMA2000_TRN_HexBolt_TransMount_001,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,transaxle mount bolt (M10)
+57,1518,ALTIMA2000_TRN_HexBolt_TransMount_002,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,transaxle mount bolt (M10)
+58,1519,ALTIMA2000_TRN_HexBolt_TransMount_003,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,transaxle mount bolt (M10)
+59,1520,ALTIMA2000_TRN_HexBolt_TransMount_004,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,transaxle mount bolt (M10)
+60,1521,ALTIMA2000_TRN_HexBolt_TransMount_005,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,transaxle mount bolt (M10)
+61,1522,ALTIMA2000_TRN_HexBolt_TransMount_006,Drivetrain_Mount,TR,TransMount,HexBolt_TransMount,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,transaxle mount bolt (M10)
+62,1487,ALTIMA2000_TRN_HexBolt_ValveBody_001,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,valve body bolt (M6)
+63,1488,ALTIMA2000_TRN_HexBolt_ValveBody_002,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,valve body bolt (M6)
+64,1489,ALTIMA2000_TRN_HexBolt_ValveBody_003,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,valve body bolt (M6)
+65,1490,ALTIMA2000_TRN_HexBolt_ValveBody_004,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,valve body bolt (M6)
+66,1491,ALTIMA2000_TRN_HexBolt_ValveBody_005,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,valve body bolt (M6)
+67,1492,ALTIMA2000_TRN_HexBolt_ValveBody_006,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,valve body bolt (M6)
+68,1493,ALTIMA2000_TRN_HexBolt_ValveBody_007,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.894092,0.502114,0.389042,valve body bolt (M6)
+69,1494,ALTIMA2000_TRN_HexBolt_ValveBody_008,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.843772,0.139333,0.958882,valve body bolt (M6)
+70,1495,ALTIMA2000_TRN_HexBolt_ValveBody_009,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.968151,-0.223448,0.528722,valve body bolt (M6)
+71,1496,ALTIMA2000_TRN_HexBolt_ValveBody_010,Drivetrain_Transaxle,TR,ValveBody,HexBolt_ValveBody,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.230287,-0.58623,1.098563,valve body bolt (M6)
+72,278,ALTIMA2000_TRN_Output_SpeedSensor,Drivetrain_Transaxle,TR,Transaxle,VSS,MAT_Plastic_Black_Matte,,0.07,0.14,0.29,vehicle speed sensor
+73,291,ALTIMA2000_TRN_ShiftCable_Selector,Drivetrain_Drive,TR,Drive,ShiftCable,MAT_Wire_Loom_Black,,0.3,-0.06,0.56,shift selector cable
+74,272,ALTIMA2000_TRN_TorqueConverter_Assembly,Drivetrain_Transaxle,TR,Transaxle,TorqueConverter,MAT_Steel_Structural,,0.28,0.0,0.4,torque converter
+75,271,ALTIMA2000_TRN_TorqueConverter_Housing,Drivetrain_Transaxle,TR,Transaxle,Bellhousing,MAT_Aluminium_Cast,,0.32,0.0,0.4,torque converter housing / bellhousing
+76,289,ALTIMA2000_TRN_TransaxleMount_Insulator_001,Drivetrain_Mount,TR,Mount,TransMount,MAT_Suspension_Bushing,,0.13,-0.27,0.18,transaxle mount insulator
+77,290,ALTIMA2000_TRN_TransaxleMount_Insulator_002,Drivetrain_Mount,TR,Mount,TransMount,MAT_Suspension_Bushing,,0.13,0.3,0.18,transaxle mount insulator
+78,270,ALTIMA2000_TRN_Transaxle_Case,Drivetrain_Transaxle,TR,Transaxle,Case,MAT_Aluminium_Cast,,0.13,0.0,0.4,transaxle case - 4-speed automatic (RE4F04A)
+79,276,ALTIMA2000_TRN_Transaxle_Dipstick,Drivetrain_Transaxle,TR,Transaxle,Dipstick,MAT_Steel_Structural,,0.56,-0.13,0.7,automatic transaxle dipstick
+80,275,ALTIMA2000_TRN_Transaxle_Filter,Drivetrain_Transaxle,TR,Transaxle,Filter,MAT_Filter_Element,,0.13,0.0,0.2,transmission fluid filter
+81,274,ALTIMA2000_TRN_Transaxle_OilPan,Drivetrain_Transaxle,TR,Transaxle,OilPan,MAT_Steel_Structural,,0.13,0.0,0.17,transaxle oil pan
+82,273,ALTIMA2000_TRN_ValveBody_Assembly,Drivetrain_Transaxle,TR,Transaxle,ValveBody,MAT_Aluminium_Cast,,0.13,0.0,0.23,valve body

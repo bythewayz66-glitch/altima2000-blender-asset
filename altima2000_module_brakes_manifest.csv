@@ -1,0 +1,62 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,422,ALTIMA2000_BRAK_ABSModule_Hydraulic,Brakes_Hydraulics,BR,Hydraulics,ABSModule,MAT_Aluminium_Cast,,1.955745,0.24,0.88,ABS hydraulic control module
+2,421,ALTIMA2000_BRAK_BrakeBooster_Vacuum,Brakes_Hydraulics,BR,Hydraulics,Booster,MAT_Steel_Structural,,1.7,-0.14,0.9,vacuum brake booster
+3,427,ALTIMA2000_BRAK_BrakeHose_Flexible_L_02,Brakes_Hydraulics,BR,Hydraulics,BrakeHose,MAT_Rubber_Hose,,1.38,-0.671097,0.391167,flexible brake hose
+4,431,ALTIMA2000_BRAK_BrakeHose_Flexible_L_04,Brakes_Hydraulics,BR,Hydraulics,BrakeHose,MAT_Rubber_Hose,,-1.24,-0.671097,0.391167,flexible brake hose
+5,425,ALTIMA2000_BRAK_BrakeHose_Flexible_R_01,Brakes_Hydraulics,BR,Hydraulics,BrakeHose,MAT_Rubber_Hose,,1.38,0.671097,0.391167,flexible brake hose
+6,429,ALTIMA2000_BRAK_BrakeHose_Flexible_R_03,Brakes_Hydraulics,BR,Hydraulics,BrakeHose,MAT_Rubber_Hose,,-1.24,0.671097,0.391167,flexible brake hose
+7,426,ALTIMA2000_BRAK_BrakeLine_Rigid_L_02,Brakes_Hydraulics,BR,Hydraulics,BrakeLine,MAT_Copper_Wire,,1.426667,-0.346667,0.6,rigid brake line
+8,430,ALTIMA2000_BRAK_BrakeLine_Rigid_L_04,Brakes_Hydraulics,BR,Hydraulics,BrakeLine,MAT_Copper_Wire,,0.553333,-0.346667,0.6,rigid brake line
+9,424,ALTIMA2000_BRAK_BrakeLine_Rigid_R_01,Brakes_Hydraulics,BR,Hydraulics,BrakeLine,MAT_Copper_Wire,,1.426667,0.346667,0.6,rigid brake line
+10,428,ALTIMA2000_BRAK_BrakeLine_Rigid_R_03,Brakes_Hydraulics,BR,Hydraulics,BrakeLine,MAT_Copper_Wire,,0.553333,0.346667,0.6,rigid brake line
+11,414,ALTIMA2000_BRAK_Caliper_Front_L,Brakes_Front,BR,Front,Caliper_FrontL,MAT_Brake_Caliper_Cast,,1.458,0.68523,0.3135,brake caliper body
+12,404,ALTIMA2000_BRAK_Caliper_Front_R,Brakes_Front,BR,Front,Caliper_FrontR,MAT_Brake_Caliper_Cast,,1.458,-0.68523,0.3135,brake caliper body
+13,419,ALTIMA2000_BRAK_Caliper_Rear_L,Brakes_Rear,BR,Rear,Caliper_RearL,MAT_Brake_Caliper_Cast,,-1.162,0.68523,0.3135,brake caliper body
+14,409,ALTIMA2000_BRAK_Caliper_Rear_R,Brakes_Rear,BR,Rear,Caliper_RearR,MAT_Brake_Caliper_Cast,,-1.162,-0.68523,0.3135,brake caliper body
+15,410,ALTIMA2000_BRAK_Disc_Front_L,Brakes_Front,BR,Front,Disc_FrontL,MAT_BrakeDisc_GreyIron,TPL_BrakeDisc,1.38,0.64758,0.3135,vented brake disc
+16,400,ALTIMA2000_BRAK_Disc_Front_R,Brakes_Front,BR,Front,Disc_FrontR,MAT_BrakeDisc_GreyIron,TPL_BrakeDisc,1.38,-0.64758,0.3135,vented brake disc
+17,415,ALTIMA2000_BRAK_Disc_Rear_L,Brakes_Rear,BR,Rear,Disc_RearL,MAT_BrakeDisc_GreyIron,TPL_BrakeDisc,-1.24,0.64758,0.3135,vented brake disc
+18,405,ALTIMA2000_BRAK_Disc_Rear_R,Brakes_Rear,BR,Rear,Disc_RearR,MAT_BrakeDisc_GreyIron,TPL_BrakeDisc,-1.24,-0.64758,0.3135,vented brake disc
+19,1607,ALTIMA2000_BRAK_HexBolt_Booster_001,Brakes_Hydraulics,BR,Booster,HexBolt_Booster,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,brake booster nut (M8)
+20,1608,ALTIMA2000_BRAK_HexBolt_Booster_002,Brakes_Hydraulics,BR,Booster,HexBolt_Booster,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,brake booster nut (M8)
+21,1609,ALTIMA2000_BRAK_HexBolt_Booster_003,Brakes_Hydraulics,BR,Booster,HexBolt_Booster,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,brake booster nut (M8)
+22,1610,ALTIMA2000_BRAK_HexBolt_Booster_004,Brakes_Hydraulics,BR,Booster,HexBolt_Booster,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,brake booster nut (M8)
+23,1595,ALTIMA2000_BRAK_HexBolt_CaliperRear_001,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,2.328085,-0.2812,0.97,rear caliper mounting bolt (M12)
+24,1596,ALTIMA2000_BRAK_HexBolt_CaliperRear_002,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.483838,-0.643981,0.53984,rear caliper mounting bolt (M12)
+25,1597,ALTIMA2000_BRAK_HexBolt_CaliperRear_003,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.254026,0.473238,1.109681,rear caliper mounting bolt (M12)
+26,1598,ALTIMA2000_BRAK_HexBolt_CaliperRear_004,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-1.557897,0.110457,0.679521,rear caliper mounting bolt (M12)
+27,1599,ALTIMA2000_BRAK_HexBolt_CaliperRear_005,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.179967,-0.252324,1.249361,rear caliper mounting bolt (M12)
+28,1600,ALTIMA2000_BRAK_HexBolt_CaliperRear_006,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,1.917831,-0.615105,0.819201,rear caliper mounting bolt (M12)
+29,1601,ALTIMA2000_BRAK_HexBolt_CaliperRear_007,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,-0.894092,0.502114,0.389042,rear caliper mounting bolt (M12)
+30,1602,ALTIMA2000_BRAK_HexBolt_CaliperRear_008,Brakes_Rear,BR,CaliperRear,HexBolt_CaliperRear,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M12,0.843772,0.139333,0.958882,rear caliper mounting bolt (M12)
+31,1587,ALTIMA2000_BRAK_HexBolt_Caliper_001,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,2.328085,-0.2812,0.97,front caliper mounting bolt (M14)
+32,1588,ALTIMA2000_BRAK_HexBolt_Caliper_002,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,-0.483838,-0.643981,0.53984,front caliper mounting bolt (M14)
+33,1589,ALTIMA2000_BRAK_HexBolt_Caliper_003,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,1.254026,0.473238,1.109681,front caliper mounting bolt (M14)
+34,1590,ALTIMA2000_BRAK_HexBolt_Caliper_004,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,-1.557897,0.110457,0.679521,front caliper mounting bolt (M14)
+35,1591,ALTIMA2000_BRAK_HexBolt_Caliper_005,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,0.179967,-0.252324,1.249361,front caliper mounting bolt (M14)
+36,1592,ALTIMA2000_BRAK_HexBolt_Caliper_006,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,1.917831,-0.615105,0.819201,front caliper mounting bolt (M14)
+37,1593,ALTIMA2000_BRAK_HexBolt_Caliper_007,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,-0.894092,0.502114,0.389042,front caliper mounting bolt (M14)
+38,1594,ALTIMA2000_BRAK_HexBolt_Caliper_008,Brakes_Front,BR,Caliper,HexBolt_Caliper,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M14,0.843772,0.139333,0.958882,front caliper mounting bolt (M14)
+39,1603,ALTIMA2000_BRAK_HexBolt_MasterCylinder_001,Brakes_Hydraulics,BR,MasterCylinder,HexBolt_MasterCylinder,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,master cylinder nut (M8)
+40,1604,ALTIMA2000_BRAK_HexBolt_MasterCylinder_002,Brakes_Hydraulics,BR,MasterCylinder,HexBolt_MasterCylinder,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,master cylinder nut (M8)
+41,1605,ALTIMA2000_BRAK_HexBolt_MasterCylinder_003,Brakes_Hydraulics,BR,MasterCylinder,HexBolt_MasterCylinder,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,master cylinder nut (M8)
+42,1606,ALTIMA2000_BRAK_HexBolt_MasterCylinder_004,Brakes_Hydraulics,BR,MasterCylinder,HexBolt_MasterCylinder,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,master cylinder nut (M8)
+43,1332,ALTIMA2000_BRAK_Hose_VacuumBooster_001,Brakes_Hydraulics,BR,Brakes_Hydraulics,Hose_VacuumBooster,MAT_Hose_Routed_Rubber,,1.0,0.2,0.78,"brake booster vacuum hose, intake manifold to the booster, segment 1/2"
+44,1333,ALTIMA2000_BRAK_Hose_VacuumBooster_002,Brakes_Hydraulics,BR,Brakes_Hydraulics,Hose_VacuumBooster,MAT_Hose_Routed_Rubber,,0.660591,-0.29904,0.720115,"brake booster vacuum hose, intake manifold to the booster, segment 2/2"
+45,420,ALTIMA2000_BRAK_MasterCylinder_Tandem,Brakes_Hydraulics,BR,Hydraulics,MasterCylinder,MAT_Aluminium_Cast,,1.870638,-0.14,0.94,tandem master cylinder
+46,411,ALTIMA2000_BRAK_Pad_Front_L_1,Brakes_Front,BR,Front,Pad_FrontL,MAT_Brake_Pad_Friction,TPL_BrakePad,1.45,0.6777,0.3435,brake pad
+47,412,ALTIMA2000_BRAK_Pad_Front_L_2,Brakes_Front,BR,Front,Pad_FrontL,MAT_Brake_Pad_Friction,TPL_BrakePad,1.45,0.6777,0.2835,brake pad
+48,401,ALTIMA2000_BRAK_Pad_Front_R_1,Brakes_Front,BR,Front,Pad_FrontR,MAT_Brake_Pad_Friction,TPL_BrakePad,1.45,-0.6777,0.3435,brake pad
+49,402,ALTIMA2000_BRAK_Pad_Front_R_2,Brakes_Front,BR,Front,Pad_FrontR,MAT_Brake_Pad_Friction,TPL_BrakePad,1.45,-0.6777,0.2835,brake pad
+50,416,ALTIMA2000_BRAK_Pad_Rear_L_1,Brakes_Rear,BR,Rear,Pad_RearL,MAT_Brake_Pad_Friction,TPL_BrakePad,-1.17,0.6777,0.3435,brake pad
+51,417,ALTIMA2000_BRAK_Pad_Rear_L_2,Brakes_Rear,BR,Rear,Pad_RearL,MAT_Brake_Pad_Friction,TPL_BrakePad,-1.17,0.6777,0.2835,brake pad
+52,406,ALTIMA2000_BRAK_Pad_Rear_R_1,Brakes_Rear,BR,Rear,Pad_RearR,MAT_Brake_Pad_Friction,TPL_BrakePad,-1.17,-0.6777,0.3435,brake pad
+53,407,ALTIMA2000_BRAK_Pad_Rear_R_2,Brakes_Rear,BR,Rear,Pad_RearR,MAT_Brake_Pad_Friction,TPL_BrakePad,-1.17,-0.6777,0.2835,brake pad
+54,434,ALTIMA2000_BRAK_ParkingBrake_Cable_L,Brakes_Hydraulics,BR,Hydraulics,ParkCable,MAT_Steel_Structural,,-0.62,-0.3608,0.35,parking brake cable
+55,433,ALTIMA2000_BRAK_ParkingBrake_Cable_R,Brakes_Hydraulics,BR,Hydraulics,ParkCable,MAT_Steel_Structural,,-0.62,0.2408,0.35,parking brake cable
+56,432,ALTIMA2000_BRAK_ParkingBrake_Lever,Brakes_Hydraulics,BR,Hydraulics,ParkBrakeLever,MAT_Steel_Structural,,0.02,-0.15,0.42,parking brake lever
+57,413,ALTIMA2000_BRAK_Piston_Front_L,Brakes_Front,BR,Front,Piston_FrontL,MAT_Steel_Structural,TPL_CaliperPiston,1.458,0.6777,0.3135,caliper piston
+58,403,ALTIMA2000_BRAK_Piston_Front_R,Brakes_Front,BR,Front,Piston_FrontR,MAT_Steel_Structural,TPL_CaliperPiston,1.458,-0.6777,0.3135,caliper piston
+59,418,ALTIMA2000_BRAK_Piston_Rear_L,Brakes_Rear,BR,Rear,Piston_RearL,MAT_Steel_Structural,TPL_CaliperPiston,-1.162,0.6777,0.3135,caliper piston
+60,408,ALTIMA2000_BRAK_Piston_Rear_R,Brakes_Rear,BR,Rear,Piston_RearR,MAT_Steel_Structural,TPL_CaliperPiston,-1.162,-0.6777,0.3135,caliper piston
+61,423,ALTIMA2000_BRAK_ProportioningValve_Rear,Brakes_Hydraulics,BR,Hydraulics,PropValve,MAT_Brass_Fitting,,1.6,0.15,0.74,rear proportioning valve

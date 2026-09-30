@@ -1,0 +1,29 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,63,ALTIMA2000_DRM_Frame_FL,Door_Module_Frame,DRM,Frame,Frame_FL,MAT_Paint_Gold_Metallic,,0.180485,0.789268,1.092037,front door frame (window frame + belt reinforcement)
+2,79,ALTIMA2000_DRM_Frame_FR,Door_Module_Frame,DRM,Frame,Frame_FR,MAT_Paint_Gold_Metallic,,0.180485,-0.789268,1.092037,front door frame (window frame + belt reinforcement)
+3,95,ALTIMA2000_DRM_Frame_RL,Door_Module_Frame,DRM,Frame,Frame_RL,MAT_Paint_Gold_Metallic,,-0.58243,0.725066,1.17632,rear door frame (window frame + belt reinforcement)
+4,110,ALTIMA2000_DRM_Frame_RR,Door_Module_Frame,DRM,Frame,Frame_RR,MAT_Paint_Gold_Metallic,,-0.58243,-0.725066,1.17632,rear door frame (window frame + belt reinforcement)
+5,76,ALTIMA2000_DRM_GlassRun_FL,Door_Module_Glazing,DRM,GlassRun,GlassRun_FL,MAT_Rubber_EPDM_Seal,,0.306,0.796539,1.107702,window glass run channel (bailey channel)
+6,92,ALTIMA2000_DRM_GlassRun_FR,Door_Module_Glazing,DRM,GlassRun,GlassRun_FR,MAT_Rubber_EPDM_Seal,,0.306,-0.796539,1.107702,window glass run channel (bailey channel)
+7,107,ALTIMA2000_DRM_GlassRun_RL,Door_Module_Glazing,DRM,GlassRun,GlassRun_RL,MAT_Rubber_EPDM_Seal,,-0.49475,0.718619,1.251967,window glass run channel (bailey channel)
+8,122,ALTIMA2000_DRM_GlassRun_RR,Door_Module_Glazing,DRM,GlassRun,GlassRun_RR,MAT_Rubber_EPDM_Seal,,-0.49475,-0.718619,1.251967,window glass run channel (bailey channel)
+9,65,ALTIMA2000_DRM_Hinge_FL_001,Door_Module_Hardware,DRM,Hinge,Hinge_FL,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+10,66,ALTIMA2000_DRM_Hinge_FL_002,Door_Module_Hardware,DRM,Hinge,Hinge_FL,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+11,81,ALTIMA2000_DRM_Hinge_FR_001,Door_Module_Hardware,DRM,Hinge,Hinge_FR,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+12,82,ALTIMA2000_DRM_Hinge_FR_002,Door_Module_Hardware,DRM,Hinge,Hinge_FR,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+13,97,ALTIMA2000_DRM_Hinge_RL_001,Door_Module_Hardware,DRM,Hinge,Hinge_RL,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+14,98,ALTIMA2000_DRM_Hinge_RL_002,Door_Module_Hardware,DRM,Hinge,Hinge_RL,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+15,112,ALTIMA2000_DRM_Hinge_RR_001,Door_Module_Hardware,DRM,Hinge,Hinge_RR,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+16,113,ALTIMA2000_DRM_Hinge_RR_002,Door_Module_Hardware,DRM,Hinge,Hinge_RR,MAT_Steel_Structural,,0.0,0.0,0.0,door hinge
+17,68,ALTIMA2000_DRM_Latch_FL,Door_Module_Hardware,DRM,Latch,Latch_FL,MAT_Zinc_Plated,,0.0,0.0,0.0,door latch assembly
+18,84,ALTIMA2000_DRM_Latch_FR,Door_Module_Hardware,DRM,Latch,Latch_FR,MAT_Zinc_Plated,,0.0,0.0,0.0,door latch assembly
+19,100,ALTIMA2000_DRM_Latch_RL,Door_Module_Hardware,DRM,Latch,Latch_RL,MAT_Zinc_Plated,,0.0,0.0,0.0,door latch assembly
+20,115,ALTIMA2000_DRM_Latch_RR,Door_Module_Hardware,DRM,Latch,Latch_RR,MAT_Zinc_Plated,,0.0,0.0,0.0,door latch assembly
+21,61,ALTIMA2000_DRM_Skin_FL,Door_Module_Skin,DRM,Skin,Skin_FL,MAT_Paint_Gold_Metallic,,0.180113,0.815935,0.738667,front door loose outer skin (removable)
+22,77,ALTIMA2000_DRM_Skin_FR,Door_Module_Skin,DRM,Skin,Skin_FR,MAT_Paint_Gold_Metallic,,0.180113,-0.815935,0.738667,front door loose outer skin (removable)
+23,93,ALTIMA2000_DRM_Skin_RL,Door_Module_Skin,DRM,Skin,Skin_RL,MAT_Paint_Gold_Metallic,,-0.582487,0.792738,0.740835,rear door loose outer skin (removable)
+24,108,ALTIMA2000_DRM_Skin_RR,Door_Module_Skin,DRM,Skin,Skin_RR,MAT_Paint_Gold_Metallic,,-0.582487,-0.792738,0.740835,rear door loose outer skin (removable)
+25,71,ALTIMA2000_DRM_WindowRegulator_FL,Door_Module_Hardware,DRM,Regulator,WindowRegulator_FL,MAT_Zinc_Plated,,0.0,0.0,0.0,window regulator mechanism
+26,87,ALTIMA2000_DRM_WindowRegulator_FR,Door_Module_Hardware,DRM,Regulator,WindowRegulator_FR,MAT_Zinc_Plated,,0.0,0.0,0.0,window regulator mechanism
+27,102,ALTIMA2000_DRM_WindowRegulator_RL,Door_Module_Hardware,DRM,Regulator,WindowRegulator_RL,MAT_Zinc_Plated,,0.0,0.0,0.0,window regulator mechanism
+28,117,ALTIMA2000_DRM_WindowRegulator_RR,Door_Module_Hardware,DRM,Regulator,WindowRegulator_RR,MAT_Zinc_Plated,,0.0,0.0,0.0,window regulator mechanism

@@ -1,0 +1,196 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,1342,ALTIMA2000_EMIS_Hose_EVAP_001,Engine_Emission,EM,Engine_Emission,Hose_EVAP,MAT_Hose_Routed_Rubber,,1.3,-0.35,0.45,"EVAP purge hose, canister to purge valve and intake, segment 1/3"
+2,1343,ALTIMA2000_EMIS_Hose_EVAP_002,Engine_Emission,EM,Engine_Emission,Hose_EVAP,MAT_Hose_Routed_Rubber,,2.139873,-0.526782,0.748896,"EVAP purge hose, canister to purge valve and intake, segment 2/3"
+3,1344,ALTIMA2000_EMIS_Hose_EVAP_003,Engine_Emission,EM,Engine_Emission,Hose_EVAP,MAT_Hose_Routed_Rubber,,1.107513,0.187335,0.800024,"EVAP purge hose, canister to purge valve and intake, segment 3/3"
+4,256,ALTIMA2000_ENG_ACCompressor_Assembly,Engine,EN,Accessory,ACCompressor,MAT_Engine_CastAlu,,1.03,-0.29,0.315,air conditioning compressor
+5,224,ALTIMA2000_ENG_AirBox_Lower,Engine,EN,Intake,AirBox,MAT_Plastic_Black_Matte,,1.38,0.05,0.745,air cleaner housing lower
+6,225,ALTIMA2000_ENG_AirBox_Upper,Engine,EN,Intake,AirBoxUpper,MAT_Plastic_Black_Matte,,1.38,0.05,0.88,air cleaner housing upper
+7,226,ALTIMA2000_ENG_AirFilter_Element,Engine,EN,Intake,AirFilter,MAT_Filter_Element,,1.38,0.05,0.83,panel air filter element
+8,223,ALTIMA2000_ENG_AirIntakeDuct_Rubber,Engine,EN,Intake,IntakeDuct,MAT_Rubber_Hose,,1.196667,0.3,0.765,air intake duct
+9,254,ALTIMA2000_ENG_Alternator_Assembly,Engine,EN,Accessory,Alternator,MAT_Aluminium_Cast,,0.89,-0.235,0.405,alternator
+10,185,ALTIMA2000_ENG_Block_Cylinder,Engine,EN,LongBlock,Block,MAT_Engine_BlockIron,,1.02,0.0,0.485,"cylinder block - cast iron, 2.4 L KA24DE"
+11,211,ALTIMA2000_ENG_Camshaft_DOHC_001,Engine,EN,Head,Camshaft,MAT_Steel_Structural,,1.02,-0.056,0.757,camshaft (DOHC)
+12,212,ALTIMA2000_ENG_Camshaft_DOHC_002,Engine,EN,Head,Camshaft,MAT_Steel_Structural,,1.02,0.056,0.757,camshaft (DOHC)
+13,242,ALTIMA2000_ENG_CoolantReservoir_Tank,Engine,EN,Cooling,CoolantTank,MAT_Plastic_Ivory,,1.54,0.4,0.76,coolant overflow reservoir
+14,244,ALTIMA2000_ENG_CoolingFan_Blade_001,Engine,EN,Cooling,FanBlade,MAT_Plastic_Black_Matte,,1.415,0.0,0.7,cooling fan blade
+15,245,ALTIMA2000_ENG_CoolingFan_Blade_002,Engine,EN,Cooling,FanBlade,MAT_Plastic_Black_Matte,,1.45,0.0,0.7,cooling fan blade
+16,191,ALTIMA2000_ENG_CoverBolt_Perimeter_001,Engine,EN,Head,CoverBolt,MAT_Steel_Phosphate_Fastener,,0.85,-0.185,0.875,valve cover bolt
+17,192,ALTIMA2000_ENG_CoverBolt_Perimeter_002,Engine,EN,Head,CoverBolt,MAT_Steel_Phosphate_Fastener,,0.963,-0.185,0.875,valve cover bolt
+18,193,ALTIMA2000_ENG_CoverBolt_Perimeter_003,Engine,EN,Head,CoverBolt,MAT_Steel_Phosphate_Fastener,,1.076,-0.185,0.875,valve cover bolt
+19,194,ALTIMA2000_ENG_CoverBolt_Perimeter_004,Engine,EN,Head,CoverBolt,MAT_Steel_Phosphate_Fastener,,1.189,-0.185,0.875,valve cover bolt
+20,186,ALTIMA2000_ENG_Crankcase_Lower,Engine,EN,LongBlock,Crankcase,MAT_Engine_BlockIron,,1.02,0.0,0.31,lower crankcase / main bearing girdle
+21,210,ALTIMA2000_ENG_Crankshaft_Forged,Engine,EN,LongBlock,Crankshaft,MAT_Steel_Structural,,1.02,0.0,0.395,crankshaft
+22,201,ALTIMA2000_ENG_Cylinder_BoreSleeve_001,Engine,EN,LongBlock,Cylinder_1,MAT_Engine_BlockIron,,0.87,0.0,0.485,cylinder bore / piston assembly
+23,202,ALTIMA2000_ENG_Cylinder_BoreSleeve_002,Engine,EN,LongBlock,Cylinder_2,MAT_Engine_BlockIron,,0.97,0.0,0.485,cylinder bore / piston assembly
+24,203,ALTIMA2000_ENG_Cylinder_BoreSleeve_003,Engine,EN,LongBlock,Cylinder_3,MAT_Engine_BlockIron,,1.07,0.0,0.485,cylinder bore / piston assembly
+25,204,ALTIMA2000_ENG_Cylinder_BoreSleeve_004,Engine,EN,LongBlock,Cylinder_4,MAT_Engine_BlockIron,,1.17,0.0,0.485,cylinder bore / piston assembly
+26,214,ALTIMA2000_ENG_Dipstick_Tube,Engine,EN,LongBlock,Dipstick,MAT_Steel_Structural,,1.17,-0.19,0.425,oil level dipstick and tube
+27,269,ALTIMA2000_ENG_Emission_CharcoalCanister,Engine_Emission,EM,EVAP,Canister,MAT_Plastic_Black_Matte,,1.47,-0.3,0.495,EVAP charcoal canister
+28,268,ALTIMA2000_ENG_Emission_EGRValve,Engine_Emission,EM,EGR,EGRValve,MAT_Aluminium_Cast,,1.09,0.3,0.655,EGR valve
+29,267,ALTIMA2000_ENG_EngineCover_Plastic,Engine,EN,Head,EngineCover,MAT_Engine_Cover_ABS,,1.02,0.0,0.895,decorative engine cover
+30,246,ALTIMA2000_ENG_FanMotor_Electric,Engine,EN,Cooling,FanMotor,MAT_Steel_Structural,,1.49,0.0,0.7,fan drive motor
+31,243,ALTIMA2000_ENG_FanShroud_Plastic,Engine,EN,Cooling,FanShroud,MAT_Plastic_Black_Matte,,1.45,0.0,0.7,cooling fan shroud
+32,213,ALTIMA2000_ENG_Flywheel_Driveplate,Engine,EN,LongBlock,Driveplate,MAT_Steel_Structural,,0.72,0.0,0.525,flex plate / drive plate
+33,229,ALTIMA2000_ENG_FuelRail_Stainless,Engine,EN,Intake,FuelRail,MAT_Stainless_Exhaust,,1.03,0.12,0.78,fuel rail
+34,195,ALTIMA2000_ENG_Gasket_Head,Engine,EN,Head,HeadGasket,MAT_Steel_Structural,,1.02,0.0,0.677,multi-layer steel head gasket
+35,189,ALTIMA2000_ENG_Head_Cylinder,Engine,EN,Head,Head,MAT_Engine_CastAlu,,1.02,0.0,0.735,cylinder head - aluminium DOHC 16v
+36,1469,ALTIMA2000_ENG_HexBolt_Alternator_001,Engine_Accessory,EN,Alternator,HexBolt_Alternator,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,alternator mounting bolt (M8)
+37,1470,ALTIMA2000_ENG_HexBolt_Alternator_002,Engine_Accessory,EN,Alternator,HexBolt_Alternator,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,alternator mounting bolt (M8)
+38,1471,ALTIMA2000_ENG_HexBolt_Alternator_003,Engine_Accessory,EN,Alternator,HexBolt_Alternator,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,alternator mounting bolt (M8)
+39,1476,ALTIMA2000_ENG_HexBolt_BeltTensioner_001,Engine_Accessory,EN,BeltTensioner,HexBolt_BeltTensioner,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,belt tensioner bolt (M8)
+40,1477,ALTIMA2000_ENG_HexBolt_BeltTensioner_002,Engine_Accessory,EN,BeltTensioner,HexBolt_BeltTensioner,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,belt tensioner bolt (M8)
+41,1478,ALTIMA2000_ENG_HexBolt_BeltTensioner_003,Engine_Accessory,EN,BeltTensioner,HexBolt_BeltTensioner,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,belt tensioner bolt (M8)
+42,1433,ALTIMA2000_ENG_HexBolt_CamCap_001,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,camshaft bearing cap bolt (M6)
+43,1434,ALTIMA2000_ENG_HexBolt_CamCap_002,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,camshaft bearing cap bolt (M6)
+44,1435,ALTIMA2000_ENG_HexBolt_CamCap_003,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,camshaft bearing cap bolt (M6)
+45,1436,ALTIMA2000_ENG_HexBolt_CamCap_004,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,camshaft bearing cap bolt (M6)
+46,1437,ALTIMA2000_ENG_HexBolt_CamCap_005,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,camshaft bearing cap bolt (M6)
+47,1438,ALTIMA2000_ENG_HexBolt_CamCap_006,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,camshaft bearing cap bolt (M6)
+48,1439,ALTIMA2000_ENG_HexBolt_CamCap_007,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.894092,0.502114,0.389042,camshaft bearing cap bolt (M6)
+49,1440,ALTIMA2000_ENG_HexBolt_CamCap_008,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.843772,0.139333,0.958882,camshaft bearing cap bolt (M6)
+50,1441,ALTIMA2000_ENG_HexBolt_CamCap_009,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.968151,-0.223448,0.528722,camshaft bearing cap bolt (M6)
+51,1442,ALTIMA2000_ENG_HexBolt_CamCap_010,Engine_Head,EN,CamCap,HexBolt_CamCap,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.230287,-0.58623,1.098563,camshaft bearing cap bolt (M6)
+52,1472,ALTIMA2000_ENG_HexBolt_Compressor_001,Engine_Accessory,EN,Compressor,HexBolt_Compressor,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,A/C compressor bolt (M8)
+53,1473,ALTIMA2000_ENG_HexBolt_Compressor_002,Engine_Accessory,EN,Compressor,HexBolt_Compressor,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,A/C compressor bolt (M8)
+54,1474,ALTIMA2000_ENG_HexBolt_Compressor_003,Engine_Accessory,EN,Compressor,HexBolt_Compressor,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,A/C compressor bolt (M8)
+55,1475,ALTIMA2000_ENG_HexBolt_Compressor_004,Engine_Accessory,EN,Compressor,HexBolt_Compressor,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,A/C compressor bolt (M8)
+56,1413,ALTIMA2000_ENG_HexBolt_Crankcase_001,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,main bearing cap bolt (M8)
+57,1414,ALTIMA2000_ENG_HexBolt_Crankcase_002,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,main bearing cap bolt (M8)
+58,1415,ALTIMA2000_ENG_HexBolt_Crankcase_003,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,main bearing cap bolt (M8)
+59,1416,ALTIMA2000_ENG_HexBolt_Crankcase_004,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,main bearing cap bolt (M8)
+60,1417,ALTIMA2000_ENG_HexBolt_Crankcase_005,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.179967,-0.252324,1.249361,main bearing cap bolt (M8)
+61,1418,ALTIMA2000_ENG_HexBolt_Crankcase_006,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.917831,-0.615105,0.819201,main bearing cap bolt (M8)
+62,1419,ALTIMA2000_ENG_HexBolt_Crankcase_007,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.894092,0.502114,0.389042,main bearing cap bolt (M8)
+63,1420,ALTIMA2000_ENG_HexBolt_Crankcase_008,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.843772,0.139333,0.958882,main bearing cap bolt (M8)
+64,1421,ALTIMA2000_ENG_HexBolt_Crankcase_009,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.968151,-0.223448,0.528722,main bearing cap bolt (M8)
+65,1422,ALTIMA2000_ENG_HexBolt_Crankcase_010,Engine_LongBlock,EN,Crankcase,HexBolt_Crankcase,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.230287,-0.58623,1.098563,main bearing cap bolt (M8)
+66,1423,ALTIMA2000_ENG_HexBolt_CylinderHead_001,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,"cylinder head bolt (M10, torque-to-yield)"
+67,1424,ALTIMA2000_ENG_HexBolt_CylinderHead_002,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,"cylinder head bolt (M10, torque-to-yield)"
+68,1425,ALTIMA2000_ENG_HexBolt_CylinderHead_003,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,"cylinder head bolt (M10, torque-to-yield)"
+69,1426,ALTIMA2000_ENG_HexBolt_CylinderHead_004,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,"cylinder head bolt (M10, torque-to-yield)"
+70,1427,ALTIMA2000_ENG_HexBolt_CylinderHead_005,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,"cylinder head bolt (M10, torque-to-yield)"
+71,1428,ALTIMA2000_ENG_HexBolt_CylinderHead_006,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,"cylinder head bolt (M10, torque-to-yield)"
+72,1429,ALTIMA2000_ENG_HexBolt_CylinderHead_007,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.894092,0.502114,0.389042,"cylinder head bolt (M10, torque-to-yield)"
+73,1430,ALTIMA2000_ENG_HexBolt_CylinderHead_008,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.843772,0.139333,0.958882,"cylinder head bolt (M10, torque-to-yield)"
+74,1431,ALTIMA2000_ENG_HexBolt_CylinderHead_009,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.968151,-0.223448,0.528722,"cylinder head bolt (M10, torque-to-yield)"
+75,1432,ALTIMA2000_ENG_HexBolt_CylinderHead_010,Engine_Head,EN,CylinderHead,HexBolt_CylinderHead,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.230287,-0.58623,1.098563,"cylinder head bolt (M10, torque-to-yield)"
+76,1465,ALTIMA2000_ENG_HexBolt_Injector_001,Engine_Fuel,EN,Injector,HexBolt_Injector,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M5,2.328085,-0.2812,0.97,fuel injector retainer bolt (M5)
+77,1466,ALTIMA2000_ENG_HexBolt_Injector_002,Engine_Fuel,EN,Injector,HexBolt_Injector,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M5,-0.483838,-0.643981,0.53984,fuel injector retainer bolt (M5)
+78,1467,ALTIMA2000_ENG_HexBolt_Injector_003,Engine_Fuel,EN,Injector,HexBolt_Injector,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M5,1.254026,0.473238,1.109681,fuel injector retainer bolt (M5)
+79,1468,ALTIMA2000_ENG_HexBolt_Injector_004,Engine_Fuel,EN,Injector,HexBolt_Injector,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M5,-1.557897,0.110457,0.679521,fuel injector retainer bolt (M5)
+80,1443,ALTIMA2000_ENG_HexBolt_IntakeManifold_001,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,2.328085,-0.2812,0.97,intake manifold bolt (M8)
+81,1444,ALTIMA2000_ENG_HexBolt_IntakeManifold_002,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.483838,-0.643981,0.53984,intake manifold bolt (M8)
+82,1445,ALTIMA2000_ENG_HexBolt_IntakeManifold_003,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.254026,0.473238,1.109681,intake manifold bolt (M8)
+83,1446,ALTIMA2000_ENG_HexBolt_IntakeManifold_004,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-1.557897,0.110457,0.679521,intake manifold bolt (M8)
+84,1447,ALTIMA2000_ENG_HexBolt_IntakeManifold_005,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.179967,-0.252324,1.249361,intake manifold bolt (M8)
+85,1448,ALTIMA2000_ENG_HexBolt_IntakeManifold_006,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,1.917831,-0.615105,0.819201,intake manifold bolt (M8)
+86,1449,ALTIMA2000_ENG_HexBolt_IntakeManifold_007,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,-0.894092,0.502114,0.389042,intake manifold bolt (M8)
+87,1450,ALTIMA2000_ENG_HexBolt_IntakeManifold_008,Engine_Head,EN,IntakeManifold,HexBolt_IntakeManifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M8,0.843772,0.139333,0.958882,intake manifold bolt (M8)
+88,1383,ALTIMA2000_ENG_HexBolt_OilPan_001,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,oil pan bolt (M6 x 20)
+89,1384,ALTIMA2000_ENG_HexBolt_OilPan_002,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,oil pan bolt (M6 x 20)
+90,1385,ALTIMA2000_ENG_HexBolt_OilPan_003,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,oil pan bolt (M6 x 20)
+91,1386,ALTIMA2000_ENG_HexBolt_OilPan_004,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,oil pan bolt (M6 x 20)
+92,1387,ALTIMA2000_ENG_HexBolt_OilPan_005,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,oil pan bolt (M6 x 20)
+93,1388,ALTIMA2000_ENG_HexBolt_OilPan_006,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,oil pan bolt (M6 x 20)
+94,1389,ALTIMA2000_ENG_HexBolt_OilPan_007,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.894092,0.502114,0.389042,oil pan bolt (M6 x 20)
+95,1390,ALTIMA2000_ENG_HexBolt_OilPan_008,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.843772,0.139333,0.958882,oil pan bolt (M6 x 20)
+96,1391,ALTIMA2000_ENG_HexBolt_OilPan_009,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.968151,-0.223448,0.528722,oil pan bolt (M6 x 20)
+97,1392,ALTIMA2000_ENG_HexBolt_OilPan_010,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.230287,-0.58623,1.098563,oil pan bolt (M6 x 20)
+98,1393,ALTIMA2000_ENG_HexBolt_OilPan_011,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.507577,0.530989,0.668403,oil pan bolt (M6 x 20)
+99,1394,ALTIMA2000_ENG_HexBolt_OilPan_012,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.304346,0.168208,1.238243,oil pan bolt (M6 x 20)
+100,1395,ALTIMA2000_ENG_HexBolt_OilPan_013,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.433518,-0.194573,0.808083,oil pan bolt (M6 x 20)
+101,1396,ALTIMA2000_ENG_HexBolt_OilPan_014,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.171382,-0.557354,0.377924,oil pan bolt (M6 x 20)
+102,1397,ALTIMA2000_ENG_HexBolt_OilPan_015,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.640541,0.559865,0.947764,oil pan bolt (M6 x 20)
+103,1398,ALTIMA2000_ENG_HexBolt_OilPan_016,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.097323,0.197084,0.517604,oil pan bolt (M6 x 20)
+104,1399,ALTIMA2000_ENG_HexBolt_OilPan_017,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.7146,-0.165697,1.087445,oil pan bolt (M6 x 20)
+105,1400,ALTIMA2000_ENG_HexBolt_OilPan_018,Engine_LongBlock,EN,OilPan,HexBolt_OilPan,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.023264,-0.528478,0.657285,oil pan bolt (M6 x 20)
+106,1401,ALTIMA2000_ENG_HexBolt_TimingCover_001,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,timing cover bolt (M6 x 25)
+107,1402,ALTIMA2000_ENG_HexBolt_TimingCover_002,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,timing cover bolt (M6 x 25)
+108,1403,ALTIMA2000_ENG_HexBolt_TimingCover_003,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,timing cover bolt (M6 x 25)
+109,1404,ALTIMA2000_ENG_HexBolt_TimingCover_004,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,timing cover bolt (M6 x 25)
+110,1405,ALTIMA2000_ENG_HexBolt_TimingCover_005,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,timing cover bolt (M6 x 25)
+111,1406,ALTIMA2000_ENG_HexBolt_TimingCover_006,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,timing cover bolt (M6 x 25)
+112,1407,ALTIMA2000_ENG_HexBolt_TimingCover_007,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.894092,0.502114,0.389042,timing cover bolt (M6 x 25)
+113,1408,ALTIMA2000_ENG_HexBolt_TimingCover_008,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.843772,0.139333,0.958882,timing cover bolt (M6 x 25)
+114,1409,ALTIMA2000_ENG_HexBolt_TimingCover_009,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.968151,-0.223448,0.528722,timing cover bolt (M6 x 25)
+115,1410,ALTIMA2000_ENG_HexBolt_TimingCover_010,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.230287,-0.58623,1.098563,timing cover bolt (M6 x 25)
+116,1411,ALTIMA2000_ENG_HexBolt_TimingCover_011,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.507577,0.530989,0.668403,timing cover bolt (M6 x 25)
+117,1412,ALTIMA2000_ENG_HexBolt_TimingCover_012,Engine_LongBlock,EN,TimingCover,HexBolt_TimingCover,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.304346,0.168208,1.238243,timing cover bolt (M6 x 25)
+118,1459,ALTIMA2000_ENG_HexBolt_WaterPump_001,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,2.328085,-0.2812,0.97,water pump bolt (M6)
+119,1460,ALTIMA2000_ENG_HexBolt_WaterPump_002,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-0.483838,-0.643981,0.53984,water pump bolt (M6)
+120,1461,ALTIMA2000_ENG_HexBolt_WaterPump_003,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.254026,0.473238,1.109681,water pump bolt (M6)
+121,1462,ALTIMA2000_ENG_HexBolt_WaterPump_004,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,-1.557897,0.110457,0.679521,water pump bolt (M6)
+122,1463,ALTIMA2000_ENG_HexBolt_WaterPump_005,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,0.179967,-0.252324,1.249361,water pump bolt (M6)
+123,1464,ALTIMA2000_ENG_HexBolt_WaterPump_006,Engine_Cooling,EN,WaterPump,HexBolt_WaterPump,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M6,1.917831,-0.615105,0.819201,water pump bolt (M6)
+124,1357,ALTIMA2000_ENG_Hose_ACRefrigerant_001,Engine_Accessory,EN,Engine_Accessory,Hose_ACRefrigerant,MAT_Hose_Routed_Rubber,,0.88,-0.28,0.42,"A/C refrigerant line, compressor to condenser, drier and evaporator, segment 1/4"
+125,1358,ALTIMA2000_ENG_Hose_ACRefrigerant_002,Engine_Accessory,EN,Engine_Accessory,Hose_ACRefrigerant,MAT_Hose_Routed_Rubber,,2.133606,-0.520528,0.756325,"A/C refrigerant line, compressor to condenser, drier and evaporator, segment 2/4"
+126,1359,ALTIMA2000_ENG_Hose_ACRefrigerant_003,Engine_Accessory,EN,Engine_Accessory,Hose_ACRefrigerant,MAT_Hose_Routed_Rubber,,1.906566,-0.005066,0.586596,"A/C refrigerant line, compressor to condenser, drier and evaporator, segment 3/4"
+127,1360,ALTIMA2000_ENG_Hose_ACRefrigerant_004,Engine_Accessory,EN,Engine_Accessory,Hose_ACRefrigerant,MAT_Hose_Routed_Rubber,,1.970161,-0.293426,0.559017,"A/C refrigerant line, compressor to condenser, drier and evaporator, segment 4/4"
+128,1348,ALTIMA2000_ENG_Hose_AirIntake_001,Engine_Intake,EN,Engine_Intake,Hose_AirIntake,MAT_Hose_Routed_Rubber,,1.38,0.05,0.72,"air intake duct, air cleaner to throttle body, segment 1/2"
+129,1349,ALTIMA2000_ENG_Hose_AirIntake_002,Engine_Intake,EN,Engine_Intake,Hose_AirIntake,MAT_Hose_Routed_Rubber,,1.498881,0.560319,0.899832,"air intake duct, air cleaner to throttle body, segment 2/2"
+130,1326,ALTIMA2000_ENG_Hose_Bypass_001,Engine_Cooling,EN,Engine_Cooling,Hose_Bypass,MAT_Hose_Routed_Rubber,,1.05,0.2,0.9,"coolant bypass hose, thermostat to water pump, segment 1/1"
+131,1316,ALTIMA2000_ENG_Hose_HeaterInlet_001,Engine_Cooling,EN,Engine_Cooling,Hose_HeaterInlet,MAT_Hose_Routed_Rubber,,0.95,0.15,0.62,"heater inlet hose, water pump through the firewall to the heater core, segment 1/2"
+132,1317,ALTIMA2000_ENG_Hose_HeaterInlet_002,Engine_Cooling,EN,Engine_Cooling,Hose_HeaterInlet,MAT_Hose_Routed_Rubber,,0.645363,0.306012,0.730036,"heater inlet hose, water pump through the firewall to the heater core, segment 2/2"
+133,1321,ALTIMA2000_ENG_Hose_HeaterOutlet_001,Engine_Cooling,EN,Engine_Cooling,Hose_HeaterOutlet,MAT_Hose_Routed_Rubber,,0.62,0.3,0.8,"heater outlet hose, heater core back to the thermostat housing, segment 1/2"
+134,1322,ALTIMA2000_ENG_Hose_HeaterOutlet_002,Engine_Cooling,EN,Engine_Cooling,Hose_HeaterOutlet,MAT_Hose_Routed_Rubber,,0.651069,-0.287943,0.719432,"heater outlet hose, heater core back to the thermostat housing, segment 2/2"
+135,1352,ALTIMA2000_ENG_Hose_PowerSteering_001,Engine_Accessory,EN,Engine_Accessory,Hose_PowerSteering,MAT_Hose_Routed_Rubber,,0.9,-0.3,0.55,"power steering pressure hose, pump to rack, segment 1/2"
+136,1353,ALTIMA2000_ENG_Hose_PowerSteering_002,Engine_Accessory,EN,Engine_Accessory,Hose_PowerSteering,MAT_Hose_Routed_Rubber,,2.141214,-0.522282,0.759818,"power steering pressure hose, pump to rack, segment 2/2"
+137,1312,ALTIMA2000_ENG_Hose_RadiatorLower_001,Engine_Cooling,EN,Engine_Cooling,Hose_RadiatorLower,MAT_Hose_Routed_Rubber,,1.5,-0.25,0.56,"lower radiator hose, radiator to water pump, segment 1/2"
+138,1313,ALTIMA2000_ENG_Hose_RadiatorLower_002,Engine_Cooling,EN,Engine_Cooling,Hose_RadiatorLower,MAT_Hose_Routed_Rubber,,2.13646,-0.511657,0.759467,"lower radiator hose, radiator to water pump, segment 2/2"
+139,1308,ALTIMA2000_ENG_Hose_RadiatorUpper_001,Engine_Cooling,EN,Engine_Cooling,Hose_RadiatorUpper,MAT_Hose_Routed_Rubber,,1.5,0.25,0.93,"upper radiator hose, radiator to thermostat housing, segment 1/2"
+140,1309,ALTIMA2000_ENG_Hose_RadiatorUpper_002,Engine_Cooling,EN,Engine_Cooling,Hose_RadiatorUpper,MAT_Hose_Routed_Rubber,,1.512728,0.553698,0.901595,"upper radiator hose, radiator to thermostat housing, segment 2/2"
+141,1328,ALTIMA2000_ENG_Hose_Reservoir_001,Engine_Cooling,EN,Engine_Cooling,Hose_Reservoir,MAT_Hose_Routed_Rubber,,1.54,0.4,0.76,"coolant reservoir overflow hose, segment 1/2"
+142,1329,ALTIMA2000_ENG_Hose_Reservoir_002,Engine_Cooling,EN,Engine_Cooling,Hose_Reservoir,MAT_Hose_Routed_Rubber,,1.504231,0.560517,0.883505,"coolant reservoir overflow hose, segment 2/2"
+143,1336,ALTIMA2000_ENG_Hose_VacuumLine_001,Engine_Intake,EN,Engine_Intake,Hose_VacuumLine,MAT_Hose_Routed_Rubber,,1.0,0.2,0.78,"intake vacuum line, manifold to throttle body and purge valve, segment 1/3"
+144,1337,ALTIMA2000_ENG_Hose_VacuumLine_002,Engine_Intake,EN,Engine_Intake,Hose_VacuumLine,MAT_Hose_Routed_Rubber,,0.938319,0.425438,0.7306,"intake vacuum line, manifold to throttle body and purge valve, segment 2/3"
+145,1338,ALTIMA2000_ENG_Hose_VacuumLine_003,Engine_Intake,EN,Engine_Intake,Hose_VacuumLine,MAT_Hose_Routed_Rubber,,1.118527,0.18251,0.799509,"intake vacuum line, manifold to throttle body and purge valve, segment 3/3"
+146,222,ALTIMA2000_ENG_IdleControl_Valve,Engine,EN,Intake,IACValve,MAT_Aluminium_Cast,,1.08,0.43,0.73,idle air control valve
+147,258,ALTIMA2000_ENG_IdlerPulley_Belt,Engine,EN,Accessory,IdlerPulley,MAT_Steel_Structural,,0.82,-0.1,0.445,idler pulley
+148,230,ALTIMA2000_ENG_Injector_Fuel_001,Engine,EN,Intake,Injector,MAT_Plastic_Black_Matte,,0.87,0.12,0.76,port fuel injector
+149,231,ALTIMA2000_ENG_Injector_Fuel_002,Engine,EN,Intake,Injector,MAT_Plastic_Black_Matte,,0.97,0.12,0.76,port fuel injector
+150,232,ALTIMA2000_ENG_Injector_Fuel_003,Engine,EN,Intake,Injector,MAT_Plastic_Black_Matte,,1.07,0.12,0.76,port fuel injector
+151,233,ALTIMA2000_ENG_Injector_Fuel_004,Engine,EN,Intake,Injector,MAT_Plastic_Black_Matte,,1.17,0.12,0.76,port fuel injector
+152,215,ALTIMA2000_ENG_IntakeManifold_Alu,Engine,EN,Intake,IntakeManifold,MAT_Engine_CastAlu,,1.02,0.29,0.695,intake manifold (aluminium)
+153,216,ALTIMA2000_ENG_IntakeRunner_Primary_001,Engine,EN,Intake,IntakeRunner,MAT_Engine_CastAlu,,0.87,0.195,0.695,intake runner
+154,217,ALTIMA2000_ENG_IntakeRunner_Primary_002,Engine,EN,Intake,IntakeRunner,MAT_Engine_CastAlu,,0.97,0.195,0.695,intake runner
+155,218,ALTIMA2000_ENG_IntakeRunner_Primary_003,Engine,EN,Intake,IntakeRunner,MAT_Engine_CastAlu,,1.07,0.195,0.695,intake runner
+156,219,ALTIMA2000_ENG_IntakeRunner_Primary_004,Engine,EN,Intake,IntakeRunner,MAT_Engine_CastAlu,,1.17,0.195,0.695,intake runner
+157,227,ALTIMA2000_ENG_MassAirFlow_Sensor,Engine,EN,Intake,MAFSensor,MAT_Plastic_Black_Matte,,1.32,0.18,0.845,mass air flow sensor
+158,188,ALTIMA2000_ENG_OilDrain_Plug,Engine,EN,LongBlock,DrainPlug,MAT_Zinc_Plated,,1.02,-0.14,0.145,oil drain plug
+159,187,ALTIMA2000_ENG_OilPan_Sump,Engine,EN,LongBlock,OilPan,MAT_Steel_Structural,,1.02,0.0,0.21,oil pan / sump
+160,255,ALTIMA2000_ENG_PowerSteeringPump_Assembly,Engine,EN,Accessory,PSPump,MAT_Aluminium_Cast,,1.15,-0.235,0.425,power steering pump
+161,239,ALTIMA2000_ENG_RadiatorCap_Pressure,Engine,EN,Cooling,RadiatorCap,MAT_Zinc_Plated,,1.54,0.27,0.945,pressure cap
+162,241,ALTIMA2000_ENG_RadiatorHose_Lower,Engine,EN,Cooling,HoseLower,MAT_Rubber_Hose,,1.326667,-0.213333,0.513333,lower radiator hose
+163,240,ALTIMA2000_ENG_RadiatorHose_Upper,Engine,EN,Cooling,HoseUpper,MAT_Rubber_Hose,,1.346667,0.226667,0.928333,upper radiator hose
+164,237,ALTIMA2000_ENG_RadiatorTank_Plastic_001,Engine,EN,Cooling,RadiatorTank,MAT_Plastic_Black_Matte,,1.54,-0.34,0.735,radiator end tank
+165,238,ALTIMA2000_ENG_RadiatorTank_Plastic_002,Engine,EN,Cooling,RadiatorTank,MAT_Plastic_Black_Matte,,1.54,0.34,0.735,radiator end tank
+166,236,ALTIMA2000_ENG_Radiator_Core,Engine,EN,Cooling,Radiator,MAT_Aluminium_Cast,,1.54,0.0,0.735,radiator core
+167,228,ALTIMA2000_ENG_Resonator_Intake,Engine,EN,Intake,Resonator,MAT_Plastic_Black_Matte,,1.2,0.29,0.785,intake resonator
+168,262,ALTIMA2000_ENG_SerpentineBelt_AC,Engine,EN,Accessory,Belt,MAT_Belt_Ribbed_Rubber,,1.04,-0.24,0.355,serpentine accessory drive belt
+169,260,ALTIMA2000_ENG_SerpentineBelt_Alternator,Engine,EN,Accessory,Belt,MAT_Belt_Ribbed_Rubber,,1.0,-0.12,0.355,serpentine accessory drive belt
+170,261,ALTIMA2000_ENG_SerpentineBelt_PS,Engine,EN,Accessory,Belt,MAT_Belt_Ribbed_Rubber,,1.02,-0.18,0.355,serpentine accessory drive belt
+171,259,ALTIMA2000_ENG_SerpentineBelt_WaterPump,Engine,EN,Accessory,Belt,MAT_Belt_Ribbed_Rubber,,0.98,-0.06,0.355,serpentine accessory drive belt
+172,196,ALTIMA2000_ENG_SparkPlug_NGK,Engine,EN,Head,SparkPlug,MAT_Steel_Structural,,1.07,-0.15,0.79,spark plug
+173,197,ALTIMA2000_ENG_SparkPlug_NGK_001,Engine,EN,Head,SparkPlug,MAT_Steel_Structural,,0.87,0.14,0.795,spark plug 1-4 (firing order 1-3-4-2)
+174,198,ALTIMA2000_ENG_SparkPlug_NGK_002,Engine,EN,Head,SparkPlug,MAT_Steel_Structural,,0.97,0.14,0.795,spark plug 1-4 (firing order 1-3-4-2)
+175,199,ALTIMA2000_ENG_SparkPlug_NGK_003,Engine,EN,Head,SparkPlug,MAT_Steel_Structural,,1.07,0.14,0.795,spark plug 1-4 (firing order 1-3-4-2)
+176,200,ALTIMA2000_ENG_SparkPlug_NGK_004,Engine,EN,Head,SparkPlug,MAT_Steel_Structural,,1.17,0.14,0.795,spark plug 1-4 (firing order 1-3-4-2)
+177,257,ALTIMA2000_ENG_Tensioner_Belt,Engine,EN,Accessory,BeltTensioner,MAT_Steel_Structural,,1.19,-0.15,0.355,drive belt tensioner
+178,209,ALTIMA2000_ENG_Tensioner_Chain,Engine,EN,LongBlock,Tensioner,MAT_Steel_Structural,,0.84,-0.16,0.635,timing chain tensioner
+179,235,ALTIMA2000_ENG_Thermostat_Housing,Engine,EN,Cooling,Thermostat,MAT_Aluminium_Cast,,1.15,0.16,0.605,thermostat housing
+180,220,ALTIMA2000_ENG_ThrottleBody_Assembly,Engine,EN,Intake,ThrottleBody,MAT_Engine_CastAlu,,0.975,0.395,0.695,throttle body
+181,221,ALTIMA2000_ENG_ThrottlePosition_Sensor,Engine,EN,Intake,TPSSensor,MAT_Plastic_Black_Matte,,0.94,0.43,0.73,throttle position sensor
+182,208,ALTIMA2000_ENG_TimingChain_Roller,Engine,EN,LongBlock,TimingChain,MAT_Steel_Structural,,-0.0,0.0,-0.0,timing chain run
+183,205,ALTIMA2000_ENG_TimingCover_Front,Engine,EN,LongBlock,TimingCover,MAT_Engine_CastAlu,,0.77,0.0,0.525,timing chain cover
+184,207,ALTIMA2000_ENG_TimingGear_Cam,Engine,EN,Head,CamGear,MAT_Steel_Structural,,0.745,0.0,0.735,camshaft timing sprocket
+185,206,ALTIMA2000_ENG_TimingGear_Crank,Engine,EN,LongBlock,CrankGear,MAT_Steel_Structural,,0.745,0.0,0.415,crankshaft timing sprocket
+186,190,ALTIMA2000_ENG_ValveCover_Cam,Engine,EN,Head,ValveCover,MAT_Engine_CastAlu_Worn,,1.02,0.0,0.835,camshaft valve cover
+187,234,ALTIMA2000_ENG_WaterPump_Assembly,Engine,EN,Cooling,WaterPump,MAT_Aluminium_Cast,,0.79,0.15,0.495,coolant pump
+188,1451,ALTIMA2000_EXH_Stud_Manifold_001,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,2.328085,-0.2812,0.97,exhaust manifold stud (M10)
+189,1452,ALTIMA2000_EXH_Stud_Manifold_002,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.483838,-0.643981,0.53984,exhaust manifold stud (M10)
+190,1453,ALTIMA2000_EXH_Stud_Manifold_003,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.254026,0.473238,1.109681,exhaust manifold stud (M10)
+191,1454,ALTIMA2000_EXH_Stud_Manifold_004,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-1.557897,0.110457,0.679521,exhaust manifold stud (M10)
+192,1455,ALTIMA2000_EXH_Stud_Manifold_005,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.179967,-0.252324,1.249361,exhaust manifold stud (M10)
+193,1456,ALTIMA2000_EXH_Stud_Manifold_006,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,1.917831,-0.615105,0.819201,exhaust manifold stud (M10)
+194,1457,ALTIMA2000_EXH_Stud_Manifold_007,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,-0.894092,0.502114,0.389042,exhaust manifold stud (M10)
+195,1458,ALTIMA2000_EXH_Stud_Manifold_008,Engine_ExhaustSide,EX,Manifold,Stud_Manifold,MAT_Steel_Phosphate_Fastener,TPL_Bolt_M10,0.843772,0.139333,0.958882,exhaust manifold stud (M10)

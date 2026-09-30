@@ -22,10 +22,16 @@ def _loft_closed(profile, seg, axis="Y"):
             ring.append(p)
         rings.append(ring)
     v, f = mu.loft(rings, close_start=True, close_end=True)
+    # The profile is revolved in the XY plane with its "along-axis" coordinate
+    # in Z.  Remap so the revolve axis lands on the requested world axis:
+    #   axis="Y" -> axle points sideways (wheels, tyres, rims, brake discs)
+    #   axis="X" -> axle points fore/aft (transaxle body)
+    # NOTE: these two mappings were previously swapped, which laid every wheel
+    # on its side (axle fore/aft) - the "wheels rotated the wrong way" defect.
     if axis == "Y":
-        v = [(p[2], p[0], p[1]) for p in v]
+        v = [(p[0], p[2], p[1]) for p in v]
     elif axis == "X":
-        v = [(p[1], p[2], p[0]) for p in v]
+        v = [(p[2], p[0], p[1]) for p in v]
     return v, f
 
 

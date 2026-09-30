@@ -1,0 +1,52 @@
+name: ALTIMA2000 asset check
+
+# Opens the built assembly headless in Blender and asserts the invariants that
+# matter for the handoff: part count, the naming regex, and module link
+# integrity.  Runs on every push and on demand.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout (with Git LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull LFS objects
+        run: git lfs pull
+
+      - name: Install Blender
+        run: |
+          set -euo pipefail
+          BLENDER_VERSION=4.5.14
+          URL="https://download.blender.org/release/Blender4.5/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
+          echo "Downloading $URL"
+          curl -fsSL -o /tmp/blender.tar.xz "$URL"
+          mkdir -p "$HOME/blender"
+          tar -xJf /tmp/blender.tar.xz -C "$HOME/blender" --strip-components=1
+          echo "$HOME/blender" >> "$GITHUB_PATH"
+          "$HOME/blender/blender" --version
+
+      - name: Verify the assembly
+        run: |
+          set -euo pipefail
+          blender -b --factory-startup --python ci/verify_asset.py 2>&1 | tee verify.log
+          grep -q "CI_RESULT ALL_PASS" verify.log
+
+      - name: Upload verification log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-log
+          path: verify.log
+          if-no-files-found: warn

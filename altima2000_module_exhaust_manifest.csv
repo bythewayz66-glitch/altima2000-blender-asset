@@ -1,0 +1,22 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,247,ALTIMA2000_ENG_ExhaustManifold_Cast,Exhaust_Manifold,EX,Manifold,ExhaustManifold,MAT_CastIron_Exhaust,,-0.0,-0.0,-0.0,exhaust manifold (cast iron)
+2,252,ALTIMA2000_ENG_HeatShield_Manifold,Exhaust_Manifold,EX,Manifold,HeatShield,MAT_Steel_Structural,,1.02,-0.215,0.575,manifold heat shield
+3,248,ALTIMA2000_ENG_ManifoldRunner_Cast_001,Exhaust_Manifold,EX,Manifold,ManifoldRunner,MAT_CastIron_Exhaust,,0.87,-0.165,0.555,exhaust manifold runner
+4,249,ALTIMA2000_ENG_ManifoldRunner_Cast_002,Exhaust_Manifold,EX,Manifold,ManifoldRunner,MAT_CastIron_Exhaust,,0.97,-0.165,0.555,exhaust manifold runner
+5,250,ALTIMA2000_ENG_ManifoldRunner_Cast_003,Exhaust_Manifold,EX,Manifold,ManifoldRunner,MAT_CastIron_Exhaust,,1.07,-0.165,0.555,exhaust manifold runner
+6,251,ALTIMA2000_ENG_ManifoldRunner_Cast_004,Exhaust_Manifold,EX,Manifold,ManifoldRunner,MAT_CastIron_Exhaust,,1.17,-0.165,0.555,exhaust manifold runner
+7,253,ALTIMA2000_ENG_OxygenSensor_Upstream,Exhaust_Manifold,EX,Manifold,O2Sensor,MAT_Zinc_Plated,,1.04,-0.19,0.605,upstream heated oxygen sensor
+8,436,ALTIMA2000_EXH_Catalyst_Converter,Exhaust_Pipe,EX,Pipe,Catalyst,MAT_Stainless_Exhaust,,0.05,-0.13,0.29,catalytic converter
+9,435,ALTIMA2000_EXH_Downpipe_Primary,Exhaust_Pipe,EX,Pipe,Downpipe,MAT_Stainless_Exhaust,,0.673333,-0.156667,0.343333,exhaust downpipe
+10,441,ALTIMA2000_EXH_Hanger_Rubber_001,Exhaust_Pipe,EX,Pipe,Hanger,MAT_Rubber_EPDM_Seal,,-0.3,-0.24,0.33,exhaust rubber hanger
+11,442,ALTIMA2000_EXH_Hanger_Rubber_002,Exhaust_Pipe,EX,Pipe,Hanger,MAT_Rubber_EPDM_Seal,,-0.78,-0.24,0.33,exhaust rubber hanger
+12,443,ALTIMA2000_EXH_Hanger_Rubber_003,Exhaust_Pipe,EX,Pipe,Hanger,MAT_Rubber_EPDM_Seal,,-1.26,-0.24,0.33,exhaust rubber hanger
+13,444,ALTIMA2000_EXH_Hanger_Rubber_004,Exhaust_Pipe,EX,Pipe,Hanger,MAT_Rubber_EPDM_Seal,,-1.74,-0.24,0.33,exhaust rubber hanger
+14,445,ALTIMA2000_EXH_HeatShield_Floor_001,Exhaust_Pipe,EX,Pipe,HeatShield,MAT_Steel_Structural,,-0.5,-0.25,0.29,exhaust heat shield
+15,446,ALTIMA2000_EXH_HeatShield_Floor_002,Exhaust_Pipe,EX,Pipe,HeatShield,MAT_Steel_Structural,,-1.2,-0.25,0.29,exhaust heat shield
+16,447,ALTIMA2000_EXH_HeatShield_Floor_003,Exhaust_Pipe,EX,Pipe,HeatShield,MAT_Steel_Structural,,0.32,-0.22,0.29,exhaust heat shield
+17,437,ALTIMA2000_EXH_Midpipe_Intermediate,Exhaust_Pipe,EX,Pipe,Midpipe,MAT_Stainless_Exhaust,,-0.706667,-0.163333,0.275,intermediate exhaust pipe
+18,439,ALTIMA2000_EXH_Muffler_Main,Exhaust_Muffler,EX,Muffler,Muffler,MAT_Stainless_Exhaust,,-1.74,-0.29,0.3,main exhaust muffler
+19,448,ALTIMA2000_EXH_OxygenSensor_Downstream,Exhaust_Pipe,EX,Pipe,O2SensorDown,MAT_Zinc_Plated,,-0.06,-0.13,0.35,downstream oxygen sensor
+20,438,ALTIMA2000_EXH_Resonator_Canister,Exhaust_Pipe,EX,Pipe,Resonator,MAT_Stainless_Exhaust,,-0.9,-0.18,0.265,exhaust resonator
+21,440,ALTIMA2000_EXH_Tailpipe_Outlet,Exhaust_Muffler,EX,Muffler,Tailpipe,MAT_Stainless_Exhaust,,-2.040851,-0.3,0.29,exhaust tailpipe

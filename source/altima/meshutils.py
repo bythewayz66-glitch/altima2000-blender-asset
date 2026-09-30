@@ -49,6 +49,11 @@ def make_object(name, verts, faces, coll, mat=None, smooth=False,
         for p in me.polygons:
             p.use_smooth = True
     me["asmb"] = fd["asmb"]
+    # NOTE: the metadata must live on the OBJECT as well as the mesh.  The
+    # manifest, the disassemble/reassemble operators and the wiring report all
+    # read ``ob["asmb"]``; storing it only on the mesh datablock silently
+    # dropped every extra key (harness, circuit, template, ...).
+    ob["asmb"] = fd["asmb"]
     coll.objects.link(ob)
     return ob
 
@@ -190,6 +195,40 @@ def loft(rings, close_start=False, close_end=False, close_loop=True):
         o = (len(rings) - 1) * n
         faces.append(tuple(range(o, o + n)))
     return verts, faces
+
+
+def inset_grid(pts, gap, edge=0.45):
+    """Shrink a point grid's outer boundary inward by ``gap`` metres.
+
+    Used to open a visible shut line between adjacent body panels: every panel
+    is built from the same body surface, so without this the assembled car
+    reads as one continuous shell.  Each boundary row/column is pulled toward
+    its neighbour along the local grid direction, which keeps the panel on the
+    surface while leaving a real gap at the seam.
+
+    ``edge`` caps the pull at a fraction of the first cell so a coarse grid
+    cannot collapse on itself.
+    """
+    nr = len(pts)
+    nc = len(pts[0]) if nr else 0
+    if nr < 2 or nc < 2 or gap <= 0.0:
+        return [[tuple(p) for p in row] for row in pts]
+    out = [[Vector(p) for p in row] for row in pts]
+
+    def pull(a, b, amount):
+        d = b - a
+        L = d.length
+        if L < 1e-9:
+            return a
+        return a + d.normalized() * min(amount, L * edge)
+
+    for j in range(nc):
+        out[0][j] = pull(out[0][j], out[1][j], gap)
+        out[-1][j] = pull(out[-1][j], out[-2][j], gap)
+    for i in range(nr):
+        out[i][0] = pull(out[i][0], out[i][1], gap)
+        out[i][-1] = pull(out[i][-1], out[i][-2], gap)
+    return [[tuple(p) for p in row] for row in out]
 
 
 def grid_surface(pts, close_u=False, close_v=False):

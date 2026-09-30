@@ -25,6 +25,13 @@ SEAM_ROWS = 3
 T_PANEL = 0.010
 T_GLASS = 0.005
 
+#: visible shut-line gap between adjacent body panels (metres).
+#: Every panel is generated from the same body surface, so without this the
+#: assembled car reads as one continuous shell instead of separate removable
+#: parts.  Each panel's outer boundary is pulled in by GAP, which opens a real
+#: seam at every shut line (hood/fender, door/body, trunk/quarter, bumper/body).
+GAP = 0.011
+
 
 def _lin(a, b, n):
     return [a + (b - a) * i / n for i in range(n + 1)]
@@ -48,8 +55,12 @@ def build_structure(reg, mats, surf, M):
     p = mats
     # ---- side body panel (the big unibody side, right + left) --------------
     for side in ("R", "L"):
-        xs = [W(x) for x in _lin(X_FEND_R, X_DR_R_R, 16)]
-        pts = surf.side_glass_grid(xs, lambda x: 1.35, 8.0, SEAM_ROWS, side)
+        # Stop the side body just behind the front tyre.  The front tyre reaches
+        # back to x = AXLE_F - WHEEL_R = 1.0665, so starting the panel at
+        # X_FEND_R (1.115) let the tyre clip through it (17 faces per side).
+        xs = [W(x) for x in _lin(X_FEND_R - 0.065, X_DR_R_R, 16)]
+        pts = mu.inset_grid(
+            surf.side_glass_grid(xs, lambda x: 1.35, 8.0, SEAM_ROWS, side), GAP)
         reg.add_grid(reg.make_name("BD", "Side", "Body_%s" % side), pts,
                      "Body_Panels", p["paint_gold"], 0.012,
                      meta={"group": "BD", "sub": "Side", "part": "Side_%s" % side,
@@ -76,7 +87,11 @@ def build_structure(reg, mats, surf, M):
     # ---- sill / rocker panels ---------------------------------------------
     for side in ("R", "L"):
         xs = [W(x) for x in _lin(-0.870, 0.600, 14)]
-        pts = surf.band_grid(xs, 1.95, 0.0, 3, side)
+        # The side body panel starts at ring index 1.35, so the rocker must stop
+        # there too.  Ending it at 1.95 (as it used to) made the two panels
+        # share a band of the same body surface, which interpenetrated and
+        # produced z-fighting in every render.
+        pts = mu.inset_grid(surf.band_grid(xs, 1.35, 0.0, 3, side), GAP)
         reg.add_grid(reg.make_name("BD", "Rocker", "Sill_%s" % side), pts,
                      "Body_Panels", p["paint_gold"], 0.009,
                      meta={"group": "BD", "sub": "Rocker", "part": "Sill_%s" % side,
@@ -93,7 +108,8 @@ def build_panels(reg, mats, surf, M):
     p = mats
     nx = 14
     # ---- hood --------------------------------------------------------------
-    hood = surf.surface_grid(W(X_HOOD_R), W(X_HOOD_F), 14.5, 29.5, nx=nx, nr=6)
+    hood = mu.inset_grid(
+        surf.surface_grid(W(X_HOOD_R), W(X_HOOD_F), 14.5, 29.5, nx=nx, nr=6), GAP)
     reg.add_grid("ALTIMA2000_BODY_Hood_Outer", hood, "Body_Panels", p["paint_gold"],
                  T_PANEL, meta={"group": "BD", "sub": "Hood", "part": "Hood",
                                 "mat_key": "paint_gold", "notes": "hood outer skin"})
@@ -119,7 +135,8 @@ def build_panels(reg, mats, surf, M):
                            "mat_key": "paint_under", "notes": "hood inner rib"})
 
     # ---- roof --------------------------------------------------------------
-    roof = surf.surface_grid(W(X_WS_T), W(X_ROOF_R), 14.5, 29.5, nx=10, nr=6)
+    roof = mu.inset_grid(
+        surf.surface_grid(W(X_WS_T), W(X_ROOF_R), 14.5, 29.5, nx=10, nr=6), GAP)
     reg.add_grid("ALTIMA2000_BODY_Roof_Outer", roof, "Body_Panels", p["paint_gold"],
                  0.009, meta={"group": "BD", "sub": "Roof", "part": "Roof",
                               "mat_key": "paint_gold", "notes": "roof panel"})
@@ -141,7 +158,7 @@ def build_panels(reg, mats, surf, M):
         f = arch_ri(surf, W(spec.AXLE_F), side)
         xs = ([W(v) for v in _lin(X_FEND_R, X_HOOD_F, 12)]
               + [W(v) for v in _lin(X_HOOD_F, 1.990, 4)])
-        pts = surf.band_grid(xs, 9.2, f, SEAM_ROWS, side)
+        pts = mu.inset_grid(surf.band_grid(xs, 9.2, f, SEAM_ROWS, side), GAP)
         reg.add_grid(reg.make_name("BD", "Fender", "Front_%s" % side), pts,
                      "Body_Panels", p["paint_gold"], T_PANEL,
                      meta={"group": "BD", "sub": "Fender", "part": "Fender_%s" % side,
@@ -159,13 +176,22 @@ def build_panels(reg, mats, surf, M):
     for side in ("R", "L"):
         f = arch_ri(surf, W(spec.AXLE_R), side)
         xs = [W(v) for v in _lin(X_DR_R_R, X_TRUNK_R, 14)]
-        pts = surf.band_grid(xs, 9.0, f, SEAM_ROWS, side)
+        pts = mu.inset_grid(surf.band_grid(xs, 9.0, f, SEAM_ROWS, side), GAP)
         reg.add_grid(reg.make_name("BD", "Quarter", "Rear_%s" % side), pts,
                      "Body_Panels", p["paint_gold"], T_PANEL,
                      meta={"group": "BD", "sub": "Quarter", "part": "Quarter_%s" % side,
                            "mat_key": "paint_gold", "notes": "rear quarter panel"})
         # quarter inner
-        pts2 = surf.band_grid(xs, 8.6, lambda x: max(1.4, f(x) - 2.6), SEAM_ROWS, side)
+        # Stop the inner structure at the trunk-lid front edge (X_TRUNK_F).
+        # Running it all the way to X_TRUNK_R put it underneath the trunk lid
+        # inner panel, and the two interpenetrated.
+        xs_in = [W(v) for v in _lin(X_DR_R_R, X_TRUNK_F + 0.25, 10)]
+        pts2 = surf.band_grid(xs_in, 8.6, lambda x: max(1.4, f(x) - 2.6), SEAM_ROWS, side)
+        # Push the inner structure inboard.  Built on the same body surface as
+        # the outer quarter skin it was coplanar with it, so the two panels
+        # interpenetrated (267 faces of z-fighting).  Scaling |y| inboard
+        # separates them by a real, deterministic amount.
+        pts2 = [[(p[0], p[1] * 0.90, p[2]) for p in row] for row in pts2]
         reg.add_grid(reg.make_name("BD", "QuarterInner", "Rear_%s" % side), pts2,
                      "Body_Structure", p["paint_under"], 0.006,
                      meta={"group": "SH", "sub": "Quarter", "part": "QuarterInner_%s" % side,
@@ -182,8 +208,8 @@ def build_panels(reg, mats, surf, M):
             y = -ymax + 2 * ymax * j / 6
             row.append((W(xd), y, surf.top_z(W(xd), y)))
         grid.append(row)
-    reg.add_grid("ALTIMA2000_BODY_TrunkLid_Outer", grid, "Body_Panels",
-                 p["paint_gold"], T_PANEL,
+    reg.add_grid("ALTIMA2000_BODY_TrunkLid_Outer", mu.inset_grid(grid, GAP),
+                 "Body_Panels", p["paint_gold"], T_PANEL,
                  meta={"group": "BD", "sub": "Trunk", "part": "TrunkLid",
                        "mat_key": "paint_gold", "notes": "trunk lid outer skin"})
     reg.add_grid("ALTIMA2000_BODY_TrunkLid_Inner", mu.offset_grid(grid, 0.055),
@@ -210,6 +236,9 @@ def build_panels(reg, mats, surf, M):
 
 
 def _cowl_v(reg, y, x):
+    # y is pulled inboard from 0.860 to 0.840: at 0.860 the cowl sat almost
+    # exactly on the side-body panel's outer surface and the two interpenetrated.
+    y = y - 0.020
     return [(W(x), -y, 0.905), (W(x), y, 0.905), (W(x - 0.05), y, 0.830),
             (W(x - 0.05), -y, 0.830)]
 
@@ -239,7 +268,8 @@ def _bumper(reg, p, end, M):
             bulge = 0.055 * (1.0 - (2.0 * v - 1.0) ** 2)
             row.append((xf - bulge, y, z))
         rows.append(row)
-    reg.add_grid(reg.make_name("BD", "BumperCover", tag), rows, "Body_Panels",
+    reg.add_grid(reg.make_name("BD", "BumperCover", tag),
+                 mu.inset_grid(rows, GAP), "Body_Panels",
                  p["paint_gold"], 0.007,
                  meta={"group": "BD", "sub": "Bumper", "part": "BumperCover_" + tag,
                        "mat_key": "paint_gold",
@@ -455,7 +485,7 @@ def build_doors(reg, mats, surf, M):
         lo = (lambda x: max(0.05, min(f(x), 8.0))) if kind == "Front" else \
              (lambda x: max(0.05, min(f(x), 8.0)))
         xs = [W(v) for v in _lin(x1, x0, 10)]
-        pts = surf.band_grid(xs, 8.0, lo, SEAM_ROWS, side)
+        pts = mu.inset_grid(surf.band_grid(xs, 8.0, lo, SEAM_ROWS, side), GAP)
         reg.add_grid(reg.make_name("DRM", "Skin", tag), pts, "Door_Module_Skin",
                      p["paint_gold"], 0.011,
                      meta={"group": "DRM", "sub": "Skin", "part": "Skin_" + tag,
@@ -478,8 +508,8 @@ def build_doors(reg, mats, surf, M):
                 pt = surf.point(W(xd), ri)
                 row.append((pt[0], pt[1] * (1 if side == "R" else -1), pt[2]))
             rows.append(row)
-        reg.add_grid(reg.make_name("DRM", "Frame", tag), rows, "Door_Module_Frame",
-                     p["paint_gold"], 0.009,
+        reg.add_grid(reg.make_name("DRM", "Frame", tag), mu.inset_grid(rows, GAP),
+                     "Door_Module_Frame", p["paint_gold"], 0.009,
                      meta={"group": "DRM", "sub": "Frame", "part": "Frame_" + tag,
                            "mat_key": "paint_gold",
                            "notes": "%s door frame (window frame + belt reinforcement)"
@@ -634,7 +664,10 @@ def build_glass(reg, mats, surf, M):
     rows = []
     for i in range(8):
         t = i / 7.0
-        xd = X_WS_T + (X_BL_B - X_WS_T) * t
+        # The backlight must start at the REAR of the roof (X_ROOF_R), not at the
+        # top of the windscreen.  Spanning from X_WS_T put the whole rear window
+        # underneath the roof panel, and the two interpenetrated (34 faces).
+        xd = X_ROOF_R + (X_BL_B - X_ROOF_R) * t
         row = []
         for j in range(7):
             y = (-0.46 + 0.92 * j / 6) * (0.55 + 0.45 * t)

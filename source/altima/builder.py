@@ -28,7 +28,10 @@ COLLECTION_TREE = [
     ("Interior",    "ALTIMA2000_Interior",    ["Interior_Dash", "Interior_Seats", "Interior_Console",
                                                "Interior_Trim", "Interior_Insulation"]),
     ("Electrical",  "ALTIMA2000_Electrical",  ["Electrical_Harness", "Electrical_Battery", "Electrical_Modules",
-                                               "Electrical_Lighting"]),
+                                               "Electrical_Lighting", "Electrical_Engine",
+                                               "Electrical_Dash", "Electrical_Cabin",
+                                               "Electrical_Body", "Electrical_Door",
+                                               "Electrical_Chassis"]),
     ("Fasteners",   "ALTIMA2000_Fasteners",   ["Fasteners_Bolts", "Fasteners_Screws", "Fasteners_Nuts",
                                                "Fasteners_Clips"]),
     ("Glass",       "ALTIMA2000_Glass",       ["Glass_Glazing", "Glass_Mirrors"]),
@@ -302,7 +305,14 @@ class Registry:
             row["offset"] = loc
             row["rotation"] = rot
             row["scale"] = scl
-            info = dict(ob.get("asmb", {}))
+            info = {}
+            old = ob.get("asmb")
+            if old is not None:
+                # NOTE: dict(IDPropertyGroup) does NOT round-trip in Blender -
+                # it silently yields an empty mapping, which would drop every
+                # extra key (harness, circuit, template, ...).  Copy explicitly.
+                for k in old.keys():
+                    info[k] = old[k]
             info["loc"] = loc
             info["rot"] = rot
             info["collection"] = row["collection"]

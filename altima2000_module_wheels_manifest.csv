@@ -1,0 +1,45 @@
+part_index,master_index,name,collection,group,sub,part,material,instance_of,x,y,z,notes
+1,1883,ALTIMA2000_WHL_HexNut_SpindleNut_001,Wheels,WH,SpindleNut,HexNut_SpindleNut,MAT_Steel_Phosphate_Fastener,TPL_Nut_M14,2.221702,-0.266,0.903,front spindle nut (M14)
+2,1884,ALTIMA2000_WHL_HexNut_SpindleNut_002,Wheels,WH,SpindleNut,HexNut_SpindleNut,MAT_Steel_Phosphate_Fastener,TPL_Nut_M14,-0.458724,-0.609171,0.515856,front spindle nut (M14)
+3,1885,ALTIMA2000_WHL_HexNut_SpindleNut_003,Wheels,WH,SpindleNut,HexNut_SpindleNut,MAT_Steel_Phosphate_Fastener,TPL_Nut_M14,1.19787,0.447657,1.028713,front spindle nut (M14)
+4,1886,ALTIMA2000_WHL_HexNut_SpindleNut_004,Wheels,WH,SpindleNut,HexNut_SpindleNut,MAT_Steel_Phosphate_Fastener,TPL_Nut_M14,-1.482556,0.104486,0.641569,front spindle nut (M14)
+5,347,ALTIMA2000_WHL_HubCap_Centre_FL,Wheels,WH,Wheel_FL,CentreCap_FL,MAT_Chrome_Trim,TPL_HubCap_Centre,1.38,0.82077,0.3135,centre cap
+6,361,ALTIMA2000_WHL_HubCap_Centre_FR,Wheels,WH,Wheel_FR,CentreCap_FR,MAT_Chrome_Trim,TPL_HubCap_Centre,1.38,-0.82077,0.3135,centre cap
+7,375,ALTIMA2000_WHL_HubCap_Centre_RL,Wheels,WH,Wheel_RL,CentreCap_RL,MAT_Chrome_Trim,TPL_HubCap_Centre,-1.24,0.82077,0.3135,centre cap
+8,389,ALTIMA2000_WHL_HubCap_Centre_RR,Wheels,WH,Wheel_RR,CentreCap_RR,MAT_Chrome_Trim,TPL_HubCap_Centre,-1.24,-0.82077,0.3135,centre cap
+9,345,ALTIMA2000_WHL_Rim_Alloy_FL,Wheels,WH,Wheel_FL,Rim_FL,MAT_Aluminium_Brushed,TPL_Rim_15x6J,1.38,0.753,0.3135,15x6J alloy wheel
+10,359,ALTIMA2000_WHL_Rim_Alloy_FR,Wheels,WH,Wheel_FR,Rim_FR,MAT_Aluminium_Brushed,TPL_Rim_15x6J,1.38,-0.753,0.3135,15x6J alloy wheel
+11,373,ALTIMA2000_WHL_Rim_Alloy_RL,Wheels,WH,Wheel_RL,Rim_RL,MAT_Aluminium_Brushed,TPL_Rim_15x6J,-1.24,0.753,0.3135,15x6J alloy wheel
+12,387,ALTIMA2000_WHL_Rim_Alloy_RR,Wheels,WH,Wheel_RR,Rim_RR,MAT_Aluminium_Brushed,TPL_Rim_15x6J,-1.24,-0.753,0.3135,15x6J alloy wheel
+13,348,ALTIMA2000_WHL_Spoke_Alloy_FL_001,Wheels,WH,Wheel_FL,Spoke_FL,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.413778,0.794415,0.422695,alloy spoke
+14,349,ALTIMA2000_WHL_Spoke_Alloy_FL_002,Wheels,WH,Wheel_FL,Spoke_FL,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.494289,0.794415,0.315118,alloy spoke
+15,350,ALTIMA2000_WHL_Spoke_Alloy_FL_003,Wheels,WH,Wheel_FL,Spoke_FL,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.416856,0.794415,0.205305,alloy spoke
+16,351,ALTIMA2000_WHL_Spoke_Alloy_FL_004,Wheels,WH,Wheel_FL,Spoke_FL,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.28849,0.794415,0.245014,alloy spoke
+17,352,ALTIMA2000_WHL_Spoke_Alloy_FL_005,Wheels,WH,Wheel_FL,Spoke_FL,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.286587,0.794415,0.379368,alloy spoke
+18,362,ALTIMA2000_WHL_Spoke_Alloy_FR_001,Wheels,WH,Wheel_FR,Spoke_FR,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.413778,-0.794415,0.422695,alloy spoke
+19,363,ALTIMA2000_WHL_Spoke_Alloy_FR_002,Wheels,WH,Wheel_FR,Spoke_FR,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.494289,-0.794415,0.315118,alloy spoke
+20,364,ALTIMA2000_WHL_Spoke_Alloy_FR_003,Wheels,WH,Wheel_FR,Spoke_FR,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.416856,-0.794415,0.205305,alloy spoke
+21,365,ALTIMA2000_WHL_Spoke_Alloy_FR_004,Wheels,WH,Wheel_FR,Spoke_FR,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.28849,-0.794415,0.245014,alloy spoke
+22,366,ALTIMA2000_WHL_Spoke_Alloy_FR_005,Wheels,WH,Wheel_FR,Spoke_FR,MAT_Aluminium_Brushed,TPL_AlloySpoke,1.286587,-0.794415,0.379368,alloy spoke
+23,376,ALTIMA2000_WHL_Spoke_Alloy_RL_001,Wheels,WH,Wheel_RL,Spoke_RL,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.206222,0.794415,0.422695,alloy spoke
+24,377,ALTIMA2000_WHL_Spoke_Alloy_RL_002,Wheels,WH,Wheel_RL,Spoke_RL,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.125711,0.794415,0.315118,alloy spoke
+25,378,ALTIMA2000_WHL_Spoke_Alloy_RL_003,Wheels,WH,Wheel_RL,Spoke_RL,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.203144,0.794415,0.205305,alloy spoke
+26,379,ALTIMA2000_WHL_Spoke_Alloy_RL_004,Wheels,WH,Wheel_RL,Spoke_RL,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.33151,0.794415,0.245014,alloy spoke
+27,380,ALTIMA2000_WHL_Spoke_Alloy_RL_005,Wheels,WH,Wheel_RL,Spoke_RL,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.333413,0.794415,0.379368,alloy spoke
+28,390,ALTIMA2000_WHL_Spoke_Alloy_RR_001,Wheels,WH,Wheel_RR,Spoke_RR,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.206222,-0.794415,0.422695,alloy spoke
+29,391,ALTIMA2000_WHL_Spoke_Alloy_RR_002,Wheels,WH,Wheel_RR,Spoke_RR,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.125711,-0.794415,0.315118,alloy spoke
+30,392,ALTIMA2000_WHL_Spoke_Alloy_RR_003,Wheels,WH,Wheel_RR,Spoke_RR,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.203144,-0.794415,0.205305,alloy spoke
+31,393,ALTIMA2000_WHL_Spoke_Alloy_RR_004,Wheels,WH,Wheel_RR,Spoke_RR,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.33151,-0.794415,0.245014,alloy spoke
+32,394,ALTIMA2000_WHL_Spoke_Alloy_RR_005,Wheels,WH,Wheel_RR,Spoke_RR,MAT_Aluminium_Brushed,TPL_AlloySpoke,-1.333413,-0.794415,0.379368,alloy spoke
+33,344,ALTIMA2000_WHL_Tire_Road_FL,Wheels,WH,Wheel_FL,Tire_FL,MAT_Tire_Compound,TPL_Tire_205_60R15,1.38,0.753,0.3135,205/60R15 tire
+34,358,ALTIMA2000_WHL_Tire_Road_FR,Wheels,WH,Wheel_FR,Tire_FR,MAT_Tire_Compound,TPL_Tire_205_60R15,1.38,-0.753,0.3135,205/60R15 tire
+35,372,ALTIMA2000_WHL_Tire_Road_RL,Wheels,WH,Wheel_RL,Tire_RL,MAT_Tire_Compound,TPL_Tire_205_60R15,-1.24,0.753,0.3135,205/60R15 tire
+36,386,ALTIMA2000_WHL_Tire_Road_RR,Wheels,WH,Wheel_RR,Tire_RR,MAT_Tire_Compound,TPL_Tire_205_60R15,-1.24,-0.753,0.3135,205/60R15 tire
+37,346,ALTIMA2000_WHL_Tread_Band_FL,Wheels,WH,Wheel_FL,Tread_FL,MAT_Tire_Tread,TPL_Tread_Band,1.38,0.753,0.3135,tire tread band
+38,360,ALTIMA2000_WHL_Tread_Band_FR,Wheels,WH,Wheel_FR,Tread_FR,MAT_Tire_Tread,TPL_Tread_Band,1.38,-0.753,0.3135,tire tread band
+39,374,ALTIMA2000_WHL_Tread_Band_RL,Wheels,WH,Wheel_RL,Tread_RL,MAT_Tire_Tread,TPL_Tread_Band,-1.24,0.753,0.3135,tire tread band
+40,388,ALTIMA2000_WHL_Tread_Band_RR,Wheels,WH,Wheel_RR,Tread_RR,MAT_Tire_Tread,TPL_Tread_Band,-1.24,-0.753,0.3135,tire tread band
+41,357,ALTIMA2000_WHL_ValveStem_Tire_FL,Wheels,WH,Wheel_FL,ValveStem_FL,MAT_Rubber_EPDM_Seal,,1.38,0.81324,0.17634,tire valve stem
+42,371,ALTIMA2000_WHL_ValveStem_Tire_FR,Wheels,WH,Wheel_FR,ValveStem_FR,MAT_Rubber_EPDM_Seal,,1.38,-0.81324,0.17634,tire valve stem
+43,385,ALTIMA2000_WHL_ValveStem_Tire_RL,Wheels,WH,Wheel_RL,ValveStem_RL,MAT_Rubber_EPDM_Seal,,-1.24,0.81324,0.17634,tire valve stem
+44,399,ALTIMA2000_WHL_ValveStem_Tire_RR,Wheels,WH,Wheel_RR,ValveStem_RR,MAT_Rubber_EPDM_Seal,,-1.24,-0.81324,0.17634,tire valve stem

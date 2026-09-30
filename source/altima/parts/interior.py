@@ -20,8 +20,8 @@ AXF, AXR = spec.AXLE_F, spec.AXLE_R
 TR = spec.TRACK_F * 0.5
 
 #: Global scale applied to every bulk block count so the assembled vehicle
-#: lands on the documented part target (override with ALTIMA_BULK_SCALE).
-#: 1.0 = full-density teardown set (the shipped default).
+#: lands on the documented ~1000-part target (override with ALTIMA_BULK_SCALE).
+#: v4 ships at FULL density (1.0) - the fastener set is generated complete.
 BULK_SCALE = float(os.environ.get("ALTIMA_BULK_SCALE", "1.0"))
 
 
@@ -594,21 +594,17 @@ CLIP_BLOCKS = [
     ("Fasteners_Clips", "CL", "Retainer", "BrakeLine", 10, "", "brake line retaining clip"),
 ]
 
-HOSE_BLOCKS = [
-    ("Engine_Cooling", "EN", "Hose", "Heater", 2, "", "heater hose"),
-    ("Engine_Cooling", "EN", "Hose", "Bypass", 1, "", "coolant bypass hose"),
-    ("Engine_Intake", "EN", "Hose", "Vacuum", 4, "", "vacuum line"),
-    ("Engine_Emission", "EM", "Hose", "EVAP", 3, "", "EVAP purge hose"),
-    ("Engine_Cooling", "EN", "Hose", "Reservoir", 2, "", "coolant reservoir hose"),
-    ("Engine_Accessory", "EN", "Hose", "PowerSteering", 2, "", "power steering hose"),
-    ("Engine_Accessory", "EN", "Hose", "ACRefrigerant", 3, "", "A/C refrigerant line"),
-    ("Fluids_Body", "FL", "Hose", "Washer", 2, "", "washer fluid hose"),
-    ("Brakes_Hydraulics", "BR", "Hose", "VacuumBooster", 1, "", "brake booster vacuum hose"),
-]
+# NOTE: the legacy HOSE_BLOCKS straight-tube population was removed in v4.
+# It is superseded by the real routed hoses in altima/parts/hoses.py, which
+# model every hose as a swept tube along its actual run (Catmull-Rom smoothed,
+# split into removable segments) with a baked trace coordinate, plus the tie
+# straps that secure it.  Keeping both would double-count the hose system.
 
 WIRE_BLOCKS = [
-    ("Electrical_Harness", "EL", "Wire", "Power", 16, "", "power wire run"),
-    ("Electrical_Harness", "EL", "Wire", "Signal", 16, "", "signal wire run"),
+    # NOTE: the two legacy "Wire" bulk blocks (16 power + 16 signal straight
+    # runs) were removed in v3.  They are superseded by the real routed wiring
+    # in altima/parts/wiring.py, which models every wire as a swept tube along
+    # its actual route with a baked trace coordinate.
     ("Electrical_Modules", "EL", "Bracket", "Module", 12, "", "module mounting bracket"),
     ("Interior_Insulation", "IN", "Damper", "Floor", 14, "", "sound deadening pad"),
     ("Interior_Insulation", "IN", "Damper", "Door", 8, "", "door sound deadening pad"),
@@ -704,13 +700,6 @@ def build_bulk(reg, mats, surf, M):
             emit(coll, grp, tag, detail, i + 1, pos,
                  tpl_key="clip" if detail != "Underbody" else "clipL",
                  mat_key="plastic_blk_m", note=note)
-    # ---- hoses -------------------------------------------------------------
-    for (coll, grp, tag, detail, n, size, note) in HOSE_BLOCKS:
-        for i in range(n_of(n)):
-            pos = pat(i, n, W(1.90), W(-2.00), -0.60, 0.60, 0.34, 0.95)
-            rot = (0.0, 0.6 + 0.5 * i, 0.3 * i)
-            emit(coll, grp, tag, detail, i + 1, pos, rot=rot, tpl_key="hose",
-                 mat_key="rubber_hose", note=note)
     # ---- wiring ------------------------------------------------------------
     for (coll, grp, tag, detail, n, size, note) in WIRE_BLOCKS:
         for i in range(n_of(n)):
