@@ -1,0 +1,8 @@
+# Git LFS tracking for the ALTIMA2000 Blender asset.
+# Large binary deliverables are stored via Git LFS.
+# These patterns MUST be committed before the binaries are added.
+
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.glb   filter=lfs diff=lfs merge=lfs -text
+*.fbx   filter=lfs diff=lfs merge=lfs -text
+*.bin   filter=lfs diff=lfs merge=lfs -text
