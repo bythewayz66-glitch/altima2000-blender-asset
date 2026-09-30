@@ -1,0 +1,110 @@
+name: Fetch ALTIMA2000 asset files
+
+# The sandbox that generated this asset has no git credentials, so the large
+# binaries are pulled in here (from their public permanent URLs) and committed
+# through Git LFS by the runner, which does have a write token.
+#
+# .gitattributes (LFS patterns) is already committed on main, so the binaries
+# land in LFS rather than as plain blobs.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Git LFS
+        run: |
+          git lfs install --local
+          echo "--- .gitattributes ---"
+          cat .gitattributes
+
+      - name: Download asset files
+        run: |
+          set -euo pipefail
+          BASE="https://static.teamily.ai/sites/d6ce0160-9a49-4bcb-a5b7-3605389009d3/documents/altima2000_v2"
+
+          fetch() {
+            local src="$1" dst="$2"
+            mkdir -p "$(dirname "$dst")"
+            curl -fsSL --retry 3 --retry-delay 2 -o "$dst" "$BASE/$src"
+            printf '  %-46s %10s bytes\n' "$dst" "$(stat -c%s "$dst")"
+          }
+
+          echo "== Blender files =="
+          fetch altima2000_assembly.blend          altima2000_assembly.blend
+          fetch altima2000_exploded.blend          altima2000_exploded.blend
+          fetch altima2000_assembly_linked.blend   altima2000_assembly_linked.blend
+
+          echo "== Module files =="
+          fetch altima2000_module_engine.blend     altima2000_module_engine.blend
+          fetch altima2000_module_suspension.blend altima2000_module_suspension.blend
+          fetch altima2000_module_drivetrain.blend altima2000_module_drivetrain.blend
+          fetch altima2000_module_brakes.blend     altima2000_module_brakes.blend
+          fetch altima2000_module_wheels.blend     altima2000_module_wheels.blend
+          fetch altima2000_module_doors.blend      altima2000_module_doors.blend
+          fetch altima2000_module_exhaust.blend    altima2000_module_exhaust.blend
+
+          echo "== Exports =="
+          fetch altima2000.glb                     altima2000.glb
+          fetch altima2000.gltf                    altima2000.gltf
+          fetch altima2000.bin                     altima2000.bin
+          fetch altima2000.fbx                     altima2000.fbx
+
+          echo "== Manifest + tools + docs =="
+          fetch altima2000_manifest.json           altima2000_manifest.json
+          fetch altima2000_manifest.csv            altima2000_manifest.csv
+          fetch altima2000_assembly_tools.py       altima2000_assembly_tools.py
+          fetch readme.md                          readme.md
+          fetch HANDOFF.md                         HANDOFF.md
+
+          echo "== Validation renders =="
+          fetch renders/assembled_hero_3q.png      renders/assembled_hero_3q.png
+          fetch renders/assembled_side_view.png    renders/assembled_side_view.png
+          fetch renders/assembled_front_view.png   renders/assembled_front_view.png
+          fetch renders/assembled_rear_view.png    renders/assembled_rear_view.png
+          fetch renders/assembled_top_view.png     renders/assembled_top_view.png
+          fetch renders/assembled_engine_bay.png   renders/assembled_engine_bay.png
+          fetch renders/exploded_hero_3q.png       renders/exploded_hero_3q.png
+          fetch renders/exploded_side_view.png     renders/exploded_side_view.png
+
+          echo "== Generator source =="
+          fetch source/build_altima.py             source/build_altima.py
+          fetch source/render_check.py             source/render_check.py
+          fetch source/verify_v2.py                source/verify_v2.py
+          fetch source/altima/__init__.py          source/altima/__init__.py
+          fetch source/altima/spec.py              source/altima/spec.py
+          fetch source/altima/meshutils.py         source/altima/meshutils.py
+          fetch source/altima/materials.py         source/altima/materials.py
+          fetch source/altima/builder.py           source/altima/builder.py
+          fetch source/altima/sequence.py          source/altima/sequence.py
+          fetch source/altima/parts/common.py      source/altima/parts/common.py
+          fetch source/altima/parts/templates.py   source/altima/parts/templates.py
+          fetch source/altima/parts/panels.py      source/altima/parts/panels.py
+          fetch source/altima/parts/mechanical.py  source/altima/parts/mechanical.py
+          fetch source/altima/parts/interior.py    source/altima/parts/interior.py
+
+      - name: Commit and push via Git LFS
+        run: |
+          set -euo pipefail
+          git config user.name  "bythewayz66-glitch"
+          git config user.email "bythewayz66@gmail.com"
+
+          git add -A
+          echo "--- staged ---"
+          git status --short
+
+          git commit -m "Push ALTIMA2000 v2 asset: 12-step engine bay, door module, 7 linked modules, bulk scale 1.0"
+          git push origin HEAD:main
+
+          echo "--- LFS objects ---"
+          git lfs ls-files
