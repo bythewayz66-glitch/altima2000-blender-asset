@@ -1,0 +1,1044 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "doors",
+ "module_file": "altima2000_module_doors.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_DoorModule"
+ ],
+ "collections": [
+  "Door_Module_Frame",
+  "Door_Module_Glazing",
+  "Door_Module_Hardware",
+  "Door_Module_Skin"
+ ],
+ "part_count": 28,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_DRM_Frame_FL",
+   "collection": "Door_Module_Frame",
+   "group": "DRM",
+   "sub": "Frame",
+   "part": "Frame_FL",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": 0.180485,
+    "y": 0.789268,
+    "z": 1.092037
+   },
+   "offset_m": [
+    0.180485,
+    0.789268,
+    1.092037
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front door frame (window frame + belt reinforcement)",
+   "master_index": 63,
+   "module": "doors"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_DRM_Frame_FR",
+   "collection": "Door_Module_Frame",
+   "group": "DRM",
+   "sub": "Frame",
+   "part": "Frame_FR",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": 0.180485,
+    "y": -0.789268,
+    "z": 1.092037
+   },
+   "offset_m": [
+    0.180485,
+    -0.789268,
+    1.092037
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front door frame (window frame + belt reinforcement)",
+   "master_index": 79,
+   "module": "doors"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_DRM_Frame_RL",
+   "collection": "Door_Module_Frame",
+   "group": "DRM",
+   "sub": "Frame",
+   "part": "Frame_RL",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": -0.58243,
+    "y": 0.725066,
+    "z": 1.17632
+   },
+   "offset_m": [
+    -0.58243,
+    0.725066,
+    1.17632
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear door frame (window frame + belt reinforcement)",
+   "master_index": 95,
+   "module": "doors"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_DRM_Frame_RR",
+   "collection": "Door_Module_Frame",
+   "group": "DRM",
+   "sub": "Frame",
+   "part": "Frame_RR",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": -0.58243,
+    "y": -0.725066,
+    "z": 1.17632
+   },
+   "offset_m": [
+    -0.58243,
+    -0.725066,
+    1.17632
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear door frame (window frame + belt reinforcement)",
+   "master_index": 110,
+   "module": "doors"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_DRM_GlassRun_FL",
+   "collection": "Door_Module_Glazing",
+   "group": "DRM",
+   "sub": "GlassRun",
+   "part": "GlassRun_FL",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": 0.306,
+    "y": 0.796539,
+    "z": 1.107702
+   },
+   "offset_m": [
+    0.306,
+    0.796539,
+    1.107702
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window glass run channel (bailey channel)",
+   "master_index": 76,
+   "module": "doors"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_DRM_GlassRun_FR",
+   "collection": "Door_Module_Glazing",
+   "group": "DRM",
+   "sub": "GlassRun",
+   "part": "GlassRun_FR",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": 0.306,
+    "y": -0.796539,
+    "z": 1.107702
+   },
+   "offset_m": [
+    0.306,
+    -0.796539,
+    1.107702
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window glass run channel (bailey channel)",
+   "master_index": 92,
+   "module": "doors"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_DRM_GlassRun_RL",
+   "collection": "Door_Module_Glazing",
+   "group": "DRM",
+   "sub": "GlassRun",
+   "part": "GlassRun_RL",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": -0.49475,
+    "y": 0.718619,
+    "z": 1.251967
+   },
+   "offset_m": [
+    -0.49475,
+    0.718619,
+    1.251967
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window glass run channel (bailey channel)",
+   "master_index": 107,
+   "module": "doors"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_DRM_GlassRun_RR",
+   "collection": "Door_Module_Glazing",
+   "group": "DRM",
+   "sub": "GlassRun",
+   "part": "GlassRun_RR",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": -0.49475,
+    "y": -0.718619,
+    "z": 1.251967
+   },
+   "offset_m": [
+    -0.49475,
+    -0.718619,
+    1.251967
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window glass run channel (bailey channel)",
+   "master_index": 122,
+   "module": "doors"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_DRM_Hinge_FL_001",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_FL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 65,
+   "module": "doors"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_DRM_Hinge_FL_002",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_FL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 66,
+   "module": "doors"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_DRM_Hinge_FR_001",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_FR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 81,
+   "module": "doors"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_DRM_Hinge_FR_002",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_FR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 82,
+   "module": "doors"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_DRM_Hinge_RL_001",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_RL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 97,
+   "module": "doors"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_DRM_Hinge_RL_002",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_RL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 98,
+   "module": "doors"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_DRM_Hinge_RR_001",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_RR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 112,
+   "module": "doors"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_DRM_Hinge_RR_002",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Hinge",
+   "part": "Hinge_RR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door hinge",
+   "master_index": 113,
+   "module": "doors"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_DRM_Latch_FL",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Latch",
+   "part": "Latch_FL",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door latch assembly",
+   "master_index": 68,
+   "module": "doors"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_DRM_Latch_FR",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Latch",
+   "part": "Latch_FR",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door latch assembly",
+   "master_index": 84,
+   "module": "doors"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_DRM_Latch_RL",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Latch",
+   "part": "Latch_RL",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door latch assembly",
+   "master_index": 100,
+   "module": "doors"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_DRM_Latch_RR",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Latch",
+   "part": "Latch_RR",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "door latch assembly",
+   "master_index": 115,
+   "module": "doors"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_DRM_Skin_FL",
+   "collection": "Door_Module_Skin",
+   "group": "DRM",
+   "sub": "Skin",
+   "part": "Skin_FL",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": 0.180113,
+    "y": 0.815935,
+    "z": 0.738667
+   },
+   "offset_m": [
+    0.180113,
+    0.815935,
+    0.738667
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front door loose outer skin (removable)",
+   "master_index": 61,
+   "module": "doors"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_DRM_Skin_FR",
+   "collection": "Door_Module_Skin",
+   "group": "DRM",
+   "sub": "Skin",
+   "part": "Skin_FR",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": 0.180113,
+    "y": -0.815935,
+    "z": 0.738667
+   },
+   "offset_m": [
+    0.180113,
+    -0.815935,
+    0.738667
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front door loose outer skin (removable)",
+   "master_index": 77,
+   "module": "doors"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_DRM_Skin_RL",
+   "collection": "Door_Module_Skin",
+   "group": "DRM",
+   "sub": "Skin",
+   "part": "Skin_RL",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": -0.582487,
+    "y": 0.792738,
+    "z": 0.740835
+   },
+   "offset_m": [
+    -0.582487,
+    0.792738,
+    0.740835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear door loose outer skin (removable)",
+   "master_index": 93,
+   "module": "doors"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_DRM_Skin_RR",
+   "collection": "Door_Module_Skin",
+   "group": "DRM",
+   "sub": "Skin",
+   "part": "Skin_RR",
+   "object_type": "MESH",
+   "material": "MAT_Paint_Gold_Metallic",
+   "material_key": "paint_gold",
+   "instance_of": "",
+   "position": {
+    "x": -0.582487,
+    "y": -0.792738,
+    "z": 0.740835
+   },
+   "offset_m": [
+    -0.582487,
+    -0.792738,
+    0.740835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear door loose outer skin (removable)",
+   "master_index": 108,
+   "module": "doors"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_DRM_WindowRegulator_FL",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Regulator",
+   "part": "WindowRegulator_FL",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window regulator mechanism",
+   "master_index": 71,
+   "module": "doors"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_DRM_WindowRegulator_FR",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Regulator",
+   "part": "WindowRegulator_FR",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window regulator mechanism",
+   "master_index": 87,
+   "module": "doors"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_DRM_WindowRegulator_RL",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Regulator",
+   "part": "WindowRegulator_RL",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window regulator mechanism",
+   "master_index": 102,
+   "module": "doors"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_DRM_WindowRegulator_RR",
+   "collection": "Door_Module_Hardware",
+   "group": "DRM",
+   "sub": "Regulator",
+   "part": "WindowRegulator_RR",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "zinc",
+   "instance_of": "",
+   "position": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+   },
+   "offset_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "window regulator mechanism",
+   "master_index": 117,
+   "module": "doors"
+  }
+ ]
+}

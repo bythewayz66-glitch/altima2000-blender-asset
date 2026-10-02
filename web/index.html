@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ALTIMA2000 — Interactive Disassembly Viewer</title>
+<meta name="description" content="Browser viewer for the ALTIMA2000 Blender asset: 2,130 parts, 27-step teardown, 31 wire harnesses, 7 modules. No Blender required." />
+<link rel="stylesheet" href="./css/app.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header">
+    <div class="brand">
+      <span class="brand-mark">A2000</span>
+      <div class="brand-text">
+        <h1>ALTIMA2000</h1>
+        <p>2000 Nissan Altima (L30) &middot; fully disassemblable asset</p>
+      </div>
+    </div>
+
+    <div class="header-stats" id="header-stats">
+      <div class="stat"><b id="stat-parts">—</b><span>parts</span></div>
+      <div class="stat"><b id="stat-steps">—</b><span>steps</span></div>
+      <div class="stat"><b id="stat-harness">—</b><span>harnesses</span></div>
+      <div class="stat"><b id="stat-modules">—</b><span>modules</span></div>
+      <div class="stat"><b id="stat-wires">—</b><span>wires</span></div>
+    </div>
+
+    <div class="header-actions">
+      <label class="src-picker">
+        <span>Source</span>
+        <select id="source-select"></select>
+      </label>
+      <button id="btn-help" class="icon-btn" title="Keyboard shortcuts &amp; help">?</button>
+    </div>
+  </header>
+
+  <!-- ===================== BODY ===================== -->
+  <div id="body">
+
+    <!-- ---------- LEFT SIDEBAR ---------- -->
+    <aside id="sidebar">
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="parts" role="tab">Parts</button>
+        <button class="tab" data-tab="harnesses" role="tab">Wiring</button>
+        <button class="tab" data-tab="modules" role="tab">Modules</button>
+      </nav>
+
+      <!-- PARTS -->
+      <section class="panel active" id="panel-parts">
+        <div class="panel-tools">
+          <input type="search" id="part-search" placeholder="Search 2,130 parts…  (name, group, collection)" autocomplete="off" />
+          <div class="filter-row">
+            <select id="filter-group"><option value="">All groups</option></select>
+            <select id="filter-collection"><option value="">All collections</option></select>
+          </div>
+          <div class="filter-row">
+            <select id="filter-module"><option value="">All modules</option></select>
+            <select id="filter-state">
+              <option value="">Any state</option>
+              <option value="visible">Visible</option>
+              <option value="hidden">Hidden</option>
+              <option value="selected">Selected</option>
+            </select>
+          </div>
+          <div class="list-meta">
+            <span id="part-count">—</span>
+            <span class="spacer"></span>
+            <button class="mini" id="btn-show-all">Show all</button>
+            <button class="mini" id="btn-hide-all">Hide all</button>
+          </div>
+        </div>
+        <div class="list-scroll" id="part-list-scroll">
+          <div class="list-inner" id="part-list-inner"></div>
+        </div>
+      </section>
+
+      <!-- WIRING -->
+      <section class="panel" id="panel-harnesses">
+        <div class="panel-tools">
+          <div class="wiring-head">
+            <h3>Wire harnesses <span class="pill" id="harness-count">—</span></h3>
+            <div class="btn-row">
+              <button class="mini" id="btn-harness-all">All on</button>
+              <button class="mini" id="btn-harness-none">All off</button>
+            </div>
+          </div>
+          <p class="hint">Toggle a harness to isolate it. Hover a wire in the viewport to run the trace along its length.</p>
+          <div class="list-scroll short" id="harness-list"></div>
+        </div>
+
+        <div class="panel-tools">
+          <div class="wiring-head">
+            <h3>Hoses &amp; tie straps <span class="pill" id="hose-count">—</span></h3>
+            <div class="btn-row">
+              <button class="mini" id="btn-hose-all">All on</button>
+              <button class="mini" id="btn-hose-none">All off</button>
+            </div>
+          </div>
+          <div class="list-scroll short" id="hose-list"></div>
+        </div>
+      </section>
+
+      <!-- MODULES -->
+      <section class="panel" id="panel-modules">
+        <div class="panel-tools">
+          <h3>Modules <span class="pill" id="module-count">—</span></h3>
+          <p class="hint">Each module is a standalone <code>.blend</code> that reassembles on its own. Isolate one to inspect it.</p>
+          <div class="btn-row">
+            <button class="mini" id="btn-module-all">Show all</button>
+          </div>
+        </div>
+        <div class="list-scroll" id="module-list"></div>
+      </section>
+    </aside>
+
+    <!-- ---------- VIEWPORT ---------- -->
+    <main id="viewport">
+      <canvas id="view"></canvas>
+
+      <div id="loading">
+        <div class="spinner"></div>
+        <p id="loading-text">Loading manifest…</p>
+        <div class="bar"><i id="loading-bar"></i></div>
+      </div>
+
+      <div id="error-box" hidden>
+        <h3>Could not load the model</h3>
+        <p id="error-text"></p>
+        <button id="btn-retry" class="primary">Retry</button>
+      </div>
+
+      <!-- view controls -->
+      <div id="view-controls">
+        <button id="btn-live-trace" class="toggle on" title="Trace animates live as you hover a wire (T)">Live trace</button>
+        <button id="btn-wireframe" class="toggle" title="Wireframe (W)">Wireframe</button>
+        <button id="btn-xray" class="toggle" title="X-ray / see-through body (X)">X-ray</button>
+        <button id="btn-fit" class="toggle" title="Frame the whole car (F)">Fit</button>
+        <button id="btn-spin" class="toggle" title="Auto-rotate (R)">Spin</button>
+      </div>
+
+      <!-- legend -->
+      <div id="legend">
+        <div class="legend-head">
+          <span>Legend</span>
+          <button id="btn-legend" class="mini">hide</button>
+        </div>
+        <div class="legend-body" id="legend-body"></div>
+      </div>
+
+      <!-- selection card -->
+      <div id="info-card" hidden>
+        <button id="info-close" class="icon-btn small">×</button>
+        <h3 id="info-name">—</h3>
+        <dl>
+          <dt>Group</dt><dd id="info-group">—</dd>
+          <dt>Sub-collection</dt><dd id="info-sub">—</dd>
+          <dt>Collection</dt><dd id="info-collection">—</dd>
+          <dt>Module</dt><dd id="info-module">—</dd>
+          <dt>Material</dt><dd id="info-material">—</dd>
+          <dt>Sequence step</dt><dd id="info-step">—</dd>
+        </dl>
+        <p class="notes" id="info-notes"></p>
+        <div class="btn-row wrap">
+          <button class="mini" id="btn-eject">Pull this part off</button>
+          <button class="mini" id="btn-hide">Hide</button>
+          <button class="mini" id="btn-isolate">Isolate</button>
+          <button class="mini" id="btn-trace">Run trace</button>
+        </div>
+      </div>
+
+      <!-- hover readout -->
+      <div id="hover-readout" hidden></div>
+    </main>
+  </div>
+
+  <!-- ===================== BOTTOM BAR ===================== -->
+  <footer id="bottombar">
+    <div class="bar-group seq-group">
+      <div class="bar-label">Sequence</div>
+      <div class="bar-controls">
+        <label class="slider-wrap">
+          <span>Explode</span>
+          <input type="range" id="explode-slider" min="0" max="100" value="0" step="1" />
+          <output id="explode-val">0%</output>
+        </label>
+        <label class="slider-wrap grow">
+          <span>Step</span>
+          <input type="range" id="step-slider" min="0" max="27" value="0" step="1" />
+          <output id="step-val">assembled</output>
+        </label>
+        <button class="mini" id="btn-reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="bar-group anim-group">
+      <div class="bar-label">Teardown animation</div>
+      <div class="bar-controls">
+        <button id="btn-play" class="play-btn" title="Play / pause (Space)">▶</button>
+        <label class="slider-wrap grow">
+          <input type="range" id="anim-scrub" min="0" max="1000" value="0" step="1" />
+          <output id="anim-time">0.00s</output>
+        </label>
+        <label class="speed-wrap">
+          <span>Speed</span>
+          <select id="anim-speed">
+            <option value="0.25">0.25×</option>
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+          </select>
+        </label>
+        <button class="mini" id="btn-loop" title="Loop playback">Loop</button>
+      </div>
+    </div>
+
+    <div class="bar-group status-group">
+      <div class="bar-label">Status</div>
+      <div class="bar-controls">
+        <span id="status-text">ready</span>
+        <span class="fps" id="fps">— fps</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== HELP ===================== -->
+<div id="help-modal" hidden>
+  <div class="modal-card">
+    <button id="help-close" class="icon-btn small">×</button>
+    <h2>ALTIMA2000 viewer</h2>
+    <p>Everything below runs in the browser — no Blender, no plugin. The model, the 2,130-part manifest and the 27-step teardown animation are the same files that ship in the repo.</p>
+    <h3>Mouse</h3>
+    <ul>
+      <li><b>Left drag</b> — orbit (rotate)</li>
+      <li><b>Wheel</b> — zoom</li>
+      <li><b>Right drag / two-finger drag</b> — pan</li>
+      <li><b>Click a part</b> — select it and read its manifest record</li>
+      <li><b>Hover a wire</b> — the trace runs along it, end to end</li>
+    </ul>
+    <h3>Keyboard</h3>
+    <ul>
+      <li><b>Space</b> — play / pause the teardown animation</li>
+      <li><b>F</b> — fit the car in view &nbsp;·&nbsp; <b>R</b> — auto-rotate</li>
+      <li><b>W</b> — wireframe &nbsp;·&nbsp; <b>X</b> — x-ray &nbsp;·&nbsp; <b>T</b> — live trace</li>
+      <li><b>Esc</b> — clear selection &nbsp;·&nbsp; <b>H</b> — hide selected</li>
+      <li><b>1 / 2 / 3</b> — Parts / Wiring / Modules tab</li>
+    </ul>
+    <h3>Views</h3>
+    <ul>
+      <li><b>Explode</b> — pulls every part apart along the 27-step sequence</li>
+      <li><b>Step</b> — explodes the sequence one step at a time</li>
+      <li><b>Pull this part off</b> — ejects the selected part individually</li>
+      <li><b>Wiring tab</b> — 31 harness toggles plus hoses and tie straps</li>
+      <li><b>Modules tab</b> — isolate any of the 7 module assemblies</li>
+    </ul>
+  </div>
+</div>
+
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>

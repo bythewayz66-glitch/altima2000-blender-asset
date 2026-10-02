@@ -1,0 +1,2231 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "brakes",
+ "module_file": "altima2000_module_brakes.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Brakes"
+ ],
+ "collections": [
+  "Brakes_Front",
+  "Brakes_Hydraulics",
+  "Brakes_Rear"
+ ],
+ "part_count": 61,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_BRAK_ABSModule_Hydraulic",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "ABSModule",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.955745,
+    "y": 0.24,
+    "z": 0.88
+   },
+   "offset_m": [
+    1.955745,
+    0.24,
+    0.88
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ABS hydraulic control module",
+   "master_index": 422,
+   "module": "brakes"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_BRAK_BrakeBooster_Vacuum",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "Booster",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.7,
+    "y": -0.14,
+    "z": 0.9
+   },
+   "offset_m": [
+    1.7,
+    -0.14,
+    0.9
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vacuum brake booster",
+   "master_index": 421,
+   "module": "brakes"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_BRAK_BrakeHose_Flexible_L_02",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeHose",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.671097,
+    "z": 0.391167
+   },
+   "offset_m": [
+    1.38,
+    -0.671097,
+    0.391167
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "flexible brake hose",
+   "master_index": 427,
+   "module": "brakes"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_BRAK_BrakeHose_Flexible_L_04",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeHose",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.671097,
+    "z": 0.391167
+   },
+   "offset_m": [
+    -1.24,
+    -0.671097,
+    0.391167
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "flexible brake hose",
+   "master_index": 431,
+   "module": "brakes"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_BRAK_BrakeHose_Flexible_R_01",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeHose",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.671097,
+    "z": 0.391167
+   },
+   "offset_m": [
+    1.38,
+    0.671097,
+    0.391167
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "flexible brake hose",
+   "master_index": 425,
+   "module": "brakes"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_BRAK_BrakeHose_Flexible_R_03",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeHose",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.671097,
+    "z": 0.391167
+   },
+   "offset_m": [
+    -1.24,
+    0.671097,
+    0.391167
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "flexible brake hose",
+   "master_index": 429,
+   "module": "brakes"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_BRAK_BrakeLine_Rigid_L_02",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeLine",
+   "object_type": "MESH",
+   "material": "MAT_Copper_Wire",
+   "material_key": "copper",
+   "instance_of": "",
+   "position": {
+    "x": 1.426667,
+    "y": -0.346667,
+    "z": 0.6
+   },
+   "offset_m": [
+    1.426667,
+    -0.346667,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rigid brake line",
+   "master_index": 426,
+   "module": "brakes"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_BRAK_BrakeLine_Rigid_L_04",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeLine",
+   "object_type": "MESH",
+   "material": "MAT_Copper_Wire",
+   "material_key": "copper",
+   "instance_of": "",
+   "position": {
+    "x": 0.553333,
+    "y": -0.346667,
+    "z": 0.6
+   },
+   "offset_m": [
+    0.553333,
+    -0.346667,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rigid brake line",
+   "master_index": 430,
+   "module": "brakes"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_BRAK_BrakeLine_Rigid_R_01",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeLine",
+   "object_type": "MESH",
+   "material": "MAT_Copper_Wire",
+   "material_key": "copper",
+   "instance_of": "",
+   "position": {
+    "x": 1.426667,
+    "y": 0.346667,
+    "z": 0.6
+   },
+   "offset_m": [
+    1.426667,
+    0.346667,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rigid brake line",
+   "master_index": 424,
+   "module": "brakes"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_BRAK_BrakeLine_Rigid_R_03",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "BrakeLine",
+   "object_type": "MESH",
+   "material": "MAT_Copper_Wire",
+   "material_key": "copper",
+   "instance_of": "",
+   "position": {
+    "x": 0.553333,
+    "y": 0.346667,
+    "z": 0.6
+   },
+   "offset_m": [
+    0.553333,
+    0.346667,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rigid brake line",
+   "master_index": 428,
+   "module": "brakes"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_BRAK_Caliper_Front_L",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Caliper_FrontL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Caliper_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.458,
+    "y": 0.68523,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.458,
+    0.68523,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake caliper body",
+   "master_index": 414,
+   "module": "brakes"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_BRAK_Caliper_Front_R",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Caliper_FrontR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Caliper_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.458,
+    "y": -0.68523,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.458,
+    -0.68523,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake caliper body",
+   "master_index": 404,
+   "module": "brakes"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_BRAK_Caliper_Rear_L",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Caliper_RearL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Caliper_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.162,
+    "y": 0.68523,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.162,
+    0.68523,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake caliper body",
+   "master_index": 419,
+   "module": "brakes"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_BRAK_Caliper_Rear_R",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Caliper_RearR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Caliper_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.162,
+    "y": -0.68523,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.162,
+    -0.68523,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake caliper body",
+   "master_index": 409,
+   "module": "brakes"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_BRAK_Disc_Front_L",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Disc_FrontL",
+   "object_type": "MESH",
+   "material": "MAT_BrakeDisc_GreyIron",
+   "material_key": "brake_disc",
+   "instance_of": "TPL_BrakeDisc",
+   "position": {
+    "x": 1.38,
+    "y": 0.64758,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.64758,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vented brake disc",
+   "master_index": 410,
+   "module": "brakes"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_BRAK_Disc_Front_R",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Disc_FrontR",
+   "object_type": "MESH",
+   "material": "MAT_BrakeDisc_GreyIron",
+   "material_key": "brake_disc",
+   "instance_of": "TPL_BrakeDisc",
+   "position": {
+    "x": 1.38,
+    "y": -0.64758,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.64758,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vented brake disc",
+   "master_index": 400,
+   "module": "brakes"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_BRAK_Disc_Rear_L",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Disc_RearL",
+   "object_type": "MESH",
+   "material": "MAT_BrakeDisc_GreyIron",
+   "material_key": "brake_disc",
+   "instance_of": "TPL_BrakeDisc",
+   "position": {
+    "x": -1.24,
+    "y": 0.64758,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.64758,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vented brake disc",
+   "master_index": 415,
+   "module": "brakes"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_BRAK_Disc_Rear_R",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Disc_RearR",
+   "object_type": "MESH",
+   "material": "MAT_BrakeDisc_GreyIron",
+   "material_key": "brake_disc",
+   "instance_of": "TPL_BrakeDisc",
+   "position": {
+    "x": -1.24,
+    "y": -0.64758,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.64758,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vented brake disc",
+   "master_index": 405,
+   "module": "brakes"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_BRAK_HexBolt_Booster_001",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Booster",
+   "part": "HexBolt_Booster",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster nut (M8)",
+   "master_index": 1607,
+   "module": "brakes"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_BRAK_HexBolt_Booster_002",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Booster",
+   "part": "HexBolt_Booster",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster nut (M8)",
+   "master_index": 1608,
+   "module": "brakes"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_BRAK_HexBolt_Booster_003",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Booster",
+   "part": "HexBolt_Booster",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster nut (M8)",
+   "master_index": 1609,
+   "module": "brakes"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_BRAK_HexBolt_Booster_004",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Booster",
+   "part": "HexBolt_Booster",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster nut (M8)",
+   "master_index": 1610,
+   "module": "brakes"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_001",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1595,
+   "module": "brakes"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_002",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1596,
+   "module": "brakes"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_003",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1597,
+   "module": "brakes"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_004",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1598,
+   "module": "brakes"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_005",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1599,
+   "module": "brakes"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_006",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1600,
+   "module": "brakes"
+  },
+  {
+   "part_index": 29,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_007",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1601,
+   "module": "brakes"
+  },
+  {
+   "part_index": 30,
+   "name": "ALTIMA2000_BRAK_HexBolt_CaliperRear_008",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "CaliperRear",
+   "part": "HexBolt_CaliperRear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear caliper mounting bolt (M12)",
+   "master_index": 1602,
+   "module": "brakes"
+  },
+  {
+   "part_index": 31,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_001",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1587,
+   "module": "brakes"
+  },
+  {
+   "part_index": 32,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_002",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1588,
+   "module": "brakes"
+  },
+  {
+   "part_index": 33,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_003",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1589,
+   "module": "brakes"
+  },
+  {
+   "part_index": 34,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_004",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1590,
+   "module": "brakes"
+  },
+  {
+   "part_index": 35,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_005",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1591,
+   "module": "brakes"
+  },
+  {
+   "part_index": 36,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_006",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1592,
+   "module": "brakes"
+  },
+  {
+   "part_index": 37,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_007",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1593,
+   "module": "brakes"
+  },
+  {
+   "part_index": 38,
+   "name": "ALTIMA2000_BRAK_HexBolt_Caliper_008",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Caliper",
+   "part": "HexBolt_Caliper",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M14",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front caliper mounting bolt (M14)",
+   "master_index": 1594,
+   "module": "brakes"
+  },
+  {
+   "part_index": 39,
+   "name": "ALTIMA2000_BRAK_HexBolt_MasterCylinder_001",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "MasterCylinder",
+   "part": "HexBolt_MasterCylinder",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "master cylinder nut (M8)",
+   "master_index": 1603,
+   "module": "brakes"
+  },
+  {
+   "part_index": 40,
+   "name": "ALTIMA2000_BRAK_HexBolt_MasterCylinder_002",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "MasterCylinder",
+   "part": "HexBolt_MasterCylinder",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "master cylinder nut (M8)",
+   "master_index": 1604,
+   "module": "brakes"
+  },
+  {
+   "part_index": 41,
+   "name": "ALTIMA2000_BRAK_HexBolt_MasterCylinder_003",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "MasterCylinder",
+   "part": "HexBolt_MasterCylinder",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "master cylinder nut (M8)",
+   "master_index": 1605,
+   "module": "brakes"
+  },
+  {
+   "part_index": 42,
+   "name": "ALTIMA2000_BRAK_HexBolt_MasterCylinder_004",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "MasterCylinder",
+   "part": "HexBolt_MasterCylinder",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "master cylinder nut (M8)",
+   "master_index": 1606,
+   "module": "brakes"
+  },
+  {
+   "part_index": 43,
+   "name": "ALTIMA2000_BRAK_Hose_VacuumBooster_001",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Brakes_Hydraulics",
+   "part": "Hose_VacuumBooster",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.0,
+    "y": 0.2,
+    "z": 0.78
+   },
+   "offset_m": [
+    1.0,
+    0.2,
+    0.78
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster vacuum hose, intake manifold to the booster, segment 1/2",
+   "master_index": 1332,
+   "module": "brakes"
+  },
+  {
+   "part_index": 44,
+   "name": "ALTIMA2000_BRAK_Hose_VacuumBooster_002",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Brakes_Hydraulics",
+   "part": "Hose_VacuumBooster",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.660591,
+    "y": -0.29904,
+    "z": 0.720115
+   },
+   "offset_m": [
+    0.660591,
+    -0.29904,
+    0.720115
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake booster vacuum hose, intake manifold to the booster, segment 2/2",
+   "master_index": 1333,
+   "module": "brakes"
+  },
+  {
+   "part_index": 45,
+   "name": "ALTIMA2000_BRAK_MasterCylinder_Tandem",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "MasterCylinder",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.870638,
+    "y": -0.14,
+    "z": 0.94
+   },
+   "offset_m": [
+    1.870638,
+    -0.14,
+    0.94
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tandem master cylinder",
+   "master_index": 420,
+   "module": "brakes"
+  },
+  {
+   "part_index": 46,
+   "name": "ALTIMA2000_BRAK_Pad_Front_L_1",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Pad_FrontL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": 1.45,
+    "y": 0.6777,
+    "z": 0.3435
+   },
+   "offset_m": [
+    1.45,
+    0.6777,
+    0.3435
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 411,
+   "module": "brakes"
+  },
+  {
+   "part_index": 47,
+   "name": "ALTIMA2000_BRAK_Pad_Front_L_2",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Pad_FrontL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": 1.45,
+    "y": 0.6777,
+    "z": 0.2835
+   },
+   "offset_m": [
+    1.45,
+    0.6777,
+    0.2835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 412,
+   "module": "brakes"
+  },
+  {
+   "part_index": 48,
+   "name": "ALTIMA2000_BRAK_Pad_Front_R_1",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Pad_FrontR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": 1.45,
+    "y": -0.6777,
+    "z": 0.3435
+   },
+   "offset_m": [
+    1.45,
+    -0.6777,
+    0.3435
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 401,
+   "module": "brakes"
+  },
+  {
+   "part_index": 49,
+   "name": "ALTIMA2000_BRAK_Pad_Front_R_2",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Pad_FrontR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": 1.45,
+    "y": -0.6777,
+    "z": 0.2835
+   },
+   "offset_m": [
+    1.45,
+    -0.6777,
+    0.2835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 402,
+   "module": "brakes"
+  },
+  {
+   "part_index": 50,
+   "name": "ALTIMA2000_BRAK_Pad_Rear_L_1",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Pad_RearL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": -1.17,
+    "y": 0.6777,
+    "z": 0.3435
+   },
+   "offset_m": [
+    -1.17,
+    0.6777,
+    0.3435
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 416,
+   "module": "brakes"
+  },
+  {
+   "part_index": 51,
+   "name": "ALTIMA2000_BRAK_Pad_Rear_L_2",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Pad_RearL",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": -1.17,
+    "y": 0.6777,
+    "z": 0.2835
+   },
+   "offset_m": [
+    -1.17,
+    0.6777,
+    0.2835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 417,
+   "module": "brakes"
+  },
+  {
+   "part_index": 52,
+   "name": "ALTIMA2000_BRAK_Pad_Rear_R_1",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Pad_RearR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": -1.17,
+    "y": -0.6777,
+    "z": 0.3435
+   },
+   "offset_m": [
+    -1.17,
+    -0.6777,
+    0.3435
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 406,
+   "module": "brakes"
+  },
+  {
+   "part_index": 53,
+   "name": "ALTIMA2000_BRAK_Pad_Rear_R_2",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Pad_RearR",
+   "object_type": "MESH",
+   "material": "MAT_Brake_Pad_Friction",
+   "material_key": "brake_pad",
+   "instance_of": "TPL_BrakePad",
+   "position": {
+    "x": -1.17,
+    "y": -0.6777,
+    "z": 0.2835
+   },
+   "offset_m": [
+    -1.17,
+    -0.6777,
+    0.2835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "brake pad",
+   "master_index": 407,
+   "module": "brakes"
+  },
+  {
+   "part_index": 54,
+   "name": "ALTIMA2000_BRAK_ParkingBrake_Cable_L",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "ParkCable",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": -0.62,
+    "y": -0.3608,
+    "z": 0.35
+   },
+   "offset_m": [
+    -0.62,
+    -0.3608,
+    0.35
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "parking brake cable",
+   "master_index": 434,
+   "module": "brakes"
+  },
+  {
+   "part_index": 55,
+   "name": "ALTIMA2000_BRAK_ParkingBrake_Cable_R",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "ParkCable",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "",
+   "position": {
+    "x": -0.62,
+    "y": 0.2408,
+    "z": 0.35
+   },
+   "offset_m": [
+    -0.62,
+    0.2408,
+    0.35
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "parking brake cable",
+   "master_index": 433,
+   "module": "brakes"
+  },
+  {
+   "part_index": 56,
+   "name": "ALTIMA2000_BRAK_ParkingBrake_Lever",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "ParkBrakeLever",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.02,
+    "y": -0.15,
+    "z": 0.42
+   },
+   "offset_m": [
+    0.02,
+    -0.15,
+    0.42
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "parking brake lever",
+   "master_index": 432,
+   "module": "brakes"
+  },
+  {
+   "part_index": 57,
+   "name": "ALTIMA2000_BRAK_Piston_Front_L",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Piston_FrontL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "TPL_CaliperPiston",
+   "position": {
+    "x": 1.458,
+    "y": 0.6777,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.458,
+    0.6777,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "caliper piston",
+   "master_index": 413,
+   "module": "brakes"
+  },
+  {
+   "part_index": 58,
+   "name": "ALTIMA2000_BRAK_Piston_Front_R",
+   "collection": "Brakes_Front",
+   "group": "BR",
+   "sub": "Front",
+   "part": "Piston_FrontR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "TPL_CaliperPiston",
+   "position": {
+    "x": 1.458,
+    "y": -0.6777,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.458,
+    -0.6777,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "caliper piston",
+   "master_index": 403,
+   "module": "brakes"
+  },
+  {
+   "part_index": 59,
+   "name": "ALTIMA2000_BRAK_Piston_Rear_L",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Piston_RearL",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "TPL_CaliperPiston",
+   "position": {
+    "x": -1.162,
+    "y": 0.6777,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.162,
+    0.6777,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "caliper piston",
+   "master_index": 418,
+   "module": "brakes"
+  },
+  {
+   "part_index": 60,
+   "name": "ALTIMA2000_BRAK_Piston_Rear_R",
+   "collection": "Brakes_Rear",
+   "group": "BR",
+   "sub": "Rear",
+   "part": "Piston_RearR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "steel",
+   "instance_of": "TPL_CaliperPiston",
+   "position": {
+    "x": -1.162,
+    "y": -0.6777,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.162,
+    -0.6777,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "caliper piston",
+   "master_index": 408,
+   "module": "brakes"
+  },
+  {
+   "part_index": 61,
+   "name": "ALTIMA2000_BRAK_ProportioningValve_Rear",
+   "collection": "Brakes_Hydraulics",
+   "group": "BR",
+   "sub": "Hydraulics",
+   "part": "PropValve",
+   "object_type": "MESH",
+   "material": "MAT_Brass_Fitting",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.6,
+    "y": 0.15,
+    "z": 0.74
+   },
+   "offset_m": [
+    1.6,
+    0.15,
+    0.74
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear proportioning valve",
+   "master_index": 423,
+   "module": "brakes"
+  }
+ ]
+}

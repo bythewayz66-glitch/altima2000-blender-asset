@@ -524,3 +524,113 @@ in X/Z — i.e. the axle points sideways, as it should) and visually.
 | 3 | Add per-harness visibility toggles for the 37 hoses and 38 tie straps | enhancement |
 | 4 | Audit remaining legacy geometry and manifest gaps | enhancement, tooling |
 | 5 | Re-validate wheel orientation and assembly seams with the vision model and record the verdict | enhancement, documentation |
+
+---
+
+## 19. Interactive web frontend (`web/`)
+
+The asset is usable **in a browser with no Blender installed**. `web/` is a plain static
+site — no build step, no npm install — that loads the same `altima2000.glb` and the same
+manifest JSON that ship in this repo.
+
+### Layout
+
+```
+web/
+  index.html              the viewer shell (header / sidebar / viewport / bottom bar)
+  css/app.css             all styling
+  js/app.js               controller: boots the data layer, viewer and UI
+  js/data.js              manifest loading + indexing (parts, harnesses, modules, steps)
+  js/viewer.js            three.js scene, picking, explode, animation, visibility
+  js/trace.js             trace shader + arc-length baking + TraceController
+  js/ui.js                panels, virtualised parts list, legend, info card, bottom bar
+  vendor/three/           three.js 0.169.0 + GLTFLoader + OrbitControls (vendored)
+  data/                   copy of the glb/gltf/bin + master and per-module manifests
+  verify_frontend.js      headless verification harness (36 assertions)
+```
+
+### Run it
+
+```bash
+cd web
+python3 -m http.server 8080     # then open http://localhost:8080
+```
+
+A server is required — `file://` blocks ES modules and `fetch`.
+
+### Deploy
+
+`.github/workflows/pages.yml` publishes `web/` to GitHub Pages on every push to `main`.
+Enable once under **Settings → Pages → Source: GitHub Actions**. Live at
+`https://bythewayz66-glitch.github.io/altima2000-blender-asset/`.
+
+### Data sources
+
+The viewer has two, selectable in the header (or with `?source=local` / `?source=github`):
+
+| Source | Manifest | Model |
+|---|---|---|
+| `local` | `./data/altima2000_manifest.json` | `./data/altima2000.glb` |
+| `github` | `raw.githubusercontent.com/…` | `media.githubusercontent.com/media/…` |
+
+The GitHub source is needed on Pages because the `.glb` is a **Git LFS object** and
+`raw.githubusercontent.com` returns only the 132-byte LFS pointer. The LFS media host
+serves the real bytes and is CORS-enabled (`access-control-allow-origin: *`), so no
+proxy is required. The page auto-selects `github` when served from `*.github.io`.
+
+### Feature map
+
+| Requested feature | Where it lives |
+|---|---|
+| 3D load + orbit (rotate / zoom / pan) | `viewer.js` — `GLTFLoader`, `OrbitControls` |
+| Exploded / disassembly view | `viewer.js` `setExplode()`; bottom-bar **Explode** + **Step** sliders |
+| "Pull this part off" | `viewer.js` `eject()` / `uneject()`; info-card button |
+| Part picking + manifest record | `viewer.js` `pick()`; `ui.js` `showInfo()` |
+| Searchable / filterable 2,130-part list | `ui.js` `refreshParts()` / `_renderParts()` (virtualised) |
+| Wiring view, 31 harness toggles | `ui.js` `refreshHarnesses()`; `viewer.js` `setHarnessVisible()` / `isolateHarness()` |
+| Hoses + tie straps | `ui.js` hose list; `viewer.js` `setHoseSystemVisible()` |
+| Glow + progressive trace | `trace.js` — `buildTraceAttribute()`, `makeTraceMaterial()`, `TraceController` |
+| Teardown animation playback | `viewer.js` `_setupAnimation()` / `setAnimTime()`; bottom-bar transport |
+| Module view (7 modules) | `ui.js` `refreshModules()`; `viewer.js` `isolateModule()` |
+| Legend | `ui.js` `_buildLegend()` |
+
+### How the trace is rebuilt in the browser
+
+Blender drives the trace from a `trace_t` mesh attribute plus material node values.
+glTF does not export custom attributes, so the frontend reconstructs the same value:
+
+1. Each wire/hose has a `trace_points` polyline in `altima2000_manifest.json`.
+2. Those points are authored in Blender's **Z-up** frame; the glTF is **Y-up**. They are
+   converted with `(x, y, z) → (x, z, −y)` in `data.js` (`blenderToGltf`), then into each
+   mesh's local frame via the inverse of its world matrix (`trace.js` `polylineToLocal`).
+3. Every vertex is projected onto the polyline; the normalised arc length becomes the
+   `aTraceT` attribute (`buildTraceAttribute`).
+4. `makeTraceMaterial()` sweeps `uProgress` 0 → 1, drawing a bright travelling head with
+   a lit trail behind it, faded in/out by `uGlow`.
+
+Tie straps carry no polyline in the manifest, so `buildTraceAttributeFromGeometry()`
+derives an arc length from the geometry's principal axis — the sweep still runs end to end.
+
+### Verification
+
+`web/verify_frontend.js` drives a real headless Chromium (WebGL via SwiftShader) against
+a local server and asserts 36 behaviours: model load, part count vs. manifest, picking,
+the info card, harness toggles and isolation, the trace attribute and its sweep, live
+hover tracing, explode, step control, part ejection, module isolation, animation playback
+and scrubbing, the parts list, search, and the panels.
+
+```bash
+cd web && python3 -m http.server 8099 &
+npm i puppeteer-core
+CHROME=/path/to/chrome node verify_frontend.js
+```
+
+### Known limitations
+
+- **Four parts have no geometry in the export.** `ALTIMA2000_SHEL_RoofBow_001…004` are in
+  the manifest but authored as non-mesh objects, so they cannot be drawn. They stay
+  searchable and the info card says so. Hence **2,126 meshes** for a **2,130-part**
+  manifest — the viewer reports both numbers rather than hiding the gap.
+- The trace shader is a custom `ShaderMaterial`, so it does not receive scene shadows.
+- Desktop-oriented; the layout is responsive but not touch-optimised.
+- First load is a few seconds (≈4.7 MB glTF + 1.8 MB manifest); both are cached after.

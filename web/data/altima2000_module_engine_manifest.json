@@ -1,0 +1,7061 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "engine",
+ "module_file": "altima2000_module_engine.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Engine"
+ ],
+ "collections": [
+  "Engine",
+  "Engine_Accessory",
+  "Engine_Cooling",
+  "Engine_Emission",
+  "Engine_ExhaustSide",
+  "Engine_Fuel",
+  "Engine_Head",
+  "Engine_Intake",
+  "Engine_LongBlock"
+ ],
+ "part_count": 195,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_EMIS_Hose_EVAP_001",
+   "collection": "Engine_Emission",
+   "group": "EM",
+   "sub": "Engine_Emission",
+   "part": "Hose_EVAP",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.3,
+    "y": -0.35,
+    "z": 0.45
+   },
+   "offset_m": [
+    1.3,
+    -0.35,
+    0.45
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "EVAP purge hose, canister to purge valve and intake, segment 1/3",
+   "master_index": 1342,
+   "module": "engine"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_EMIS_Hose_EVAP_002",
+   "collection": "Engine_Emission",
+   "group": "EM",
+   "sub": "Engine_Emission",
+   "part": "Hose_EVAP",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 2.139873,
+    "y": -0.526782,
+    "z": 0.748896
+   },
+   "offset_m": [
+    2.139873,
+    -0.526782,
+    0.748896
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "EVAP purge hose, canister to purge valve and intake, segment 2/3",
+   "master_index": 1343,
+   "module": "engine"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_EMIS_Hose_EVAP_003",
+   "collection": "Engine_Emission",
+   "group": "EM",
+   "sub": "Engine_Emission",
+   "part": "Hose_EVAP",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.107513,
+    "y": 0.187335,
+    "z": 0.800024
+   },
+   "offset_m": [
+    1.107513,
+    0.187335,
+    0.800024
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "EVAP purge hose, canister to purge valve and intake, segment 3/3",
+   "master_index": 1344,
+   "module": "engine"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_ENG_ACCompressor_Assembly",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "ACCompressor",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.03,
+    "y": -0.29,
+    "z": 0.315
+   },
+   "offset_m": [
+    1.03,
+    -0.29,
+    0.315
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air conditioning compressor",
+   "master_index": 256,
+   "module": "engine"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_ENG_AirBox_Lower",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "AirBox",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.05,
+    "z": 0.745
+   },
+   "offset_m": [
+    1.38,
+    0.05,
+    0.745
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air cleaner housing lower",
+   "master_index": 224,
+   "module": "engine"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_ENG_AirBox_Upper",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "AirBoxUpper",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.05,
+    "z": 0.88
+   },
+   "offset_m": [
+    1.38,
+    0.05,
+    0.88
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air cleaner housing upper",
+   "master_index": 225,
+   "module": "engine"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_ENG_AirFilter_Element",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "AirFilter",
+   "object_type": "MESH",
+   "material": "MAT_Filter_Element",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.05,
+    "z": 0.83
+   },
+   "offset_m": [
+    1.38,
+    0.05,
+    0.83
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "panel air filter element",
+   "master_index": 226,
+   "module": "engine"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_ENG_AirIntakeDuct_Rubber",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeDuct",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": 1.196667,
+    "y": 0.3,
+    "z": 0.765
+   },
+   "offset_m": [
+    1.196667,
+    0.3,
+    0.765
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air intake duct",
+   "master_index": 223,
+   "module": "engine"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_ENG_Alternator_Assembly",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "Alternator",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.89,
+    "y": -0.235,
+    "z": 0.405
+   },
+   "offset_m": [
+    0.89,
+    -0.235,
+    0.405
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alternator",
+   "master_index": 254,
+   "module": "engine"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_ENG_Block_Cylinder",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Block",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.485
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.485
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder block - cast iron, 2.4 L KA24DE",
+   "master_index": 185,
+   "module": "engine"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_ENG_Camshaft_DOHC_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "Camshaft",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.056,
+    "z": 0.757
+   },
+   "offset_m": [
+    1.02,
+    -0.056,
+    0.757
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft (DOHC)",
+   "master_index": 211,
+   "module": "engine"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_ENG_Camshaft_DOHC_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "Camshaft",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.056,
+    "z": 0.757
+   },
+   "offset_m": [
+    1.02,
+    0.056,
+    0.757
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft (DOHC)",
+   "master_index": 212,
+   "module": "engine"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_ENG_CoolantReservoir_Tank",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "CoolantTank",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Ivory",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": 0.4,
+    "z": 0.76
+   },
+   "offset_m": [
+    1.54,
+    0.4,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "coolant overflow reservoir",
+   "master_index": 242,
+   "module": "engine"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_ENG_CoolingFan_Blade_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "FanBlade",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.415,
+    "y": 0.0,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.415,
+    0.0,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cooling fan blade",
+   "master_index": 244,
+   "module": "engine"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_ENG_CoolingFan_Blade_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "FanBlade",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.45,
+    "y": 0.0,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.45,
+    0.0,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cooling fan blade",
+   "master_index": 245,
+   "module": "engine"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_ENG_CoverBolt_Perimeter_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "CoverBolt",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.85,
+    "y": -0.185,
+    "z": 0.875
+   },
+   "offset_m": [
+    0.85,
+    -0.185,
+    0.875
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve cover bolt",
+   "master_index": 191,
+   "module": "engine"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_ENG_CoverBolt_Perimeter_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "CoverBolt",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.963,
+    "y": -0.185,
+    "z": 0.875
+   },
+   "offset_m": [
+    0.963,
+    -0.185,
+    0.875
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve cover bolt",
+   "master_index": 192,
+   "module": "engine"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_ENG_CoverBolt_Perimeter_003",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "CoverBolt",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.076,
+    "y": -0.185,
+    "z": 0.875
+   },
+   "offset_m": [
+    1.076,
+    -0.185,
+    0.875
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve cover bolt",
+   "master_index": 193,
+   "module": "engine"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_ENG_CoverBolt_Perimeter_004",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "CoverBolt",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.189,
+    "y": -0.185,
+    "z": 0.875
+   },
+   "offset_m": [
+    1.189,
+    -0.185,
+    0.875
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve cover bolt",
+   "master_index": 194,
+   "module": "engine"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_ENG_Crankcase_Lower",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.31
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.31
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower crankcase / main bearing girdle",
+   "master_index": 186,
+   "module": "engine"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_ENG_Crankshaft_Forged",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Crankshaft",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.395
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.395
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "crankshaft",
+   "master_index": 210,
+   "module": "engine"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_ENG_Cylinder_BoreSleeve_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Cylinder_1",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "engine_blk",
+   "instance_of": "",
+   "position": {
+    "x": 0.87,
+    "y": 0.0,
+    "z": 0.485
+   },
+   "offset_m": [
+    0.87,
+    0.0,
+    0.485
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder bore / piston assembly",
+   "master_index": 201,
+   "module": "engine"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_ENG_Cylinder_BoreSleeve_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Cylinder_2",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "engine_blk",
+   "instance_of": "",
+   "position": {
+    "x": 0.97,
+    "y": 0.0,
+    "z": 0.485
+   },
+   "offset_m": [
+    0.97,
+    0.0,
+    0.485
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder bore / piston assembly",
+   "master_index": 202,
+   "module": "engine"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_ENG_Cylinder_BoreSleeve_003",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Cylinder_3",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "engine_blk",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": 0.0,
+    "z": 0.485
+   },
+   "offset_m": [
+    1.07,
+    0.0,
+    0.485
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder bore / piston assembly",
+   "master_index": 203,
+   "module": "engine"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_ENG_Cylinder_BoreSleeve_004",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Cylinder_4",
+   "object_type": "MESH",
+   "material": "MAT_Engine_BlockIron",
+   "material_key": "engine_blk",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": 0.0,
+    "z": 0.485
+   },
+   "offset_m": [
+    1.17,
+    0.0,
+    0.485
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder bore / piston assembly",
+   "master_index": 204,
+   "module": "engine"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_ENG_Dipstick_Tube",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Dipstick",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": -0.19,
+    "z": 0.425
+   },
+   "offset_m": [
+    1.17,
+    -0.19,
+    0.425
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil level dipstick and tube",
+   "master_index": 214,
+   "module": "engine"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_ENG_Emission_CharcoalCanister",
+   "collection": "Engine_Emission",
+   "group": "EM",
+   "sub": "EVAP",
+   "part": "Canister",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.47,
+    "y": -0.3,
+    "z": 0.495
+   },
+   "offset_m": [
+    1.47,
+    -0.3,
+    0.495
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "EVAP charcoal canister",
+   "master_index": 269,
+   "module": "engine"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_ENG_Emission_EGRValve",
+   "collection": "Engine_Emission",
+   "group": "EM",
+   "sub": "EGR",
+   "part": "EGRValve",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.09,
+    "y": 0.3,
+    "z": 0.655
+   },
+   "offset_m": [
+    1.09,
+    0.3,
+    0.655
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "EGR valve",
+   "master_index": 268,
+   "module": "engine"
+  },
+  {
+   "part_index": 29,
+   "name": "ALTIMA2000_ENG_EngineCover_Plastic",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "EngineCover",
+   "object_type": "MESH",
+   "material": "MAT_Engine_Cover_ABS",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.895
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.895
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "decorative engine cover",
+   "master_index": 267,
+   "module": "engine"
+  },
+  {
+   "part_index": 30,
+   "name": "ALTIMA2000_ENG_FanMotor_Electric",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "FanMotor",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.49,
+    "y": 0.0,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.49,
+    0.0,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fan drive motor",
+   "master_index": 246,
+   "module": "engine"
+  },
+  {
+   "part_index": 31,
+   "name": "ALTIMA2000_ENG_FanShroud_Plastic",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "FanShroud",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.45,
+    "y": 0.0,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.45,
+    0.0,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cooling fan shroud",
+   "master_index": 243,
+   "module": "engine"
+  },
+  {
+   "part_index": 32,
+   "name": "ALTIMA2000_ENG_Flywheel_Driveplate",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Driveplate",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.72,
+    "y": 0.0,
+    "z": 0.525
+   },
+   "offset_m": [
+    0.72,
+    0.0,
+    0.525
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "flex plate / drive plate",
+   "master_index": 213,
+   "module": "engine"
+  },
+  {
+   "part_index": 33,
+   "name": "ALTIMA2000_ENG_FuelRail_Stainless",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "FuelRail",
+   "object_type": "MESH",
+   "material": "MAT_Stainless_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.03,
+    "y": 0.12,
+    "z": 0.78
+   },
+   "offset_m": [
+    1.03,
+    0.12,
+    0.78
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fuel rail",
+   "master_index": 229,
+   "module": "engine"
+  },
+  {
+   "part_index": 34,
+   "name": "ALTIMA2000_ENG_Gasket_Head",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "HeadGasket",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.677
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.677
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "multi-layer steel head gasket",
+   "master_index": 195,
+   "module": "engine"
+  },
+  {
+   "part_index": 35,
+   "name": "ALTIMA2000_ENG_Head_Cylinder",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "Head",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.735
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head - aluminium DOHC 16v",
+   "master_index": 189,
+   "module": "engine"
+  },
+  {
+   "part_index": 36,
+   "name": "ALTIMA2000_ENG_HexBolt_Alternator_001",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Alternator",
+   "part": "HexBolt_Alternator",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alternator mounting bolt (M8)",
+   "master_index": 1469,
+   "module": "engine"
+  },
+  {
+   "part_index": 37,
+   "name": "ALTIMA2000_ENG_HexBolt_Alternator_002",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Alternator",
+   "part": "HexBolt_Alternator",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alternator mounting bolt (M8)",
+   "master_index": 1470,
+   "module": "engine"
+  },
+  {
+   "part_index": 38,
+   "name": "ALTIMA2000_ENG_HexBolt_Alternator_003",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Alternator",
+   "part": "HexBolt_Alternator",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alternator mounting bolt (M8)",
+   "master_index": 1471,
+   "module": "engine"
+  },
+  {
+   "part_index": 39,
+   "name": "ALTIMA2000_ENG_HexBolt_BeltTensioner_001",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "BeltTensioner",
+   "part": "HexBolt_BeltTensioner",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "belt tensioner bolt (M8)",
+   "master_index": 1476,
+   "module": "engine"
+  },
+  {
+   "part_index": 40,
+   "name": "ALTIMA2000_ENG_HexBolt_BeltTensioner_002",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "BeltTensioner",
+   "part": "HexBolt_BeltTensioner",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "belt tensioner bolt (M8)",
+   "master_index": 1477,
+   "module": "engine"
+  },
+  {
+   "part_index": 41,
+   "name": "ALTIMA2000_ENG_HexBolt_BeltTensioner_003",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "BeltTensioner",
+   "part": "HexBolt_BeltTensioner",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "belt tensioner bolt (M8)",
+   "master_index": 1478,
+   "module": "engine"
+  },
+  {
+   "part_index": 42,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_001",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1433,
+   "module": "engine"
+  },
+  {
+   "part_index": 43,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_002",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1434,
+   "module": "engine"
+  },
+  {
+   "part_index": 44,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_003",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1435,
+   "module": "engine"
+  },
+  {
+   "part_index": 45,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_004",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1436,
+   "module": "engine"
+  },
+  {
+   "part_index": 46,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_005",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1437,
+   "module": "engine"
+  },
+  {
+   "part_index": 47,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_006",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1438,
+   "module": "engine"
+  },
+  {
+   "part_index": 48,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_007",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1439,
+   "module": "engine"
+  },
+  {
+   "part_index": 49,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_008",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1440,
+   "module": "engine"
+  },
+  {
+   "part_index": 50,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_009",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1441,
+   "module": "engine"
+  },
+  {
+   "part_index": 51,
+   "name": "ALTIMA2000_ENG_HexBolt_CamCap_010",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CamCap",
+   "part": "HexBolt_CamCap",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft bearing cap bolt (M6)",
+   "master_index": 1442,
+   "module": "engine"
+  },
+  {
+   "part_index": 52,
+   "name": "ALTIMA2000_ENG_HexBolt_Compressor_001",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Compressor",
+   "part": "HexBolt_Compressor",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C compressor bolt (M8)",
+   "master_index": 1472,
+   "module": "engine"
+  },
+  {
+   "part_index": 53,
+   "name": "ALTIMA2000_ENG_HexBolt_Compressor_002",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Compressor",
+   "part": "HexBolt_Compressor",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C compressor bolt (M8)",
+   "master_index": 1473,
+   "module": "engine"
+  },
+  {
+   "part_index": 54,
+   "name": "ALTIMA2000_ENG_HexBolt_Compressor_003",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Compressor",
+   "part": "HexBolt_Compressor",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C compressor bolt (M8)",
+   "master_index": 1474,
+   "module": "engine"
+  },
+  {
+   "part_index": 55,
+   "name": "ALTIMA2000_ENG_HexBolt_Compressor_004",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Compressor",
+   "part": "HexBolt_Compressor",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C compressor bolt (M8)",
+   "master_index": 1475,
+   "module": "engine"
+  },
+  {
+   "part_index": 56,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_001",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1413,
+   "module": "engine"
+  },
+  {
+   "part_index": 57,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_002",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1414,
+   "module": "engine"
+  },
+  {
+   "part_index": 58,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_003",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1415,
+   "module": "engine"
+  },
+  {
+   "part_index": 59,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_004",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1416,
+   "module": "engine"
+  },
+  {
+   "part_index": 60,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_005",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1417,
+   "module": "engine"
+  },
+  {
+   "part_index": 61,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_006",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1418,
+   "module": "engine"
+  },
+  {
+   "part_index": 62,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_007",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1419,
+   "module": "engine"
+  },
+  {
+   "part_index": 63,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_008",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1420,
+   "module": "engine"
+  },
+  {
+   "part_index": 64,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_009",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1421,
+   "module": "engine"
+  },
+  {
+   "part_index": 65,
+   "name": "ALTIMA2000_ENG_HexBolt_Crankcase_010",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "Crankcase",
+   "part": "HexBolt_Crankcase",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "main bearing cap bolt (M8)",
+   "master_index": 1422,
+   "module": "engine"
+  },
+  {
+   "part_index": 66,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_001",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1423,
+   "module": "engine"
+  },
+  {
+   "part_index": 67,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_002",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1424,
+   "module": "engine"
+  },
+  {
+   "part_index": 68,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_003",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1425,
+   "module": "engine"
+  },
+  {
+   "part_index": 69,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_004",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1426,
+   "module": "engine"
+  },
+  {
+   "part_index": 70,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_005",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1427,
+   "module": "engine"
+  },
+  {
+   "part_index": 71,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_006",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1428,
+   "module": "engine"
+  },
+  {
+   "part_index": 72,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_007",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1429,
+   "module": "engine"
+  },
+  {
+   "part_index": 73,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_008",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1430,
+   "module": "engine"
+  },
+  {
+   "part_index": 74,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_009",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1431,
+   "module": "engine"
+  },
+  {
+   "part_index": 75,
+   "name": "ALTIMA2000_ENG_HexBolt_CylinderHead_010",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "CylinderHead",
+   "part": "HexBolt_CylinderHead",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "cylinder head bolt (M10, torque-to-yield)",
+   "master_index": 1432,
+   "module": "engine"
+  },
+  {
+   "part_index": 76,
+   "name": "ALTIMA2000_ENG_HexBolt_Injector_001",
+   "collection": "Engine_Fuel",
+   "group": "EN",
+   "sub": "Injector",
+   "part": "HexBolt_Injector",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M5",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fuel injector retainer bolt (M5)",
+   "master_index": 1465,
+   "module": "engine"
+  },
+  {
+   "part_index": 77,
+   "name": "ALTIMA2000_ENG_HexBolt_Injector_002",
+   "collection": "Engine_Fuel",
+   "group": "EN",
+   "sub": "Injector",
+   "part": "HexBolt_Injector",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M5",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fuel injector retainer bolt (M5)",
+   "master_index": 1466,
+   "module": "engine"
+  },
+  {
+   "part_index": 78,
+   "name": "ALTIMA2000_ENG_HexBolt_Injector_003",
+   "collection": "Engine_Fuel",
+   "group": "EN",
+   "sub": "Injector",
+   "part": "HexBolt_Injector",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M5",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fuel injector retainer bolt (M5)",
+   "master_index": 1467,
+   "module": "engine"
+  },
+  {
+   "part_index": 79,
+   "name": "ALTIMA2000_ENG_HexBolt_Injector_004",
+   "collection": "Engine_Fuel",
+   "group": "EN",
+   "sub": "Injector",
+   "part": "HexBolt_Injector",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M5",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "fuel injector retainer bolt (M5)",
+   "master_index": 1468,
+   "module": "engine"
+  },
+  {
+   "part_index": 80,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_001",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1443,
+   "module": "engine"
+  },
+  {
+   "part_index": 81,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_002",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1444,
+   "module": "engine"
+  },
+  {
+   "part_index": 82,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_003",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1445,
+   "module": "engine"
+  },
+  {
+   "part_index": 83,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_004",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1446,
+   "module": "engine"
+  },
+  {
+   "part_index": 84,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_005",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1447,
+   "module": "engine"
+  },
+  {
+   "part_index": 85,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_006",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1448,
+   "module": "engine"
+  },
+  {
+   "part_index": 86,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_007",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1449,
+   "module": "engine"
+  },
+  {
+   "part_index": 87,
+   "name": "ALTIMA2000_ENG_HexBolt_IntakeManifold_008",
+   "collection": "Engine_Head",
+   "group": "EN",
+   "sub": "IntakeManifold",
+   "part": "HexBolt_IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold bolt (M8)",
+   "master_index": 1450,
+   "module": "engine"
+  },
+  {
+   "part_index": 88,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_001",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1383,
+   "module": "engine"
+  },
+  {
+   "part_index": 89,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_002",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1384,
+   "module": "engine"
+  },
+  {
+   "part_index": 90,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_003",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1385,
+   "module": "engine"
+  },
+  {
+   "part_index": 91,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_004",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1386,
+   "module": "engine"
+  },
+  {
+   "part_index": 92,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_005",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1387,
+   "module": "engine"
+  },
+  {
+   "part_index": 93,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_006",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1388,
+   "module": "engine"
+  },
+  {
+   "part_index": 94,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_007",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1389,
+   "module": "engine"
+  },
+  {
+   "part_index": 95,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_008",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1390,
+   "module": "engine"
+  },
+  {
+   "part_index": 96,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_009",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1391,
+   "module": "engine"
+  },
+  {
+   "part_index": 97,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_010",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1392,
+   "module": "engine"
+  },
+  {
+   "part_index": 98,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_011",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.507577,
+    "y": 0.530989,
+    "z": 0.668403
+   },
+   "offset_m": [
+    1.507577,
+    0.530989,
+    0.668403
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.72
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1393,
+   "module": "engine"
+  },
+  {
+   "part_index": 99,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_012",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.304346,
+    "y": 0.168208,
+    "z": 1.238243
+   },
+   "offset_m": [
+    -1.304346,
+    0.168208,
+    1.238243
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.42
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1394,
+   "module": "engine"
+  },
+  {
+   "part_index": 100,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_013",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.433518,
+    "y": -0.194573,
+    "z": 0.808083
+   },
+   "offset_m": [
+    0.433518,
+    -0.194573,
+    0.808083
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.12
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1395,
+   "module": "engine"
+  },
+  {
+   "part_index": 101,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_014",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.171382,
+    "y": -0.557354,
+    "z": 0.377924
+   },
+   "offset_m": [
+    2.171382,
+    -0.557354,
+    0.377924
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.82
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1396,
+   "module": "engine"
+  },
+  {
+   "part_index": 102,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_015",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.640541,
+    "y": 0.559865,
+    "z": 0.947764
+   },
+   "offset_m": [
+    -0.640541,
+    0.559865,
+    0.947764
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.38
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1397,
+   "module": "engine"
+  },
+  {
+   "part_index": 103,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_016",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.097323,
+    "y": 0.197084,
+    "z": 0.517604
+   },
+   "offset_m": [
+    1.097323,
+    0.197084,
+    0.517604
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.08
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1398,
+   "module": "engine"
+  },
+  {
+   "part_index": 104,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_017",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.7146,
+    "y": -0.165697,
+    "z": 1.087445
+   },
+   "offset_m": [
+    -1.7146,
+    -0.165697,
+    1.087445
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.78
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1399,
+   "module": "engine"
+  },
+  {
+   "part_index": 105,
+   "name": "ALTIMA2000_ENG_HexBolt_OilPan_018",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "OilPan",
+   "part": "HexBolt_OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.023264,
+    "y": -0.528478,
+    "z": 0.657285
+   },
+   "offset_m": [
+    0.023264,
+    -0.528478,
+    0.657285
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.48
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan bolt (M6 x 20)",
+   "master_index": 1400,
+   "module": "engine"
+  },
+  {
+   "part_index": 106,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_001",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1401,
+   "module": "engine"
+  },
+  {
+   "part_index": 107,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_002",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1402,
+   "module": "engine"
+  },
+  {
+   "part_index": 108,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_003",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1403,
+   "module": "engine"
+  },
+  {
+   "part_index": 109,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_004",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1404,
+   "module": "engine"
+  },
+  {
+   "part_index": 110,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_005",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1405,
+   "module": "engine"
+  },
+  {
+   "part_index": 111,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_006",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1406,
+   "module": "engine"
+  },
+  {
+   "part_index": 112,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_007",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1407,
+   "module": "engine"
+  },
+  {
+   "part_index": 113,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_008",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1408,
+   "module": "engine"
+  },
+  {
+   "part_index": 114,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_009",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1409,
+   "module": "engine"
+  },
+  {
+   "part_index": 115,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_010",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1410,
+   "module": "engine"
+  },
+  {
+   "part_index": 116,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_011",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.507577,
+    "y": 0.530989,
+    "z": 0.668403
+   },
+   "offset_m": [
+    1.507577,
+    0.530989,
+    0.668403
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.72
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1411,
+   "module": "engine"
+  },
+  {
+   "part_index": 117,
+   "name": "ALTIMA2000_ENG_HexBolt_TimingCover_012",
+   "collection": "Engine_LongBlock",
+   "group": "EN",
+   "sub": "TimingCover",
+   "part": "HexBolt_TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.304346,
+    "y": 0.168208,
+    "z": 1.238243
+   },
+   "offset_m": [
+    -1.304346,
+    0.168208,
+    1.238243
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.42
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing cover bolt (M6 x 25)",
+   "master_index": 1412,
+   "module": "engine"
+  },
+  {
+   "part_index": 118,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1459,
+   "module": "engine"
+  },
+  {
+   "part_index": 119,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1460,
+   "module": "engine"
+  },
+  {
+   "part_index": 120,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_003",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1461,
+   "module": "engine"
+  },
+  {
+   "part_index": 121,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_004",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1462,
+   "module": "engine"
+  },
+  {
+   "part_index": 122,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_005",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1463,
+   "module": "engine"
+  },
+  {
+   "part_index": 123,
+   "name": "ALTIMA2000_ENG_HexBolt_WaterPump_006",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "WaterPump",
+   "part": "HexBolt_WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "water pump bolt (M6)",
+   "master_index": 1464,
+   "module": "engine"
+  },
+  {
+   "part_index": 124,
+   "name": "ALTIMA2000_ENG_Hose_ACRefrigerant_001",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_ACRefrigerant",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.88,
+    "y": -0.28,
+    "z": 0.42
+   },
+   "offset_m": [
+    0.88,
+    -0.28,
+    0.42
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C refrigerant line, compressor to condenser, drier and evaporator, segment 1/4",
+   "master_index": 1357,
+   "module": "engine"
+  },
+  {
+   "part_index": 125,
+   "name": "ALTIMA2000_ENG_Hose_ACRefrigerant_002",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_ACRefrigerant",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 2.133606,
+    "y": -0.520528,
+    "z": 0.756325
+   },
+   "offset_m": [
+    2.133606,
+    -0.520528,
+    0.756325
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C refrigerant line, compressor to condenser, drier and evaporator, segment 2/4",
+   "master_index": 1358,
+   "module": "engine"
+  },
+  {
+   "part_index": 126,
+   "name": "ALTIMA2000_ENG_Hose_ACRefrigerant_003",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_ACRefrigerant",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.906566,
+    "y": -0.005066,
+    "z": 0.586596
+   },
+   "offset_m": [
+    1.906566,
+    -0.005066,
+    0.586596
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C refrigerant line, compressor to condenser, drier and evaporator, segment 3/4",
+   "master_index": 1359,
+   "module": "engine"
+  },
+  {
+   "part_index": 127,
+   "name": "ALTIMA2000_ENG_Hose_ACRefrigerant_004",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_ACRefrigerant",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.970161,
+    "y": -0.293426,
+    "z": 0.559017
+   },
+   "offset_m": [
+    1.970161,
+    -0.293426,
+    0.559017
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "A/C refrigerant line, compressor to condenser, drier and evaporator, segment 4/4",
+   "master_index": 1360,
+   "module": "engine"
+  },
+  {
+   "part_index": 128,
+   "name": "ALTIMA2000_ENG_Hose_AirIntake_001",
+   "collection": "Engine_Intake",
+   "group": "EN",
+   "sub": "Engine_Intake",
+   "part": "Hose_AirIntake",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.05,
+    "z": 0.72
+   },
+   "offset_m": [
+    1.38,
+    0.05,
+    0.72
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air intake duct, air cleaner to throttle body, segment 1/2",
+   "master_index": 1348,
+   "module": "engine"
+  },
+  {
+   "part_index": 129,
+   "name": "ALTIMA2000_ENG_Hose_AirIntake_002",
+   "collection": "Engine_Intake",
+   "group": "EN",
+   "sub": "Engine_Intake",
+   "part": "Hose_AirIntake",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.498881,
+    "y": 0.560319,
+    "z": 0.899832
+   },
+   "offset_m": [
+    1.498881,
+    0.560319,
+    0.899832
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "air intake duct, air cleaner to throttle body, segment 2/2",
+   "master_index": 1349,
+   "module": "engine"
+  },
+  {
+   "part_index": 130,
+   "name": "ALTIMA2000_ENG_Hose_Bypass_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_Bypass",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.05,
+    "y": 0.2,
+    "z": 0.9
+   },
+   "offset_m": [
+    1.05,
+    0.2,
+    0.9
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "coolant bypass hose, thermostat to water pump, segment 1/1",
+   "master_index": 1326,
+   "module": "engine"
+  },
+  {
+   "part_index": 131,
+   "name": "ALTIMA2000_ENG_Hose_HeaterInlet_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_HeaterInlet",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.95,
+    "y": 0.15,
+    "z": 0.62
+   },
+   "offset_m": [
+    0.95,
+    0.15,
+    0.62
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "heater inlet hose, water pump through the firewall to the heater core, segment 1/2",
+   "master_index": 1316,
+   "module": "engine"
+  },
+  {
+   "part_index": 132,
+   "name": "ALTIMA2000_ENG_Hose_HeaterInlet_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_HeaterInlet",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.645363,
+    "y": 0.306012,
+    "z": 0.730036
+   },
+   "offset_m": [
+    0.645363,
+    0.306012,
+    0.730036
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "heater inlet hose, water pump through the firewall to the heater core, segment 2/2",
+   "master_index": 1317,
+   "module": "engine"
+  },
+  {
+   "part_index": 133,
+   "name": "ALTIMA2000_ENG_Hose_HeaterOutlet_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_HeaterOutlet",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.62,
+    "y": 0.3,
+    "z": 0.8
+   },
+   "offset_m": [
+    0.62,
+    0.3,
+    0.8
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "heater outlet hose, heater core back to the thermostat housing, segment 1/2",
+   "master_index": 1321,
+   "module": "engine"
+  },
+  {
+   "part_index": 134,
+   "name": "ALTIMA2000_ENG_Hose_HeaterOutlet_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_HeaterOutlet",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.651069,
+    "y": -0.287943,
+    "z": 0.719432
+   },
+   "offset_m": [
+    0.651069,
+    -0.287943,
+    0.719432
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "heater outlet hose, heater core back to the thermostat housing, segment 2/2",
+   "master_index": 1322,
+   "module": "engine"
+  },
+  {
+   "part_index": 135,
+   "name": "ALTIMA2000_ENG_Hose_PowerSteering_001",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_PowerSteering",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.9,
+    "y": -0.3,
+    "z": 0.55
+   },
+   "offset_m": [
+    0.9,
+    -0.3,
+    0.55
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "power steering pressure hose, pump to rack, segment 1/2",
+   "master_index": 1352,
+   "module": "engine"
+  },
+  {
+   "part_index": 136,
+   "name": "ALTIMA2000_ENG_Hose_PowerSteering_002",
+   "collection": "Engine_Accessory",
+   "group": "EN",
+   "sub": "Engine_Accessory",
+   "part": "Hose_PowerSteering",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 2.141214,
+    "y": -0.522282,
+    "z": 0.759818
+   },
+   "offset_m": [
+    2.141214,
+    -0.522282,
+    0.759818
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "power steering pressure hose, pump to rack, segment 2/2",
+   "master_index": 1353,
+   "module": "engine"
+  },
+  {
+   "part_index": 137,
+   "name": "ALTIMA2000_ENG_Hose_RadiatorLower_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_RadiatorLower",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.5,
+    "y": -0.25,
+    "z": 0.56
+   },
+   "offset_m": [
+    1.5,
+    -0.25,
+    0.56
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower radiator hose, radiator to water pump, segment 1/2",
+   "master_index": 1312,
+   "module": "engine"
+  },
+  {
+   "part_index": 138,
+   "name": "ALTIMA2000_ENG_Hose_RadiatorLower_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_RadiatorLower",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 2.13646,
+    "y": -0.511657,
+    "z": 0.759467
+   },
+   "offset_m": [
+    2.13646,
+    -0.511657,
+    0.759467
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower radiator hose, radiator to water pump, segment 2/2",
+   "master_index": 1313,
+   "module": "engine"
+  },
+  {
+   "part_index": 139,
+   "name": "ALTIMA2000_ENG_Hose_RadiatorUpper_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_RadiatorUpper",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.5,
+    "y": 0.25,
+    "z": 0.93
+   },
+   "offset_m": [
+    1.5,
+    0.25,
+    0.93
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upper radiator hose, radiator to thermostat housing, segment 1/2",
+   "master_index": 1308,
+   "module": "engine"
+  },
+  {
+   "part_index": 140,
+   "name": "ALTIMA2000_ENG_Hose_RadiatorUpper_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_RadiatorUpper",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.512728,
+    "y": 0.553698,
+    "z": 0.901595
+   },
+   "offset_m": [
+    1.512728,
+    0.553698,
+    0.901595
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upper radiator hose, radiator to thermostat housing, segment 2/2",
+   "master_index": 1309,
+   "module": "engine"
+  },
+  {
+   "part_index": 141,
+   "name": "ALTIMA2000_ENG_Hose_Reservoir_001",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_Reservoir",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": 0.4,
+    "z": 0.76
+   },
+   "offset_m": [
+    1.54,
+    0.4,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "coolant reservoir overflow hose, segment 1/2",
+   "master_index": 1328,
+   "module": "engine"
+  },
+  {
+   "part_index": 142,
+   "name": "ALTIMA2000_ENG_Hose_Reservoir_002",
+   "collection": "Engine_Cooling",
+   "group": "EN",
+   "sub": "Engine_Cooling",
+   "part": "Hose_Reservoir",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.504231,
+    "y": 0.560517,
+    "z": 0.883505
+   },
+   "offset_m": [
+    1.504231,
+    0.560517,
+    0.883505
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "coolant reservoir overflow hose, segment 2/2",
+   "master_index": 1329,
+   "module": "engine"
+  },
+  {
+   "part_index": 143,
+   "name": "ALTIMA2000_ENG_Hose_VacuumLine_001",
+   "collection": "Engine_Intake",
+   "group": "EN",
+   "sub": "Engine_Intake",
+   "part": "Hose_VacuumLine",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.0,
+    "y": 0.2,
+    "z": 0.78
+   },
+   "offset_m": [
+    1.0,
+    0.2,
+    0.78
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake vacuum line, manifold to throttle body and purge valve, segment 1/3",
+   "master_index": 1336,
+   "module": "engine"
+  },
+  {
+   "part_index": 144,
+   "name": "ALTIMA2000_ENG_Hose_VacuumLine_002",
+   "collection": "Engine_Intake",
+   "group": "EN",
+   "sub": "Engine_Intake",
+   "part": "Hose_VacuumLine",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 0.938319,
+    "y": 0.425438,
+    "z": 0.7306
+   },
+   "offset_m": [
+    0.938319,
+    0.425438,
+    0.7306
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake vacuum line, manifold to throttle body and purge valve, segment 2/3",
+   "master_index": 1337,
+   "module": "engine"
+  },
+  {
+   "part_index": 145,
+   "name": "ALTIMA2000_ENG_Hose_VacuumLine_003",
+   "collection": "Engine_Intake",
+   "group": "EN",
+   "sub": "Engine_Intake",
+   "part": "Hose_VacuumLine",
+   "object_type": "MESH",
+   "material": "MAT_Hose_Routed_Rubber",
+   "material_key": "hose_routed",
+   "instance_of": "",
+   "position": {
+    "x": 1.118527,
+    "y": 0.18251,
+    "z": 0.799509
+   },
+   "offset_m": [
+    1.118527,
+    0.18251,
+    0.799509
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake vacuum line, manifold to throttle body and purge valve, segment 3/3",
+   "master_index": 1338,
+   "module": "engine"
+  },
+  {
+   "part_index": 146,
+   "name": "ALTIMA2000_ENG_IdleControl_Valve",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IACValve",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.08,
+    "y": 0.43,
+    "z": 0.73
+   },
+   "offset_m": [
+    1.08,
+    0.43,
+    0.73
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "idle air control valve",
+   "master_index": 222,
+   "module": "engine"
+  },
+  {
+   "part_index": 147,
+   "name": "ALTIMA2000_ENG_IdlerPulley_Belt",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "IdlerPulley",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.82,
+    "y": -0.1,
+    "z": 0.445
+   },
+   "offset_m": [
+    0.82,
+    -0.1,
+    0.445
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "idler pulley",
+   "master_index": 258,
+   "module": "engine"
+  },
+  {
+   "part_index": 148,
+   "name": "ALTIMA2000_ENG_Injector_Fuel_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "Injector",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.87,
+    "y": 0.12,
+    "z": 0.76
+   },
+   "offset_m": [
+    0.87,
+    0.12,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "port fuel injector",
+   "master_index": 230,
+   "module": "engine"
+  },
+  {
+   "part_index": 149,
+   "name": "ALTIMA2000_ENG_Injector_Fuel_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "Injector",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.97,
+    "y": 0.12,
+    "z": 0.76
+   },
+   "offset_m": [
+    0.97,
+    0.12,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "port fuel injector",
+   "master_index": 231,
+   "module": "engine"
+  },
+  {
+   "part_index": 150,
+   "name": "ALTIMA2000_ENG_Injector_Fuel_003",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "Injector",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": 0.12,
+    "z": 0.76
+   },
+   "offset_m": [
+    1.07,
+    0.12,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "port fuel injector",
+   "master_index": 232,
+   "module": "engine"
+  },
+  {
+   "part_index": 151,
+   "name": "ALTIMA2000_ENG_Injector_Fuel_004",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "Injector",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": 0.12,
+    "z": 0.76
+   },
+   "offset_m": [
+    1.17,
+    0.12,
+    0.76
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "port fuel injector",
+   "master_index": 233,
+   "module": "engine"
+  },
+  {
+   "part_index": 152,
+   "name": "ALTIMA2000_ENG_IntakeManifold_Alu",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeManifold",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.29,
+    "z": 0.695
+   },
+   "offset_m": [
+    1.02,
+    0.29,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake manifold (aluminium)",
+   "master_index": 215,
+   "module": "engine"
+  },
+  {
+   "part_index": 153,
+   "name": "ALTIMA2000_ENG_IntakeRunner_Primary_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeRunner",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.87,
+    "y": 0.195,
+    "z": 0.695
+   },
+   "offset_m": [
+    0.87,
+    0.195,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake runner",
+   "master_index": 216,
+   "module": "engine"
+  },
+  {
+   "part_index": 154,
+   "name": "ALTIMA2000_ENG_IntakeRunner_Primary_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeRunner",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.97,
+    "y": 0.195,
+    "z": 0.695
+   },
+   "offset_m": [
+    0.97,
+    0.195,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake runner",
+   "master_index": 217,
+   "module": "engine"
+  },
+  {
+   "part_index": 155,
+   "name": "ALTIMA2000_ENG_IntakeRunner_Primary_003",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeRunner",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": 0.195,
+    "z": 0.695
+   },
+   "offset_m": [
+    1.07,
+    0.195,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake runner",
+   "master_index": 218,
+   "module": "engine"
+  },
+  {
+   "part_index": 156,
+   "name": "ALTIMA2000_ENG_IntakeRunner_Primary_004",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "IntakeRunner",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": 0.195,
+    "z": 0.695
+   },
+   "offset_m": [
+    1.17,
+    0.195,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake runner",
+   "master_index": 219,
+   "module": "engine"
+  },
+  {
+   "part_index": 157,
+   "name": "ALTIMA2000_ENG_MassAirFlow_Sensor",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "MAFSensor",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.32,
+    "y": 0.18,
+    "z": 0.845
+   },
+   "offset_m": [
+    1.32,
+    0.18,
+    0.845
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "mass air flow sensor",
+   "master_index": 227,
+   "module": "engine"
+  },
+  {
+   "part_index": 158,
+   "name": "ALTIMA2000_ENG_OilDrain_Plug",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "DrainPlug",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.14,
+    "z": 0.145
+   },
+   "offset_m": [
+    1.02,
+    -0.14,
+    0.145
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil drain plug",
+   "master_index": 188,
+   "module": "engine"
+  },
+  {
+   "part_index": 159,
+   "name": "ALTIMA2000_ENG_OilPan_Sump",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.21
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.21
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "oil pan / sump",
+   "master_index": 187,
+   "module": "engine"
+  },
+  {
+   "part_index": 160,
+   "name": "ALTIMA2000_ENG_PowerSteeringPump_Assembly",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "PSPump",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.15,
+    "y": -0.235,
+    "z": 0.425
+   },
+   "offset_m": [
+    1.15,
+    -0.235,
+    0.425
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "power steering pump",
+   "master_index": 255,
+   "module": "engine"
+  },
+  {
+   "part_index": 161,
+   "name": "ALTIMA2000_ENG_RadiatorCap_Pressure",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "RadiatorCap",
+   "object_type": "MESH",
+   "material": "MAT_Zinc_Plated",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": 0.27,
+    "z": 0.945
+   },
+   "offset_m": [
+    1.54,
+    0.27,
+    0.945
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "pressure cap",
+   "master_index": 239,
+   "module": "engine"
+  },
+  {
+   "part_index": 162,
+   "name": "ALTIMA2000_ENG_RadiatorHose_Lower",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "HoseLower",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": 1.326667,
+    "y": -0.213333,
+    "z": 0.513333
+   },
+   "offset_m": [
+    1.326667,
+    -0.213333,
+    0.513333
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower radiator hose",
+   "master_index": 241,
+   "module": "engine"
+  },
+  {
+   "part_index": 163,
+   "name": "ALTIMA2000_ENG_RadiatorHose_Upper",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "HoseUpper",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "rubber_hose",
+   "instance_of": "",
+   "position": {
+    "x": 1.346667,
+    "y": 0.226667,
+    "z": 0.928333
+   },
+   "offset_m": [
+    1.346667,
+    0.226667,
+    0.928333
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upper radiator hose",
+   "master_index": 240,
+   "module": "engine"
+  },
+  {
+   "part_index": 164,
+   "name": "ALTIMA2000_ENG_RadiatorTank_Plastic_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "RadiatorTank",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": -0.34,
+    "z": 0.735
+   },
+   "offset_m": [
+    1.54,
+    -0.34,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "radiator end tank",
+   "master_index": 237,
+   "module": "engine"
+  },
+  {
+   "part_index": 165,
+   "name": "ALTIMA2000_ENG_RadiatorTank_Plastic_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "RadiatorTank",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": 0.34,
+    "z": 0.735
+   },
+   "offset_m": [
+    1.54,
+    0.34,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "radiator end tank",
+   "master_index": 238,
+   "module": "engine"
+  },
+  {
+   "part_index": 166,
+   "name": "ALTIMA2000_ENG_Radiator_Core",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "Radiator",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.54,
+    "y": 0.0,
+    "z": 0.735
+   },
+   "offset_m": [
+    1.54,
+    0.0,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "radiator core",
+   "master_index": 236,
+   "module": "engine"
+  },
+  {
+   "part_index": 167,
+   "name": "ALTIMA2000_ENG_Resonator_Intake",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "Resonator",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.2,
+    "y": 0.29,
+    "z": 0.785
+   },
+   "offset_m": [
+    1.2,
+    0.29,
+    0.785
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "intake resonator",
+   "master_index": 228,
+   "module": "engine"
+  },
+  {
+   "part_index": 168,
+   "name": "ALTIMA2000_ENG_SerpentineBelt_AC",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "Belt",
+   "object_type": "MESH",
+   "material": "MAT_Belt_Ribbed_Rubber",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.04,
+    "y": -0.24,
+    "z": 0.355
+   },
+   "offset_m": [
+    1.04,
+    -0.24,
+    0.355
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "serpentine accessory drive belt",
+   "master_index": 262,
+   "module": "engine"
+  },
+  {
+   "part_index": 169,
+   "name": "ALTIMA2000_ENG_SerpentineBelt_Alternator",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "Belt",
+   "object_type": "MESH",
+   "material": "MAT_Belt_Ribbed_Rubber",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.0,
+    "y": -0.12,
+    "z": 0.355
+   },
+   "offset_m": [
+    1.0,
+    -0.12,
+    0.355
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "serpentine accessory drive belt",
+   "master_index": 260,
+   "module": "engine"
+  },
+  {
+   "part_index": 170,
+   "name": "ALTIMA2000_ENG_SerpentineBelt_PS",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "Belt",
+   "object_type": "MESH",
+   "material": "MAT_Belt_Ribbed_Rubber",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.18,
+    "z": 0.355
+   },
+   "offset_m": [
+    1.02,
+    -0.18,
+    0.355
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "serpentine accessory drive belt",
+   "master_index": 261,
+   "module": "engine"
+  },
+  {
+   "part_index": 171,
+   "name": "ALTIMA2000_ENG_SerpentineBelt_WaterPump",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "Belt",
+   "object_type": "MESH",
+   "material": "MAT_Belt_Ribbed_Rubber",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.98,
+    "y": -0.06,
+    "z": 0.355
+   },
+   "offset_m": [
+    0.98,
+    -0.06,
+    0.355
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "serpentine accessory drive belt",
+   "master_index": 259,
+   "module": "engine"
+  },
+  {
+   "part_index": 172,
+   "name": "ALTIMA2000_ENG_SparkPlug_NGK",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "SparkPlug",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": -0.15,
+    "z": 0.79
+   },
+   "offset_m": [
+    1.07,
+    -0.15,
+    0.79
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "spark plug",
+   "master_index": 196,
+   "module": "engine"
+  },
+  {
+   "part_index": 173,
+   "name": "ALTIMA2000_ENG_SparkPlug_NGK_001",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "SparkPlug",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.87,
+    "y": 0.14,
+    "z": 0.795
+   },
+   "offset_m": [
+    0.87,
+    0.14,
+    0.795
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "spark plug 1-4 (firing order 1-3-4-2)",
+   "master_index": 197,
+   "module": "engine"
+  },
+  {
+   "part_index": 174,
+   "name": "ALTIMA2000_ENG_SparkPlug_NGK_002",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "SparkPlug",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.97,
+    "y": 0.14,
+    "z": 0.795
+   },
+   "offset_m": [
+    0.97,
+    0.14,
+    0.795
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "spark plug 1-4 (firing order 1-3-4-2)",
+   "master_index": 198,
+   "module": "engine"
+  },
+  {
+   "part_index": 175,
+   "name": "ALTIMA2000_ENG_SparkPlug_NGK_003",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "SparkPlug",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.07,
+    "y": 0.14,
+    "z": 0.795
+   },
+   "offset_m": [
+    1.07,
+    0.14,
+    0.795
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "spark plug 1-4 (firing order 1-3-4-2)",
+   "master_index": 199,
+   "module": "engine"
+  },
+  {
+   "part_index": 176,
+   "name": "ALTIMA2000_ENG_SparkPlug_NGK_004",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "SparkPlug",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.17,
+    "y": 0.14,
+    "z": 0.795
+   },
+   "offset_m": [
+    1.17,
+    0.14,
+    0.795
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "spark plug 1-4 (firing order 1-3-4-2)",
+   "master_index": 200,
+   "module": "engine"
+  },
+  {
+   "part_index": 177,
+   "name": "ALTIMA2000_ENG_Tensioner_Belt",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Accessory",
+   "part": "BeltTensioner",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.19,
+    "y": -0.15,
+    "z": 0.355
+   },
+   "offset_m": [
+    1.19,
+    -0.15,
+    0.355
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "drive belt tensioner",
+   "master_index": 257,
+   "module": "engine"
+  },
+  {
+   "part_index": 178,
+   "name": "ALTIMA2000_ENG_Tensioner_Chain",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "Tensioner",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.84,
+    "y": -0.16,
+    "z": 0.635
+   },
+   "offset_m": [
+    0.84,
+    -0.16,
+    0.635
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing chain tensioner",
+   "master_index": 209,
+   "module": "engine"
+  },
+  {
+   "part_index": 179,
+   "name": "ALTIMA2000_ENG_Thermostat_Housing",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "Thermostat",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.15,
+    "y": 0.16,
+    "z": 0.605
+   },
+   "offset_m": [
+    1.15,
+    0.16,
+    0.605
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "thermostat housing",
+   "master_index": 235,
+   "module": "engine"
+  },
+  {
+   "part_index": 180,
+   "name": "ALTIMA2000_ENG_ThrottleBody_Assembly",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "ThrottleBody",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.975,
+    "y": 0.395,
+    "z": 0.695
+   },
+   "offset_m": [
+    0.975,
+    0.395,
+    0.695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "throttle body",
+   "master_index": 220,
+   "module": "engine"
+  },
+  {
+   "part_index": 181,
+   "name": "ALTIMA2000_ENG_ThrottlePosition_Sensor",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Intake",
+   "part": "TPSSensor",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.94,
+    "y": 0.43,
+    "z": 0.73
+   },
+   "offset_m": [
+    0.94,
+    0.43,
+    0.73
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "throttle position sensor",
+   "master_index": 221,
+   "module": "engine"
+  },
+  {
+   "part_index": 182,
+   "name": "ALTIMA2000_ENG_TimingChain_Roller",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "TimingChain",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.0,
+    "y": 0.0,
+    "z": -0.0
+   },
+   "offset_m": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing chain run",
+   "master_index": 208,
+   "module": "engine"
+  },
+  {
+   "part_index": 183,
+   "name": "ALTIMA2000_ENG_TimingCover_Front",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "TimingCover",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.77,
+    "y": 0.0,
+    "z": 0.525
+   },
+   "offset_m": [
+    0.77,
+    0.0,
+    0.525
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "timing chain cover",
+   "master_index": 205,
+   "module": "engine"
+  },
+  {
+   "part_index": 184,
+   "name": "ALTIMA2000_ENG_TimingGear_Cam",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "CamGear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.745,
+    "y": 0.0,
+    "z": 0.735
+   },
+   "offset_m": [
+    0.745,
+    0.0,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft timing sprocket",
+   "master_index": 207,
+   "module": "engine"
+  },
+  {
+   "part_index": 185,
+   "name": "ALTIMA2000_ENG_TimingGear_Crank",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "LongBlock",
+   "part": "CrankGear",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.745,
+    "y": 0.0,
+    "z": 0.415
+   },
+   "offset_m": [
+    0.745,
+    0.0,
+    0.415
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "crankshaft timing sprocket",
+   "master_index": 206,
+   "module": "engine"
+  },
+  {
+   "part_index": 186,
+   "name": "ALTIMA2000_ENG_ValveCover_Cam",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Head",
+   "part": "ValveCover",
+   "object_type": "MESH",
+   "material": "MAT_Engine_CastAlu_Worn",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.0,
+    "z": 0.835
+   },
+   "offset_m": [
+    1.02,
+    0.0,
+    0.835
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "camshaft valve cover",
+   "master_index": 190,
+   "module": "engine"
+  },
+  {
+   "part_index": 187,
+   "name": "ALTIMA2000_ENG_WaterPump_Assembly",
+   "collection": "Engine",
+   "group": "EN",
+   "sub": "Cooling",
+   "part": "WaterPump",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.79,
+    "y": 0.15,
+    "z": 0.495
+   },
+   "offset_m": [
+    0.79,
+    0.15,
+    0.495
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "coolant pump",
+   "master_index": 234,
+   "module": "engine"
+  },
+  {
+   "part_index": 188,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_001",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1451,
+   "module": "engine"
+  },
+  {
+   "part_index": 189,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_002",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1452,
+   "module": "engine"
+  },
+  {
+   "part_index": 190,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_003",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1453,
+   "module": "engine"
+  },
+  {
+   "part_index": 191,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_004",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1454,
+   "module": "engine"
+  },
+  {
+   "part_index": 192,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_005",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1455,
+   "module": "engine"
+  },
+  {
+   "part_index": 193,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_006",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1456,
+   "module": "engine"
+  },
+  {
+   "part_index": 194,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_007",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1457,
+   "module": "engine"
+  },
+  {
+   "part_index": 195,
+   "name": "ALTIMA2000_EXH_Stud_Manifold_008",
+   "collection": "Engine_ExhaustSide",
+   "group": "EX",
+   "sub": "Manifold",
+   "part": "Stud_Manifold",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "exhaust manifold stud (M10)",
+   "master_index": 1458,
+   "module": "engine"
+  }
+ ]
+}

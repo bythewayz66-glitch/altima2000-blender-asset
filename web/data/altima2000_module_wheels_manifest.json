@@ -1,0 +1,1617 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "wheels",
+ "module_file": "altima2000_module_wheels.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Wheels"
+ ],
+ "collections": [
+  "Wheels"
+ ],
+ "part_count": 44,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_WHL_HexNut_SpindleNut_001",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "SpindleNut",
+   "part": "HexNut_SpindleNut",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M14",
+   "position": {
+    "x": 2.221702,
+    "y": -0.266,
+    "z": 0.903
+   },
+   "offset_m": [
+    2.221702,
+    -0.266,
+    0.903
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front spindle nut (M14)",
+   "master_index": 1883,
+   "module": "wheels"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_WHL_HexNut_SpindleNut_002",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "SpindleNut",
+   "part": "HexNut_SpindleNut",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M14",
+   "position": {
+    "x": -0.458724,
+    "y": -0.609171,
+    "z": 0.515856
+   },
+   "offset_m": [
+    -0.458724,
+    -0.609171,
+    0.515856
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front spindle nut (M14)",
+   "master_index": 1884,
+   "module": "wheels"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_WHL_HexNut_SpindleNut_003",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "SpindleNut",
+   "part": "HexNut_SpindleNut",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M14",
+   "position": {
+    "x": 1.19787,
+    "y": 0.447657,
+    "z": 1.028713
+   },
+   "offset_m": [
+    1.19787,
+    0.447657,
+    1.028713
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front spindle nut (M14)",
+   "master_index": 1885,
+   "module": "wheels"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_WHL_HexNut_SpindleNut_004",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "SpindleNut",
+   "part": "HexNut_SpindleNut",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M14",
+   "position": {
+    "x": -1.482556,
+    "y": 0.104486,
+    "z": 0.641569
+   },
+   "offset_m": [
+    -1.482556,
+    0.104486,
+    0.641569
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front spindle nut (M14)",
+   "master_index": 1886,
+   "module": "wheels"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_WHL_HubCap_Centre_FL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "CentreCap_FL",
+   "object_type": "MESH",
+   "material": "MAT_Chrome_Trim",
+   "material_key": "chrome",
+   "instance_of": "TPL_HubCap_Centre",
+   "position": {
+    "x": 1.38,
+    "y": 0.82077,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.82077,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "centre cap",
+   "master_index": 347,
+   "module": "wheels"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_WHL_HubCap_Centre_FR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "CentreCap_FR",
+   "object_type": "MESH",
+   "material": "MAT_Chrome_Trim",
+   "material_key": "chrome",
+   "instance_of": "TPL_HubCap_Centre",
+   "position": {
+    "x": 1.38,
+    "y": -0.82077,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.82077,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "centre cap",
+   "master_index": 361,
+   "module": "wheels"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_WHL_HubCap_Centre_RL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "CentreCap_RL",
+   "object_type": "MESH",
+   "material": "MAT_Chrome_Trim",
+   "material_key": "chrome",
+   "instance_of": "TPL_HubCap_Centre",
+   "position": {
+    "x": -1.24,
+    "y": 0.82077,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.82077,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "centre cap",
+   "master_index": 375,
+   "module": "wheels"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_WHL_HubCap_Centre_RR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "CentreCap_RR",
+   "object_type": "MESH",
+   "material": "MAT_Chrome_Trim",
+   "material_key": "chrome",
+   "instance_of": "TPL_HubCap_Centre",
+   "position": {
+    "x": -1.24,
+    "y": -0.82077,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.82077,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "centre cap",
+   "master_index": 389,
+   "module": "wheels"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_WHL_Rim_Alloy_FL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Rim_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_Rim_15x6J",
+   "position": {
+    "x": 1.38,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "15x6J alloy wheel",
+   "master_index": 345,
+   "module": "wheels"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_WHL_Rim_Alloy_FR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Rim_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_Rim_15x6J",
+   "position": {
+    "x": 1.38,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "15x6J alloy wheel",
+   "master_index": 359,
+   "module": "wheels"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_WHL_Rim_Alloy_RL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Rim_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_Rim_15x6J",
+   "position": {
+    "x": -1.24,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "15x6J alloy wheel",
+   "master_index": 373,
+   "module": "wheels"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_WHL_Rim_Alloy_RR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Rim_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_Rim_15x6J",
+   "position": {
+    "x": -1.24,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "15x6J alloy wheel",
+   "master_index": 387,
+   "module": "wheels"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FL_001",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Spoke_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.413778,
+    "y": 0.794415,
+    "z": 0.422695
+   },
+   "offset_m": [
+    1.413778,
+    0.794415,
+    0.422695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -0.3
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 348,
+   "module": "wheels"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FL_002",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Spoke_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.494289,
+    "y": 0.794415,
+    "z": 0.315118
+   },
+   "offset_m": [
+    1.494289,
+    0.794415,
+    0.315118
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -1.556637
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 349,
+   "module": "wheels"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FL_003",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Spoke_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.416856,
+    "y": 0.794415,
+    "z": 0.205305
+   },
+   "offset_m": [
+    1.416856,
+    0.794415,
+    0.205305
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -2.813274
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 350,
+   "module": "wheels"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FL_004",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Spoke_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.28849,
+    "y": 0.794415,
+    "z": 0.245014
+   },
+   "offset_m": [
+    1.28849,
+    0.794415,
+    0.245014
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -4.069911
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 351,
+   "module": "wheels"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FL_005",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Spoke_FL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.286587,
+    "y": 0.794415,
+    "z": 0.379368
+   },
+   "offset_m": [
+    1.286587,
+    0.794415,
+    0.379368
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -5.326548
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 352,
+   "module": "wheels"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FR_001",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Spoke_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.413778,
+    "y": -0.794415,
+    "z": 0.422695
+   },
+   "offset_m": [
+    1.413778,
+    -0.794415,
+    0.422695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -0.3
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 362,
+   "module": "wheels"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FR_002",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Spoke_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.494289,
+    "y": -0.794415,
+    "z": 0.315118
+   },
+   "offset_m": [
+    1.494289,
+    -0.794415,
+    0.315118
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -1.556637
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 363,
+   "module": "wheels"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FR_003",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Spoke_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.416856,
+    "y": -0.794415,
+    "z": 0.205305
+   },
+   "offset_m": [
+    1.416856,
+    -0.794415,
+    0.205305
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -2.813274
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 364,
+   "module": "wheels"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FR_004",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Spoke_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.28849,
+    "y": -0.794415,
+    "z": 0.245014
+   },
+   "offset_m": [
+    1.28849,
+    -0.794415,
+    0.245014
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -4.069911
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 365,
+   "module": "wheels"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_FR_005",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Spoke_FR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": 1.286587,
+    "y": -0.794415,
+    "z": 0.379368
+   },
+   "offset_m": [
+    1.286587,
+    -0.794415,
+    0.379368
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -5.326548
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 366,
+   "module": "wheels"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RL_001",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Spoke_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.206222,
+    "y": 0.794415,
+    "z": 0.422695
+   },
+   "offset_m": [
+    -1.206222,
+    0.794415,
+    0.422695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -0.3
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 376,
+   "module": "wheels"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RL_002",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Spoke_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.125711,
+    "y": 0.794415,
+    "z": 0.315118
+   },
+   "offset_m": [
+    -1.125711,
+    0.794415,
+    0.315118
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -1.556637
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 377,
+   "module": "wheels"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RL_003",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Spoke_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.203144,
+    "y": 0.794415,
+    "z": 0.205305
+   },
+   "offset_m": [
+    -1.203144,
+    0.794415,
+    0.205305
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -2.813274
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 378,
+   "module": "wheels"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RL_004",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Spoke_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.33151,
+    "y": 0.794415,
+    "z": 0.245014
+   },
+   "offset_m": [
+    -1.33151,
+    0.794415,
+    0.245014
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -4.069911
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 379,
+   "module": "wheels"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RL_005",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Spoke_RL",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.333413,
+    "y": 0.794415,
+    "z": 0.379368
+   },
+   "offset_m": [
+    -1.333413,
+    0.794415,
+    0.379368
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -5.326548
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 380,
+   "module": "wheels"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RR_001",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Spoke_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.206222,
+    "y": -0.794415,
+    "z": 0.422695
+   },
+   "offset_m": [
+    -1.206222,
+    -0.794415,
+    0.422695
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -0.3
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 390,
+   "module": "wheels"
+  },
+  {
+   "part_index": 29,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RR_002",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Spoke_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.125711,
+    "y": -0.794415,
+    "z": 0.315118
+   },
+   "offset_m": [
+    -1.125711,
+    -0.794415,
+    0.315118
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -1.556637
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 391,
+   "module": "wheels"
+  },
+  {
+   "part_index": 30,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RR_003",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Spoke_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.203144,
+    "y": -0.794415,
+    "z": 0.205305
+   },
+   "offset_m": [
+    -1.203144,
+    -0.794415,
+    0.205305
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -2.813274
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 392,
+   "module": "wheels"
+  },
+  {
+   "part_index": 31,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RR_004",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Spoke_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.33151,
+    "y": -0.794415,
+    "z": 0.245014
+   },
+   "offset_m": [
+    -1.33151,
+    -0.794415,
+    0.245014
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -4.069911
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 393,
+   "module": "wheels"
+  },
+  {
+   "part_index": 32,
+   "name": "ALTIMA2000_WHL_Spoke_Alloy_RR_005",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Spoke_RR",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Brushed",
+   "material_key": "alu_brushed",
+   "instance_of": "TPL_AlloySpoke",
+   "position": {
+    "x": -1.333413,
+    "y": -0.794415,
+    "z": 0.379368
+   },
+   "offset_m": [
+    -1.333413,
+    -0.794415,
+    0.379368
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    -5.326548
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "alloy spoke",
+   "master_index": 394,
+   "module": "wheels"
+  },
+  {
+   "part_index": 33,
+   "name": "ALTIMA2000_WHL_Tire_Road_FL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Tire_FL",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Compound",
+   "material_key": "tire",
+   "instance_of": "TPL_Tire_205_60R15",
+   "position": {
+    "x": 1.38,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "205/60R15 tire",
+   "master_index": 344,
+   "module": "wheels"
+  },
+  {
+   "part_index": 34,
+   "name": "ALTIMA2000_WHL_Tire_Road_FR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Tire_FR",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Compound",
+   "material_key": "tire",
+   "instance_of": "TPL_Tire_205_60R15",
+   "position": {
+    "x": 1.38,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "205/60R15 tire",
+   "master_index": 358,
+   "module": "wheels"
+  },
+  {
+   "part_index": 35,
+   "name": "ALTIMA2000_WHL_Tire_Road_RL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Tire_RL",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Compound",
+   "material_key": "tire",
+   "instance_of": "TPL_Tire_205_60R15",
+   "position": {
+    "x": -1.24,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "205/60R15 tire",
+   "master_index": 372,
+   "module": "wheels"
+  },
+  {
+   "part_index": 36,
+   "name": "ALTIMA2000_WHL_Tire_Road_RR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Tire_RR",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Compound",
+   "material_key": "tire",
+   "instance_of": "TPL_Tire_205_60R15",
+   "position": {
+    "x": -1.24,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "205/60R15 tire",
+   "master_index": 386,
+   "module": "wheels"
+  },
+  {
+   "part_index": 37,
+   "name": "ALTIMA2000_WHL_Tread_Band_FL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "Tread_FL",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Tread",
+   "material_key": "tire_tread",
+   "instance_of": "TPL_Tread_Band",
+   "position": {
+    "x": 1.38,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire tread band",
+   "master_index": 346,
+   "module": "wheels"
+  },
+  {
+   "part_index": 38,
+   "name": "ALTIMA2000_WHL_Tread_Band_FR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "Tread_FR",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Tread",
+   "material_key": "tire_tread",
+   "instance_of": "TPL_Tread_Band",
+   "position": {
+    "x": 1.38,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire tread band",
+   "master_index": 360,
+   "module": "wheels"
+  },
+  {
+   "part_index": 39,
+   "name": "ALTIMA2000_WHL_Tread_Band_RL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "Tread_RL",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Tread",
+   "material_key": "tire_tread",
+   "instance_of": "TPL_Tread_Band",
+   "position": {
+    "x": -1.24,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire tread band",
+   "master_index": 374,
+   "module": "wheels"
+  },
+  {
+   "part_index": 40,
+   "name": "ALTIMA2000_WHL_Tread_Band_RR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "Tread_RR",
+   "object_type": "MESH",
+   "material": "MAT_Tire_Tread",
+   "material_key": "tire_tread",
+   "instance_of": "TPL_Tread_Band",
+   "position": {
+    "x": -1.24,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire tread band",
+   "master_index": 388,
+   "module": "wheels"
+  },
+  {
+   "part_index": 41,
+   "name": "ALTIMA2000_WHL_ValveStem_Tire_FL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FL",
+   "part": "ValveStem_FL",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.81324,
+    "z": 0.17634
+   },
+   "offset_m": [
+    1.38,
+    0.81324,
+    0.17634
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire valve stem",
+   "master_index": 357,
+   "module": "wheels"
+  },
+  {
+   "part_index": 42,
+   "name": "ALTIMA2000_WHL_ValveStem_Tire_FR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_FR",
+   "part": "ValveStem_FR",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.81324,
+    "z": 0.17634
+   },
+   "offset_m": [
+    1.38,
+    -0.81324,
+    0.17634
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire valve stem",
+   "master_index": 371,
+   "module": "wheels"
+  },
+  {
+   "part_index": 43,
+   "name": "ALTIMA2000_WHL_ValveStem_Tire_RL",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RL",
+   "part": "ValveStem_RL",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.81324,
+    "z": 0.17634
+   },
+   "offset_m": [
+    -1.24,
+    0.81324,
+    0.17634
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire valve stem",
+   "master_index": 385,
+   "module": "wheels"
+  },
+  {
+   "part_index": 44,
+   "name": "ALTIMA2000_WHL_ValveStem_Tire_RR",
+   "collection": "Wheels",
+   "group": "WH",
+   "sub": "Wheel_RR",
+   "part": "ValveStem_RR",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_EPDM_Seal",
+   "material_key": "rubber",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.81324,
+    "z": 0.17634
+   },
+   "offset_m": [
+    -1.24,
+    -0.81324,
+    0.17634
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tire valve stem",
+   "master_index": 399,
+   "module": "wheels"
+  }
+ ]
+}

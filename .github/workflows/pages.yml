@@ -1,0 +1,61 @@
+name: Deploy web frontend to GitHub Pages
+
+# Publishes the static viewer in web/ to GitHub Pages.
+# Enable once under Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Assemble the site
+        run: |
+          set -e
+          mkdir -p _site
+          # the viewer itself (html / css / js / vendored three.js)
+          cp -r web/. _site/
+          # the manifest JSON is plain text and is served directly
+          cp altima2000_manifest.json _site/data/
+          cp altima2000_module_*_manifest.json _site/data/
+          # the glTF/GLB are Git LFS objects; ship the real bytes so the
+          # local source works on Pages too (the page also falls back to
+          # media.githubusercontent.com automatically)
+          cp altima2000.glb _site/data/
+          cp altima2000.gltf _site/data/
+          cp altima2000.bin _site/data/
+          ls -la _site/data/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

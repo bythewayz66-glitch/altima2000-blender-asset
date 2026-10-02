@@ -1,0 +1,4067 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "suspension",
+ "module_file": "altima2000_module_suspension.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Suspension"
+ ],
+ "collections": [
+  "Suspension_Front",
+  "Suspension_Rear",
+  "Suspension_Steering"
+ ],
+ "part_count": 112,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_STR_HexBolt_Column_001",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Column",
+   "part": "HexBolt_Column",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering column bolt (M8)",
+   "master_index": 1583,
+   "module": "suspension"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_STR_HexBolt_Column_002",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Column",
+   "part": "HexBolt_Column",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering column bolt (M8)",
+   "master_index": 1584,
+   "module": "suspension"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_STR_HexBolt_Column_003",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Column",
+   "part": "HexBolt_Column",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering column bolt (M8)",
+   "master_index": 1585,
+   "module": "suspension"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_STR_HexBolt_Column_004",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Column",
+   "part": "HexBolt_Column",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering column bolt (M8)",
+   "master_index": 1586,
+   "module": "suspension"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_STR_HexBolt_SteeringRack_001",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "SteeringRack",
+   "part": "HexBolt_SteeringRack",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering rack bolt (M10)",
+   "master_index": 1579,
+   "module": "suspension"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_STR_HexBolt_SteeringRack_002",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "SteeringRack",
+   "part": "HexBolt_SteeringRack",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering rack bolt (M10)",
+   "master_index": 1580,
+   "module": "suspension"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_STR_HexBolt_SteeringRack_003",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "SteeringRack",
+   "part": "HexBolt_SteeringRack",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering rack bolt (M10)",
+   "master_index": 1581,
+   "module": "suspension"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_STR_HexBolt_SteeringRack_004",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "SteeringRack",
+   "part": "HexBolt_SteeringRack",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering rack bolt (M10)",
+   "master_index": 1582,
+   "module": "suspension"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_STR_HexNut_TieRod_001",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "TieRod",
+   "part": "HexNut_TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M12",
+   "position": {
+    "x": 2.221702,
+    "y": -0.266,
+    "z": 0.903
+   },
+   "offset_m": [
+    2.221702,
+    -0.266,
+    0.903
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tie rod end nut (M12)",
+   "master_index": 1879,
+   "module": "suspension"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_STR_HexNut_TieRod_002",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "TieRod",
+   "part": "HexNut_TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M12",
+   "position": {
+    "x": -0.458724,
+    "y": -0.609171,
+    "z": 0.515856
+   },
+   "offset_m": [
+    -0.458724,
+    -0.609171,
+    0.515856
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tie rod end nut (M12)",
+   "master_index": 1880,
+   "module": "suspension"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_STR_HexNut_TieRod_003",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "TieRod",
+   "part": "HexNut_TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M12",
+   "position": {
+    "x": 1.19787,
+    "y": 0.447657,
+    "z": 1.028713
+   },
+   "offset_m": [
+    1.19787,
+    0.447657,
+    1.028713
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tie rod end nut (M12)",
+   "master_index": 1881,
+   "module": "suspension"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_STR_HexNut_TieRod_004",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "TieRod",
+   "part": "HexNut_TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M12",
+   "position": {
+    "x": -1.482556,
+    "y": 0.104486,
+    "z": 0.641569
+   },
+   "offset_m": [
+    -1.482556,
+    0.104486,
+    0.641569
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "tie rod end nut (M12)",
+   "master_index": 1882,
+   "module": "suspension"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_SUSP_BallJoint_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.42,
+    "y": 0.73794,
+    "z": 0.25
+   },
+   "offset_m": [
+    1.42,
+    0.73794,
+    0.25
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower ball joint",
+   "master_index": 312,
+   "module": "suspension"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_SUSP_BallJoint_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.42,
+    "y": -0.73794,
+    "z": 0.25
+   },
+   "offset_m": [
+    1.42,
+    -0.73794,
+    0.25
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower ball joint",
+   "master_index": 299,
+   "module": "suspension"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_SUSP_BeamAxle_Rear",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.0,
+    "z": 0.3
+   },
+   "offset_m": [
+    -1.24,
+    0.0,
+    0.3
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear torsion beam axle",
+   "master_index": 318,
+   "module": "suspension"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_SUSP_BumpStop_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "BumpStop",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.79
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.79
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut bump stop",
+   "master_index": 309,
+   "module": "suspension"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_SUSP_BumpStop_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "BumpStop",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.79
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.79
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut bump stop",
+   "master_index": 296,
+   "module": "suspension"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_SUSP_CoilSpring_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "CoilSpring",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.6
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front coil spring",
+   "master_index": 307,
+   "module": "suspension"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_SUSP_CoilSpring_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "CoilSpring",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.6
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.6
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front coil spring",
+   "master_index": 294,
+   "module": "suspension"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_SUSP_CoilSpring_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "CoilSpringR",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.6024,
+    "z": 0.43
+   },
+   "offset_m": [
+    -1.24,
+    0.6024,
+    0.43
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear coil spring",
+   "master_index": 327,
+   "module": "suspension"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_SUSP_CoilSpring_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "CoilSpringR",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.6024,
+    "z": 0.43
+   },
+   "offset_m": [
+    -1.24,
+    -0.6024,
+    0.43
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear coil spring",
+   "master_index": 321,
+   "module": "suspension"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_SUSP_DustBoot_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "DustBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut dust boot",
+   "master_index": 310,
+   "module": "suspension"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_SUSP_DustBoot_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "DustBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.7
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut dust boot",
+   "master_index": 297,
+   "module": "suspension"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1545,
+   "module": "suspension"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1546,
+   "module": "suspension"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1547,
+   "module": "suspension"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1548,
+   "module": "suspension"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_005",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1549,
+   "module": "suspension"
+  },
+  {
+   "part_index": 29,
+   "name": "ALTIMA2000_SUSP_HexBolt_BallJoint_006",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJoint",
+   "part": "HexBolt_BallJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint bolt (M10)",
+   "master_index": 1550,
+   "module": "suspension"
+  },
+  {
+   "part_index": 30,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_001",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1561,
+   "module": "suspension"
+  },
+  {
+   "part_index": 31,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_002",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1562,
+   "module": "suspension"
+  },
+  {
+   "part_index": 32,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_003",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1563,
+   "module": "suspension"
+  },
+  {
+   "part_index": 33,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_004",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1564,
+   "module": "suspension"
+  },
+  {
+   "part_index": 34,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_005",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1565,
+   "module": "suspension"
+  },
+  {
+   "part_index": 35,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_006",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1566,
+   "module": "suspension"
+  },
+  {
+   "part_index": 36,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_007",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1567,
+   "module": "suspension"
+  },
+  {
+   "part_index": 37,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_008",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1568,
+   "module": "suspension"
+  },
+  {
+   "part_index": 38,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_009",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1569,
+   "module": "suspension"
+  },
+  {
+   "part_index": 39,
+   "name": "ALTIMA2000_SUSP_HexBolt_BeamAxle_010",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "BeamAxle",
+   "part": "HexBolt_BeamAxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear beam axle bolt (M12)",
+   "master_index": 1570,
+   "module": "suspension"
+  },
+  {
+   "part_index": 40,
+   "name": "ALTIMA2000_SUSP_HexBolt_ControlArm_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "ControlArm",
+   "part": "HexBolt_ControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower control arm pivot bolt (M12)",
+   "master_index": 1551,
+   "module": "suspension"
+  },
+  {
+   "part_index": 41,
+   "name": "ALTIMA2000_SUSP_HexBolt_ControlArm_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "ControlArm",
+   "part": "HexBolt_ControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower control arm pivot bolt (M12)",
+   "master_index": 1552,
+   "module": "suspension"
+  },
+  {
+   "part_index": 42,
+   "name": "ALTIMA2000_SUSP_HexBolt_ControlArm_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "ControlArm",
+   "part": "HexBolt_ControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower control arm pivot bolt (M12)",
+   "master_index": 1553,
+   "module": "suspension"
+  },
+  {
+   "part_index": 43,
+   "name": "ALTIMA2000_SUSP_HexBolt_ControlArm_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "ControlArm",
+   "part": "HexBolt_ControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lower control arm pivot bolt (M12)",
+   "master_index": 1554,
+   "module": "suspension"
+  },
+  {
+   "part_index": 44,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutClamp_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutClamp",
+   "part": "HexBolt_StrutClamp",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut to knuckle clamp bolt (M12)",
+   "master_index": 1541,
+   "module": "suspension"
+  },
+  {
+   "part_index": 45,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutClamp_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutClamp",
+   "part": "HexBolt_StrutClamp",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut to knuckle clamp bolt (M12)",
+   "master_index": 1542,
+   "module": "suspension"
+  },
+  {
+   "part_index": 46,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutClamp_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutClamp",
+   "part": "HexBolt_StrutClamp",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut to knuckle clamp bolt (M12)",
+   "master_index": 1543,
+   "module": "suspension"
+  },
+  {
+   "part_index": 47,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutClamp_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutClamp",
+   "part": "HexBolt_StrutClamp",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut to knuckle clamp bolt (M12)",
+   "master_index": 1544,
+   "module": "suspension"
+  },
+  {
+   "part_index": 48,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1535,
+   "module": "suspension"
+  },
+  {
+   "part_index": 49,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1536,
+   "module": "suspension"
+  },
+  {
+   "part_index": 50,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1537,
+   "module": "suspension"
+  },
+  {
+   "part_index": 51,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1538,
+   "module": "suspension"
+  },
+  {
+   "part_index": 52,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_005",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1539,
+   "module": "suspension"
+  },
+  {
+   "part_index": 53,
+   "name": "ALTIMA2000_SUSP_HexBolt_StrutMount_006",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "StrutMount",
+   "part": "HexBolt_StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "strut upper mount nut/bolt (M10)",
+   "master_index": 1540,
+   "module": "suspension"
+  },
+  {
+   "part_index": 54,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1555,
+   "module": "suspension"
+  },
+  {
+   "part_index": 55,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1556,
+   "module": "suspension"
+  },
+  {
+   "part_index": 56,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1557,
+   "module": "suspension"
+  },
+  {
+   "part_index": 57,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1558,
+   "module": "suspension"
+  },
+  {
+   "part_index": 58,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_005",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1559,
+   "module": "suspension"
+  },
+  {
+   "part_index": 59,
+   "name": "ALTIMA2000_SUSP_HexBolt_SwayBar_006",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "SwayBar",
+   "part": "HexBolt_SwayBar",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bracket bolt (M8)",
+   "master_index": 1560,
+   "module": "suspension"
+  },
+  {
+   "part_index": 60,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_001",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1571,
+   "module": "suspension"
+  },
+  {
+   "part_index": 61,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_002",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1572,
+   "module": "suspension"
+  },
+  {
+   "part_index": 62,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_003",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1573,
+   "module": "suspension"
+  },
+  {
+   "part_index": 63,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_004",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1574,
+   "module": "suspension"
+  },
+  {
+   "part_index": 64,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_005",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1575,
+   "module": "suspension"
+  },
+  {
+   "part_index": 65,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_006",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1576,
+   "module": "suspension"
+  },
+  {
+   "part_index": 66,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_007",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1577,
+   "module": "suspension"
+  },
+  {
+   "part_index": 67,
+   "name": "ALTIMA2000_SUSP_HexBolt_TrailingArm_008",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "TrailingArm",
+   "part": "HexBolt_TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm bolt (M10)",
+   "master_index": 1578,
+   "module": "suspension"
+  },
+  {
+   "part_index": 68,
+   "name": "ALTIMA2000_SUSP_HexNut_BallJointCastle_001",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJointCastle",
+   "part": "HexNut_BallJointCastle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M10",
+   "position": {
+    "x": 2.221702,
+    "y": -0.266,
+    "z": 0.903
+   },
+   "offset_m": [
+    2.221702,
+    -0.266,
+    0.903
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint castle nut (M10)",
+   "master_index": 1875,
+   "module": "suspension"
+  },
+  {
+   "part_index": 69,
+   "name": "ALTIMA2000_SUSP_HexNut_BallJointCastle_002",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJointCastle",
+   "part": "HexNut_BallJointCastle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M10",
+   "position": {
+    "x": -0.458724,
+    "y": -0.609171,
+    "z": 0.515856
+   },
+   "offset_m": [
+    -0.458724,
+    -0.609171,
+    0.515856
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint castle nut (M10)",
+   "master_index": 1876,
+   "module": "suspension"
+  },
+  {
+   "part_index": 70,
+   "name": "ALTIMA2000_SUSP_HexNut_BallJointCastle_003",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJointCastle",
+   "part": "HexNut_BallJointCastle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M10",
+   "position": {
+    "x": 1.19787,
+    "y": 0.447657,
+    "z": 1.028713
+   },
+   "offset_m": [
+    1.19787,
+    0.447657,
+    1.028713
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint castle nut (M10)",
+   "master_index": 1877,
+   "module": "suspension"
+  },
+  {
+   "part_index": 71,
+   "name": "ALTIMA2000_SUSP_HexNut_BallJointCastle_004",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "BallJointCastle",
+   "part": "HexNut_BallJointCastle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Nut_M10",
+   "position": {
+    "x": -1.482556,
+    "y": 0.104486,
+    "z": 0.641569
+   },
+   "offset_m": [
+    -1.482556,
+    0.104486,
+    0.641569
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "ball joint castle nut (M10)",
+   "master_index": 1878,
+   "module": "suspension"
+  },
+  {
+   "part_index": 72,
+   "name": "ALTIMA2000_SUSP_HubBearing_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "HubBearing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front hub bearing assembly",
+   "master_index": 314,
+   "module": "suspension"
+  },
+  {
+   "part_index": 73,
+   "name": "ALTIMA2000_SUSP_HubBearing_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "HubBearing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    1.38,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front hub bearing assembly",
+   "master_index": 301,
+   "module": "suspension"
+  },
+  {
+   "part_index": 74,
+   "name": "ALTIMA2000_SUSP_HubBearing_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "HubBearingR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear hub bearing assembly",
+   "master_index": 330,
+   "module": "suspension"
+  },
+  {
+   "part_index": 75,
+   "name": "ALTIMA2000_SUSP_HubBearing_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "HubBearingR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.753,
+    "z": 0.3135
+   },
+   "offset_m": [
+    -1.24,
+    -0.753,
+    0.3135
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear hub bearing assembly",
+   "master_index": 324,
+   "module": "suspension"
+  },
+  {
+   "part_index": 76,
+   "name": "ALTIMA2000_SUSP_LowerControlArm_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "LowerControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.42,
+    "y": 0.4518,
+    "z": 0.26
+   },
+   "offset_m": [
+    1.42,
+    0.4518,
+    0.26
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front lower control arm (transverse link)",
+   "master_index": 311,
+   "module": "suspension"
+  },
+  {
+   "part_index": 77,
+   "name": "ALTIMA2000_SUSP_LowerControlArm_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "LowerControlArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.42,
+    "y": -0.4518,
+    "z": 0.26
+   },
+   "offset_m": [
+    1.42,
+    -0.4518,
+    0.26
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front lower control arm (transverse link)",
+   "master_index": 298,
+   "module": "suspension"
+  },
+  {
+   "part_index": 78,
+   "name": "ALTIMA2000_SUSP_PanhardRod_Rear",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "PanhardRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.12,
+    "y": 0.0,
+    "z": 0.33
+   },
+   "offset_m": [
+    -1.12,
+    0.0,
+    0.33
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "lateral locating rod",
+   "master_index": 331,
+   "module": "suspension"
+  },
+  {
+   "part_index": 79,
+   "name": "ALTIMA2000_SUSP_PinionHousing_Steering",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "Pinion",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": -0.13,
+    "z": 0.43
+   },
+   "offset_m": [
+    1.48,
+    -0.13,
+    0.43
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering pinion housing",
+   "master_index": 333,
+   "module": "suspension"
+  },
+  {
+   "part_index": 80,
+   "name": "ALTIMA2000_SUSP_RackBoot_Rubber_L",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "RackBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": 0.33,
+    "z": 0.395
+   },
+   "offset_m": [
+    1.48,
+    0.33,
+    0.395
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rack end rubber boot",
+   "master_index": 339,
+   "module": "suspension"
+  },
+  {
+   "part_index": 81,
+   "name": "ALTIMA2000_SUSP_RackBoot_Rubber_R",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "RackBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": -0.33,
+    "z": 0.395
+   },
+   "offset_m": [
+    1.48,
+    -0.33,
+    0.395
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rack end rubber boot",
+   "master_index": 336,
+   "module": "suspension"
+  },
+  {
+   "part_index": 82,
+   "name": "ALTIMA2000_SUSP_StabilizerBar_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerBar_L",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.76,
+    "y": 1.06926,
+    "z": 0.42
+   },
+   "offset_m": [
+    1.76,
+    1.06926,
+    0.42
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front stabiliser (anti-roll) bar",
+   "master_index": 315,
+   "module": "suspension"
+  },
+  {
+   "part_index": 83,
+   "name": "ALTIMA2000_SUSP_StabilizerBar_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerBar_R",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Spring",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.76,
+    "y": -1.06926,
+    "z": 0.42
+   },
+   "offset_m": [
+    1.76,
+    -1.06926,
+    0.42
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front stabiliser (anti-roll) bar",
+   "master_index": 302,
+   "module": "suspension"
+  },
+  {
+   "part_index": 84,
+   "name": "ALTIMA2000_SUSP_StabilizerBushing_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerBush_L",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.56,
+    "y": 0.2259,
+    "z": 0.41
+   },
+   "offset_m": [
+    1.56,
+    0.2259,
+    0.41
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bushing",
+   "master_index": 317,
+   "module": "suspension"
+  },
+  {
+   "part_index": 85,
+   "name": "ALTIMA2000_SUSP_StabilizerBushing_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerBush_R",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.56,
+    "y": -0.2259,
+    "z": 0.41
+   },
+   "offset_m": [
+    1.56,
+    -0.2259,
+    0.41
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser bar bushing",
+   "master_index": 304,
+   "module": "suspension"
+  },
+  {
+   "part_index": 86,
+   "name": "ALTIMA2000_SUSP_StabilizerLink_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerLink_L",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.7,
+    "y": 0.69276,
+    "z": 0.36
+   },
+   "offset_m": [
+    1.7,
+    0.69276,
+    0.36
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser link rod",
+   "master_index": 316,
+   "module": "suspension"
+  },
+  {
+   "part_index": 87,
+   "name": "ALTIMA2000_SUSP_StabilizerLink_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StabilizerLink_R",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.7,
+    "y": -0.69276,
+    "z": 0.36
+   },
+   "offset_m": [
+    1.7,
+    -0.69276,
+    0.36
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "stabiliser link rod",
+   "master_index": 303,
+   "module": "suspension"
+  },
+  {
+   "part_index": 88,
+   "name": "ALTIMA2000_SUSP_SteeringColumn_Assembly",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "Column",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.4,
+    "y": -0.36,
+    "z": 0.73
+   },
+   "offset_m": [
+    0.4,
+    -0.36,
+    0.73
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "collapsible steering column",
+   "master_index": 340,
+   "module": "suspension"
+  },
+  {
+   "part_index": 89,
+   "name": "ALTIMA2000_SUSP_SteeringKnuckle_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "Knuckle",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.749235,
+    "z": 0.32
+   },
+   "offset_m": [
+    1.38,
+    0.749235,
+    0.32
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front steering knuckle",
+   "master_index": 313,
+   "module": "suspension"
+  },
+  {
+   "part_index": 90,
+   "name": "ALTIMA2000_SUSP_SteeringKnuckle_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "Knuckle",
+   "object_type": "MESH",
+   "material": "MAT_CastIron_Exhaust",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.749235,
+    "z": 0.32
+   },
+   "offset_m": [
+    1.38,
+    -0.749235,
+    0.32
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front steering knuckle",
+   "master_index": 300,
+   "module": "suspension"
+  },
+  {
+   "part_index": 91,
+   "name": "ALTIMA2000_SUSP_SteeringRack_Assembly",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "Rack",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": 0.0,
+    "z": 0.4
+   },
+   "offset_m": [
+    1.48,
+    0.0,
+    0.4
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "power steering rack and pinion",
+   "master_index": 332,
+   "module": "suspension"
+  },
+  {
+   "part_index": 92,
+   "name": "ALTIMA2000_SUSP_SteeringUJoint_Lower",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "UJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.93,
+    "y": -0.22,
+    "z": 0.64
+   },
+   "offset_m": [
+    0.93,
+    -0.22,
+    0.64
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering intermediate shaft universal joint",
+   "master_index": 341,
+   "module": "suspension"
+  },
+  {
+   "part_index": 93,
+   "name": "ALTIMA2000_SUSP_SteeringWheelHub_Centre",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "WheelHub",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_DarkGrey",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.39,
+    "y": -0.36,
+    "z": 0.735
+   },
+   "offset_m": [
+    0.39,
+    -0.36,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering wheel hub with airbag",
+   "master_index": 343,
+   "module": "suspension"
+  },
+  {
+   "part_index": 94,
+   "name": "ALTIMA2000_SUSP_SteeringWheel_Rim",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "SteeringWheel",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_DarkGrey",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.36,
+    "y": -0.36,
+    "z": 0.735
+   },
+   "offset_m": [
+    0.36,
+    -0.36,
+    0.735
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "steering wheel rim",
+   "master_index": 342,
+   "module": "suspension"
+  },
+  {
+   "part_index": 95,
+   "name": "ALTIMA2000_SUSP_StrutDamper_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutDamper",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Absorber_Body",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.52
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.52
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front strut damper body",
+   "master_index": 305,
+   "module": "suspension"
+  },
+  {
+   "part_index": 96,
+   "name": "ALTIMA2000_SUSP_StrutDamper_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutDamper",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Absorber_Body",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.52
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.52
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front strut damper body",
+   "master_index": 292,
+   "module": "suspension"
+  },
+  {
+   "part_index": 97,
+   "name": "ALTIMA2000_SUSP_StrutDamper_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "StrutDamperR",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Absorber_Body",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.71535,
+    "z": 0.43
+   },
+   "offset_m": [
+    -1.24,
+    0.71535,
+    0.43
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear shock absorber",
+   "master_index": 326,
+   "module": "suspension"
+  },
+  {
+   "part_index": 98,
+   "name": "ALTIMA2000_SUSP_StrutDamper_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "StrutDamperR",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Absorber_Body",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.71535,
+    "z": 0.43
+   },
+   "offset_m": [
+    -1.24,
+    -0.71535,
+    0.43
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear shock absorber",
+   "master_index": 320,
+   "module": "suspension"
+  },
+  {
+   "part_index": 99,
+   "name": "ALTIMA2000_SUSP_StrutMount_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "StrutMountR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": 0.71535,
+    "z": 0.62
+   },
+   "offset_m": [
+    -1.24,
+    0.71535,
+    0.62
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear upper shock mount",
+   "master_index": 328,
+   "module": "suspension"
+  },
+  {
+   "part_index": 100,
+   "name": "ALTIMA2000_SUSP_StrutMount_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "StrutMountR",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -1.24,
+    "y": -0.71535,
+    "z": 0.62
+   },
+   "offset_m": [
+    -1.24,
+    -0.71535,
+    0.62
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear upper shock mount",
+   "master_index": 322,
+   "module": "suspension"
+  },
+  {
+   "part_index": 101,
+   "name": "ALTIMA2000_SUSP_StrutMount_Upper_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.88
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.88
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upper strut mount bearing",
+   "master_index": 308,
+   "module": "suspension"
+  },
+  {
+   "part_index": 102,
+   "name": "ALTIMA2000_SUSP_StrutMount_Upper_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.88
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.88
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "upper strut mount bearing",
+   "master_index": 295,
+   "module": "suspension"
+  },
+  {
+   "part_index": 103,
+   "name": "ALTIMA2000_SUSP_StrutRod_Front_L",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutRod",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Piston_Rod",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.72288,
+    "z": 0.72
+   },
+   "offset_m": [
+    1.38,
+    0.72288,
+    0.72
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front strut piston rod",
+   "master_index": 306,
+   "module": "suspension"
+  },
+  {
+   "part_index": 104,
+   "name": "ALTIMA2000_SUSP_StrutRod_Front_R",
+   "collection": "Suspension_Front",
+   "group": "SU",
+   "sub": "Front",
+   "part": "StrutRod",
+   "object_type": "MESH",
+   "material": "MAT_Shock_Piston_Rod",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.72288,
+    "z": 0.72
+   },
+   "offset_m": [
+    1.38,
+    -0.72288,
+    0.72
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front strut piston rod",
+   "master_index": 293,
+   "module": "suspension"
+  },
+  {
+   "part_index": 105,
+   "name": "ALTIMA2000_SUSP_TieRodEnd_Outer_L",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "TieRodEnd",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": 0.64,
+    "z": 0.36
+   },
+   "offset_m": [
+    1.38,
+    0.64,
+    0.36
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "outer tie rod end",
+   "master_index": 338,
+   "module": "suspension"
+  },
+  {
+   "part_index": 106,
+   "name": "ALTIMA2000_SUSP_TieRodEnd_Outer_R",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "TieRodEnd",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.38,
+    "y": -0.64,
+    "z": 0.36
+   },
+   "offset_m": [
+    1.38,
+    -0.64,
+    0.36
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "outer tie rod end",
+   "master_index": 335,
+   "module": "suspension"
+  },
+  {
+   "part_index": 107,
+   "name": "ALTIMA2000_SUSP_TieRod_Inner_L",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": 0.27,
+    "z": 0.39
+   },
+   "offset_m": [
+    1.48,
+    0.27,
+    0.39
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "inner tie rod",
+   "master_index": 337,
+   "module": "suspension"
+  },
+  {
+   "part_index": 108,
+   "name": "ALTIMA2000_SUSP_TieRod_Inner_R",
+   "collection": "Suspension_Steering",
+   "group": "SR",
+   "sub": "Steering",
+   "part": "TieRod",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.48,
+    "y": -0.27,
+    "z": 0.39
+   },
+   "offset_m": [
+    1.48,
+    -0.27,
+    0.39
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "inner tie rod",
+   "master_index": 334,
+   "module": "suspension"
+  },
+  {
+   "part_index": 109,
+   "name": "ALTIMA2000_SUSP_TrailingArmBushing_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "TrailingArmBush",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.74,
+    "y": 0.64758,
+    "z": 0.29
+   },
+   "offset_m": [
+    -0.74,
+    0.64758,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm pivot bushing",
+   "master_index": 329,
+   "module": "suspension"
+  },
+  {
+   "part_index": 110,
+   "name": "ALTIMA2000_SUSP_TrailingArmBushing_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "TrailingArmBush",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.74,
+    "y": -0.64758,
+    "z": 0.29
+   },
+   "offset_m": [
+    -0.74,
+    -0.64758,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "trailing arm pivot bushing",
+   "master_index": 323,
+   "module": "suspension"
+  },
+  {
+   "part_index": 111,
+   "name": "ALTIMA2000_SUSP_TrailingArm_Rear_L",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.99,
+    "y": 0.64758,
+    "z": 0.29
+   },
+   "offset_m": [
+    -0.99,
+    0.64758,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear trailing arm",
+   "master_index": 325,
+   "module": "suspension"
+  },
+  {
+   "part_index": 112,
+   "name": "ALTIMA2000_SUSP_TrailingArm_Rear_R",
+   "collection": "Suspension_Rear",
+   "group": "SU",
+   "sub": "Rear",
+   "part": "TrailingArm",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": -0.99,
+    "y": -0.64758,
+    "z": 0.29
+   },
+   "offset_m": [
+    -0.99,
+    -0.64758,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "rear trailing arm",
+   "master_index": 319,
+   "module": "suspension"
+  }
+ ]
+}

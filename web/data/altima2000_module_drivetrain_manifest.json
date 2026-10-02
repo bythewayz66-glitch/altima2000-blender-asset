@@ -1,0 +1,2987 @@
+{
+ "asset": "2000 Nissan Altima (L30) - fully disassemblable Blender asset",
+ "module": "drivetrain",
+ "module_file": "altima2000_module_drivetrain.blend",
+ "generator": "source/build_altima.py (bpy procedural build)",
+ "bulk_scale": 1.0,
+ "units": "metre",
+ "coordinate_system": {
+  "convention": "+X = forward (nose), +Y = left side, +Z = up, Z=0 = ground",
+  "origin": "mid-point of the wheelbase, projected to the ground plane"
+ },
+ "naming_convention": "ALTIMA2000_<GROUP>_<Tag>_<Detail>[_<NNN>]",
+ "root_collections": [
+  "ALTIMA2000_Drivetrain"
+ ],
+ "collections": [
+  "Drivetrain_Drive",
+  "Drivetrain_Mount",
+  "Drivetrain_Transaxle"
+ ],
+ "part_count": 82,
+ "master_manifest": "altima2000_manifest.json",
+ "master_part_count": 2130,
+ "standalone_reassembly": {
+  "note": "This module reassembles on its own: every row carries the part's assembled world position in offset_m, so the disassemble / reassemble operators shipped in altima2000_assembly_tools.py work on this file unchanged.",
+  "operators": [
+   "altima.disassemble",
+   "altima.reassemble",
+   "altima.verify_assembly"
+  ],
+  "mapping_to_master": "row['master_index'] is the part's 1-based index in the master manifest; row['name'] is identical in both, and row['collection'] is the same sub-collection name."
+ },
+ "parts": [
+  {
+   "part_index": 1,
+   "name": "ALTIMA2000_ENG_EngineMount_Bracket_001",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.28,
+    "z": 0.375
+   },
+   "offset_m": [
+    1.02,
+    -0.28,
+    0.375
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bracket",
+   "master_index": 263,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 2,
+   "name": "ALTIMA2000_ENG_EngineMount_Bracket_002",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.33,
+    "z": 0.375
+   },
+   "offset_m": [
+    1.02,
+    0.33,
+    0.375
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bracket",
+   "master_index": 265,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 3,
+   "name": "ALTIMA2000_ENG_EngineMount_Insulator_001",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "EngineMountIns",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": -0.29,
+    "z": 0.29
+   },
+   "offset_m": [
+    1.02,
+    -0.29,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount insulator",
+   "master_index": 264,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 4,
+   "name": "ALTIMA2000_ENG_EngineMount_Insulator_002",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "EngineMountIns",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 1.02,
+    "y": 0.34,
+    "z": 0.29
+   },
+   "offset_m": [
+    1.02,
+    0.34,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount insulator",
+   "master_index": 266,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 5,
+   "name": "ALTIMA2000_TRN_CVBoot_Rubber_001",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.19,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.19,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint rubber boot",
+   "master_index": 281,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 6,
+   "name": "ALTIMA2000_TRN_CVBoot_Rubber_002",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.63,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.63,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint rubber boot",
+   "master_index": 283,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 7,
+   "name": "ALTIMA2000_TRN_CVBoot_Rubber_003",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": -0.19,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    -0.19,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint rubber boot",
+   "master_index": 286,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 8,
+   "name": "ALTIMA2000_TRN_CVBoot_Rubber_004",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVBoot",
+   "object_type": "MESH",
+   "material": "MAT_Rubber_Hose",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": -0.63,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    -0.63,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint rubber boot",
+   "master_index": 288,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 9,
+   "name": "ALTIMA2000_TRN_CVJoint_ConstantVelocity_001",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.135,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.135,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "constant velocity joint",
+   "master_index": 280,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 10,
+   "name": "ALTIMA2000_TRN_CVJoint_ConstantVelocity_002",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.58,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.58,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "constant velocity joint",
+   "master_index": 282,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 11,
+   "name": "ALTIMA2000_TRN_CVJoint_ConstantVelocity_003",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": -0.135,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    -0.135,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "constant velocity joint",
+   "master_index": 285,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 12,
+   "name": "ALTIMA2000_TRN_CVJoint_ConstantVelocity_004",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": -0.58,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    -0.58,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "constant velocity joint",
+   "master_index": 287,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 13,
+   "name": "ALTIMA2000_TRN_Differential_Carrier",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "Differential",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.0,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.0,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "final drive / differential assembly",
+   "master_index": 277,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 14,
+   "name": "ALTIMA2000_TRN_DriveShaft_Axle_001",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "Axle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.36,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.36,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front drive axle shaft",
+   "master_index": 279,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 15,
+   "name": "ALTIMA2000_TRN_DriveShaft_Axle_002",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "Axle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": -0.36,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    -0.36,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "front drive axle shaft",
+   "master_index": 284,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 16,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_001",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1479,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 17,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_002",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1480,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 18,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_003",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1481,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 19,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_004",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1482,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 20,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_005",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1483,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 21,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_006",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1484,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 22,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_007",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1485,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 23,
+   "name": "ALTIMA2000_TRN_HexBolt_Bellhousing_008",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Bellhousing",
+   "part": "HexBolt_Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M12",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle bellhousing bolt (M12)",
+   "master_index": 1486,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 24,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_001",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1523,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 25,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_002",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1524,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 26,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_003",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1525,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 27,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_004",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1526,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 28,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_005",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1527,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 29,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_006",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1528,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 30,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_007",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1529,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 31,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_008",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1530,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 32,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_009",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1531,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 33,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_010",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1532,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 34,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_011",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": 1.507577,
+    "y": 0.530989,
+    "z": 0.668403
+   },
+   "offset_m": [
+    1.507577,
+    0.530989,
+    0.668403
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.72
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1533,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 35,
+   "name": "ALTIMA2000_TRN_HexBolt_CVJoint_012",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "CVJoint",
+   "part": "HexBolt_CVJoint",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M8",
+   "position": {
+    "x": -1.304346,
+    "y": 0.168208,
+    "z": 1.238243
+   },
+   "offset_m": [
+    -1.304346,
+    0.168208,
+    1.238243
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.42
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "CV joint flange bolt (M8)",
+   "master_index": 1534,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 36,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_001",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1509,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 37,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_002",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1510,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 38,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_003",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1511,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 39,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_004",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1512,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 40,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_005",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1513,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 41,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_006",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1514,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 42,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_007",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1515,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 43,
+   "name": "ALTIMA2000_TRN_HexBolt_EngineMount_008",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "EngineMount",
+   "part": "HexBolt_EngineMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "engine mount bolt (M10)",
+   "master_index": 1516,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 44,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_001",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1497,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 45,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_002",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1498,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 46,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_003",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1499,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 47,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_004",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1500,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 48,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_005",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1501,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 49,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_006",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1502,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 50,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_007",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1503,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 51,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_008",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1504,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 52,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_009",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1505,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 53,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_010",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1506,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 54,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_011",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.507577,
+    "y": 0.530989,
+    "z": 0.668403
+   },
+   "offset_m": [
+    1.507577,
+    0.530989,
+    0.668403
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.72
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1507,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 55,
+   "name": "ALTIMA2000_TRN_HexBolt_OilPanTransaxle_012",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "OilPanTransaxle",
+   "part": "HexBolt_OilPanTransaxle",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.304346,
+    "y": 0.168208,
+    "z": 1.238243
+   },
+   "offset_m": [
+    -1.304346,
+    0.168208,
+    1.238243
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.42
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan bolt (M6)",
+   "master_index": 1508,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 56,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_001",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1517,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 57,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_002",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1518,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 58,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_003",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1519,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 59,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_004",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1520,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 60,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_005",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1521,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 61,
+   "name": "ALTIMA2000_TRN_HexBolt_TransMount_006",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "TransMount",
+   "part": "HexBolt_TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M10",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount bolt (M10)",
+   "master_index": 1522,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 62,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_001",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 2.328085,
+    "y": -0.2812,
+    "z": 0.97
+   },
+   "offset_m": [
+    2.328085,
+    -0.2812,
+    0.97
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1487,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 63,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_002",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.483838,
+    "y": -0.643981,
+    "z": 0.53984
+   },
+   "offset_m": [
+    -0.483838,
+    -0.643981,
+    0.53984
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.7
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1488,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 64,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_003",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.254026,
+    "y": 0.473238,
+    "z": 1.109681
+   },
+   "offset_m": [
+    1.254026,
+    0.473238,
+    1.109681
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.4
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1489,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 65,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_004",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.557897,
+    "y": 0.110457,
+    "z": 0.679521
+   },
+   "offset_m": [
+    -1.557897,
+    0.110457,
+    0.679521
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.1
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1490,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 66,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_005",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.179967,
+    "y": -0.252324,
+    "z": 1.249361
+   },
+   "offset_m": [
+    0.179967,
+    -0.252324,
+    1.249361
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.8
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1491,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 67,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_006",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 1.917831,
+    "y": -0.615105,
+    "z": 0.819201
+   },
+   "offset_m": [
+    1.917831,
+    -0.615105,
+    0.819201
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.36
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1492,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 68,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_007",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.894092,
+    "y": 0.502114,
+    "z": 0.389042
+   },
+   "offset_m": [
+    -0.894092,
+    0.502114,
+    0.389042
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.06
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1493,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 69,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_008",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": 0.843772,
+    "y": 0.139333,
+    "z": 0.958882
+   },
+   "offset_m": [
+    0.843772,
+    0.139333,
+    0.958882
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    1.76
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1494,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 70,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_009",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -1.968151,
+    "y": -0.223448,
+    "z": 0.528722
+   },
+   "offset_m": [
+    -1.968151,
+    -0.223448,
+    0.528722
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    2.46
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1495,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 71,
+   "name": "ALTIMA2000_TRN_HexBolt_ValveBody_010",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "ValveBody",
+   "part": "HexBolt_ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Phosphate_Fastener",
+   "material_key": "steel_phos",
+   "instance_of": "TPL_Bolt_M6",
+   "position": {
+    "x": -0.230287,
+    "y": -0.58623,
+    "z": 1.098563
+   },
+   "offset_m": [
+    -0.230287,
+    -0.58623,
+    1.098563
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body bolt (M6)",
+   "master_index": 1496,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 72,
+   "name": "ALTIMA2000_TRN_Output_SpeedSensor",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "VSS",
+   "object_type": "MESH",
+   "material": "MAT_Plastic_Black_Matte",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.07,
+    "y": 0.14,
+    "z": 0.29
+   },
+   "offset_m": [
+    0.07,
+    0.14,
+    0.29
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "vehicle speed sensor",
+   "master_index": 278,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 73,
+   "name": "ALTIMA2000_TRN_ShiftCable_Selector",
+   "collection": "Drivetrain_Drive",
+   "group": "TR",
+   "sub": "Drive",
+   "part": "ShiftCable",
+   "object_type": "MESH",
+   "material": "MAT_Wire_Loom_Black",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.3,
+    "y": -0.06,
+    "z": 0.56
+   },
+   "offset_m": [
+    0.3,
+    -0.06,
+    0.56
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "shift selector cable",
+   "master_index": 291,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 74,
+   "name": "ALTIMA2000_TRN_TorqueConverter_Assembly",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "TorqueConverter",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.28,
+    "y": 0.0,
+    "z": 0.4
+   },
+   "offset_m": [
+    0.28,
+    0.0,
+    0.4
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "torque converter",
+   "master_index": 272,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 75,
+   "name": "ALTIMA2000_TRN_TorqueConverter_Housing",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "Bellhousing",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.32,
+    "y": 0.0,
+    "z": 0.4
+   },
+   "offset_m": [
+    0.32,
+    0.0,
+    0.4
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "torque converter housing / bellhousing",
+   "master_index": 271,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 76,
+   "name": "ALTIMA2000_TRN_TransaxleMount_Insulator_001",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": -0.27,
+    "z": 0.18
+   },
+   "offset_m": [
+    0.13,
+    -0.27,
+    0.18
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount insulator",
+   "master_index": 289,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 77,
+   "name": "ALTIMA2000_TRN_TransaxleMount_Insulator_002",
+   "collection": "Drivetrain_Mount",
+   "group": "TR",
+   "sub": "Mount",
+   "part": "TransMount",
+   "object_type": "MESH",
+   "material": "MAT_Suspension_Bushing",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": 0.3,
+    "z": 0.18
+   },
+   "offset_m": [
+    0.13,
+    0.3,
+    0.18
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle mount insulator",
+   "master_index": 290,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 78,
+   "name": "ALTIMA2000_TRN_Transaxle_Case",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "Case",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": 0.0,
+    "z": 0.4
+   },
+   "offset_m": [
+    0.13,
+    0.0,
+    0.4
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle case - 4-speed automatic (RE4F04A)",
+   "master_index": 270,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 79,
+   "name": "ALTIMA2000_TRN_Transaxle_Dipstick",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "Dipstick",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.56,
+    "y": -0.13,
+    "z": 0.7
+   },
+   "offset_m": [
+    0.56,
+    -0.13,
+    0.7
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "automatic transaxle dipstick",
+   "master_index": 276,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 80,
+   "name": "ALTIMA2000_TRN_Transaxle_Filter",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "Filter",
+   "object_type": "MESH",
+   "material": "MAT_Filter_Element",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": 0.0,
+    "z": 0.2
+   },
+   "offset_m": [
+    0.13,
+    0.0,
+    0.2
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transmission fluid filter",
+   "master_index": 275,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 81,
+   "name": "ALTIMA2000_TRN_Transaxle_OilPan",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "OilPan",
+   "object_type": "MESH",
+   "material": "MAT_Steel_Structural",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": 0.0,
+    "z": 0.17
+   },
+   "offset_m": [
+    0.13,
+    0.0,
+    0.17
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "transaxle oil pan",
+   "master_index": 274,
+   "module": "drivetrain"
+  },
+  {
+   "part_index": 82,
+   "name": "ALTIMA2000_TRN_ValveBody_Assembly",
+   "collection": "Drivetrain_Transaxle",
+   "group": "TR",
+   "sub": "Transaxle",
+   "part": "ValveBody",
+   "object_type": "MESH",
+   "material": "MAT_Aluminium_Cast",
+   "material_key": "",
+   "instance_of": "",
+   "position": {
+    "x": 0.13,
+    "y": 0.0,
+    "z": 0.23
+   },
+   "offset_m": [
+    0.13,
+    0.0,
+    0.23
+   ],
+   "rotation_euler_rad": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "assembled": true,
+   "notes": "valve body",
+   "master_index": 273,
+   "module": "drivetrain"
+  }
+ ]
+}
