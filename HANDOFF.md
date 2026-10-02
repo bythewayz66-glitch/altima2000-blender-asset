@@ -4,7 +4,8 @@
 for Blender, built entirely from Python (`bpy`). No downloaded or third-party mesh is
 used anywhere — running the build script reproduces the whole car deterministically.
 
-**Repository:** https://github.com/bythewayz66-glitch/altima2000-blender-asset (private, branch `main`)
+**Repository:** https://github.com/bythewayz66-glitch/altima2000-blender-asset (public, branch `main`)
+**Release:** https://github.com/bythewayz66-glitch/altima2000-blender-asset/releases/tag/v1.0.0
 **Generator:** `source/build_altima.py` (+ the `source/altima/` package)
 **Current build:** 2,130 parts · 57 sub-collections · 81 materials · `ALTIMA_BULK_SCALE = 1.0`
 
@@ -467,11 +468,59 @@ in X/Z — i.e. the axle points sideways, as it should) and visually.
 
 ---
 
-## 18. Repository
+## 18. Repository, Release and CI
 
-- **URL:** https://github.com/bythewayz66-glitch/altima2000-blender-asset (private)
+- **URL:** https://github.com/bythewayz66-glitch/altima2000-blender-asset (**public**)
 - **Branch:** `main`
 - **LFS:** `.blend`, `.glb`, `.fbx`, `.bin` are tracked with Git LFS. The patterns in
   `.gitattributes` are committed **before** the binaries.
-- **Access:** a write-enabled deploy key (`altima2000-blender-asset-deploy`) is installed
-  on the repo for pushing from the build sandbox.
+
+### Release
+
+- **Release:** https://github.com/bythewayz66-glitch/altima2000-blender-asset/releases/tag/v1.0.0
+- **Tag:** `v1.0.0` (targets `main`)
+- **Attached assets (12, all downloadable):** `altima2000_assembly.blend`,
+  `altima2000_assembly_linked.blend`, `altima2000_exploded.blend`, the 7 module files
+  (`altima2000_module_{engine,drivetrain,suspension,wheels,brakes,exhaust,doors}.blend`),
+  `altima2000.glb` and `altima2000.fbx`.
+- The assets are attached by `.github/workflows/attach-release-assets.yml`, which runs on
+  GitHub's own runners (they hold the repo token and can pull the Git LFS objects), so the
+  release assets are produced from the exact committed binaries.
+
+### Access / pushing
+
+- **Deploy key:** a write-enabled deploy key (`altima2000-blender-asset-deploy`, installed
+  in the sandbox at `~/.ssh/altima_asset_deploy`) is registered on the repo.
+- **Important:** the sandbox `~/.ssh/config` pins a *different* key (`altima_deploy`, scoped
+  to the `altima2000` repo), so a plain `git push` fails with `Repository not found`. Force
+  the correct key per repo:
+
+  ```bash
+  git config core.sshCommand "ssh -i $HOME/.ssh/altima_asset_deploy -o IdentitiesOnly=yes"
+  ```
+
+- **PAT (open):** a repo-scoped personal access token stored as a sandbox secret is **not
+  yet configured** — see issue #1. Once it exists, plain
+  `git clone https://github.com/bythewayz66-glitch/altima2000-blender-asset.git` +
+  `git lfs push` will work over HTTPS with no SSH key.
+
+### CI
+
+- **Workflow:** `.github/workflows/asset-check.yml` (`ALTIMA2000 asset check`) — opens
+  `altima2000_assembly.blend` headless in Blender on every push to `main` and asserts the
+  part count, the naming regex and module link integrity via `ci/verify_asset.py`
+  (greps for `CI_RESULT ALL_PASS`).
+- **Workflow:** `.github/workflows/attach-release-assets.yml` — attaches the binaries to
+  the `v1.0.0` release.
+- **Open:** the green/red result of the asset check on the latest push has not been
+  confirmed from the repo — see issue #2.
+
+### Open follow-up issues
+
+| # | Title | Labels |
+|---|---|---|
+| 1 | Add a repo-scoped PAT as a sandbox secret so future pushes use plain git clone + git lfs push | tooling, enhancement |
+| 2 | Verify the CI asset-check workflow runs green on the latest push | ci |
+| 3 | Add per-harness visibility toggles for the 37 hoses and 38 tie straps | enhancement |
+| 4 | Audit remaining legacy geometry and manifest gaps | enhancement, tooling |
+| 5 | Re-validate wheel orientation and assembly seams with the vision model and record the verdict | enhancement, documentation |
